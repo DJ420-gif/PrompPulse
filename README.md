@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Ultimate Coding AI Prompt Guide</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+ <a href="homepage.html" class="btn-ghost">← Back to Home</a>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -376,7 +377,9 @@
     <a href="#cheatsheet">Cheat Sheet</a>
     <a href="#mistakes">Mistakes</a>
   </div>
-  <div class="nav-badge">2025 Edition</div>
+ div class="nav-links">
+  <a href="homepage.html">🏠 Home</a>
+  <a href="#anatomy">Anatomy</a>
 </nav>
 
 <!-- HERO -->

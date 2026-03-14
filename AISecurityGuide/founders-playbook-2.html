@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Founder's AI Playbook — PromptPulse</title>
+<meta name="description" content="How non-technical founders use AI to build, launch and grow products without a full team. Real workflows, real tools, real results — not theory.">
+<meta name="keywords" content="AI for founders, build startup with AI, non-technical founder, AI business tools 2026, founder playbook">
+<meta name="author" content="PromptPulse">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="founders-style.css">
+<style>
+.play-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0;}
+.play-card{background:var(--s1);border:1px solid var(--bdr);border-radius:12px;
+  padding:24px;transition:all .3s;border-top:3px solid var(--pc,var(--acc));}
+.play-card:hover{transform:translateY(-3px);border-color:var(--pc,var(--acc));}
+.pc-phase{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--pc,var(--acc));margin-bottom:10px;display:block;}
+.pc-title{font-family:var(--serif);font-size:18px;margin-bottom:8px;}
+.pc-desc{font-size:12px;color:var(--muted2);line-height:1.65;}
+.pc-prompt{margin-top:12px;padding:10px 12px;background:var(--s2);
+  border-left:2px solid var(--pc,var(--acc));font-size:11px;
+  color:var(--muted2);font-family:var(--mono);line-height:1.6;}
+.workflow-steps{display:flex;flex-direction:column;gap:3px;margin:32px 0;}
+.ws-item{display:flex;gap:20px;align-items:flex-start;padding:20px 24px;
+  background:var(--s1);border:1px solid var(--bdr);transition:all .2s;}
+.ws-item:hover{border-color:var(--acc);}
+.ws-num{font-family:var(--serif);font-size:32px;color:var(--acc);
+  letter-spacing:-1px;line-height:1;flex-shrink:0;min-width:36px;}
+.ws-body h4{font-size:14px;font-weight:700;margin-bottom:4px;}
+.ws-body p{font-size:12px;color:var(--muted2);line-height:1.65;}
+.ws-time{font-size:10px;font-family:var(--mono);color:var(--acc);
+  letter-spacing:1px;margin-top:6px;display:block;}
+@media(max-width:768px){.play-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <div class="logo-pulse">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M2 8 Q5 3 8 8 Q11 13 14 8" stroke="#09090E" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+    </div>
+    <span class="logo-name">Prompt<em>Pulse</em></span>
+  </a>
+  <div class="nav-mid">
+    <a href="../index.html#guides" class="active">Guides</a>
+    <a href="ai-tools-clean.html">Tools</a>
+    <a href="../index.html#formula">Prompts</a>
+    <a href="../index.html#newsletter">Newsletter</a>
+  </div>
+  <div class="nav-right">
+    <a href="../index.html" class="nav-home">← Home</a>
+    <a href="../index.html#newsletter" class="nav-cta">Subscribe Free</a>
+  </div>
+</nav>
+
+<div class="art-hero">
+  <div class="hero-glow"></div>
+  <div class="art-hero-inner">
+    <div class="art-breadcrumb">
+      <a href="../index.html">Home</a><span>/</span>
+      <a href="../index.html#guides">Guides</a><span>/</span>
+      <span>Founder's Playbook</span>
+    </div>
+    <div class="art-cat">💼 Business</div>
+    <h1 class="art-h1">The Founder's<br><em>AI Playbook</em></h1>
+    <p class="art-deck">You don't need a team of ten. You don't need to code. You don't need a large budget. What you need is the right workflow — and AI handling everything a team of specialists used to do.</p>
+    <div class="art-meta">
+      <div class="meta-author">
+        <div class="meta-av">PP</div>
+        <div><div class="meta-name">PromptPulse Editorial</div><div class="meta-date">March 2026 · Updated Monthly</div></div>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-stat">⏱ <strong>30 min</strong>&nbsp;read</div>
+      <div class="meta-sep"></div>
+      <div class="meta-stat">💼 <strong>Founder Focus</strong></div>
+      <div class="meta-sep"></div>
+      <div class="meta-stat">👁 <strong>21.7K</strong>&nbsp;views</div>
+      <div class="art-share">
+        <button class="share-btn" onclick="copyLink()">🔗</button>
+        <a class="share-btn" href="#">𝕏</a>
+        <a class="share-btn" href="#">in</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:760px;margin:0 auto;padding:0 clamp(16px,4vw,56px);">
+  <div class="img-ph img-ph-lg" style="margin-top:32px;">
+    <span class="img-ph-icon">🖼️</span>
+    <span class="img-ph-label">Hero Image</span>
+    <span class="img-ph-hint">Recommended: 1400×700px · Solo founder at desk with multiple screens showing product, analytics and revenue · confident mood</span>
+  </div>
+</div>
+
+<div class="art-layout">
+  <article class="art-body">
+
+    <p>There's a version of building a company that looked like this five years ago: you either had technical co-founders, a budget for contractors, or years to learn everything yourself. Most great ideas died in that gap between concept and capability.</p>
+
+    <p>That gap has closed. Not because AI makes everything easy — it doesn't. But because AI lets one motivated person do the work that used to require four. <strong>Market research, copywriting, product design, coding, customer support, content marketing</strong> — every one of these has been fundamentally changed by what's available right now.</p>
+
+    <p>This playbook isn't about the hype. It's about the specific workflows, prompts and tools that founders are actually using to build real businesses in 2026. Nothing theoretical. Everything tested.</p>
+
+    <div class="stat-highlights sr">
+      <div class="sh-item"><span class="sh-num">6</span><span class="sh-lbl">Business Phases</span></div>
+      <div class="sh-item"><span class="sh-num">20+</span><span class="sh-lbl">AI Workflows</span></div>
+      <div class="sh-item"><span class="sh-num">1</span><span class="sh-lbl">Person Needed</span></div>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">01</span><div class="sec-div-line"></div></div>
+    <h2 id="validation">Phase 1 — Validate Before You Build</h2>
+    <p>The AI era has made it dangerously easy to build. You can go from idea to deployed product in two weeks. Which means you can also waste two weeks building something nobody wants in two weeks. Validation isn't optional — it's what separates the founders who succeed from the ones who build in circles.</p>
+
+    <div class="play-grid sr">
+      <div class="play-card" style="--pc:#F0C040">
+        <span class="pc-phase">Research</span>
+        <div class="pc-title">Market Sizing</div>
+        <div class="pc-desc">Use Perplexity to research your target market size, competitors and pricing. Use Claude to stress-test your assumptions.</div>
+        <div class="pc-prompt">"You are a VC analyst. Tear apart my business idea: [idea]. What would make you pass on this?"</div>
+      </div>
+      <div class="play-card" style="--pc:#5CF0A8">
+        <span class="pc-phase">Customer Discovery</span>
+        <div class="pc-title">Interview Questions</div>
+        <div class="pc-desc">Generate your customer discovery interview script. 10 open-ended questions that reveal real pain without leading the witness.</div>
+        <div class="pc-prompt">"Write 10 customer discovery interview questions for [ICP] to validate whether [problem] is real and worth solving."</div>
+      </div>
+      <div class="play-card" style="--pc:#5C9BF0">
+        <span class="pc-phase">Positioning</span>
+        <div class="pc-title">Competitive Analysis</div>
+        <div class="pc-desc">Map competitors, their pricing, weaknesses and the gap you can own. AI compiles this in minutes, not days.</div>
+        <div class="pc-prompt">"Compare the top 5 tools in [space]. List each one's biggest weakness. Where is the gap a new entrant could own?"</div>
+      </div>
+      <div class="play-card" style="--pc:#FF5C5C">
+        <span class="pc-phase">Messaging</span>
+        <div class="pc-title">Value Proposition</div>
+        <div class="pc-desc">Generate 10 different value proposition framings. Test them as landing page headlines before you build anything.</div>
+        <div class="pc-prompt">"Write 10 landing page headlines for [product]. Each should speak to a different emotional driver of [ICP]."</div>
+      </div>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">02</span><div class="sec-div-line"></div></div>
+    <h2 id="building">Phase 2 — Building Without a Full Team</h2>
+    <p>If you can write a coherent sentence, you can use AI to build software. The secret is understanding that AI is not an autocomplete — it's a co-engineer that needs the same context a human co-founder would need.</p>
+
+    <div class="workflow-steps sr">
+      <div class="ws-item">
+        <div class="ws-num">1</div>
+        <div class="ws-body">
+          <h4>Spec First, Code Second</h4>
+          <p>Before asking AI to write code, ask it to help you spec the feature. "Here's what I want to build. What are the edge cases I haven't thought about? What's the right data model?" This session is free — skipping it costs you days.</p>
+          <span class="ws-time">⏱ 30 min · saves 3–4 hrs</span>
+        </div>
+      </div>
+      <div class="ws-item">
+        <div class="ws-num">2</div>
+        <div class="ws-body">
+          <h4>Use Cursor for Everything Code-Related</h4>
+          <p>Open your project in Cursor. Use @codebase to give AI context about your existing code. Multi-file edits mean one prompt can update your API, your database schema and your UI simultaneously.</p>
+          <span class="ws-time">⏱ ongoing · 3–5x faster development</span>
+        </div>
+      </div>
+      <div class="ws-item">
+        <div class="ws-num">3</div>
+        <div class="ws-body">
+          <h4>v0 for Landing Pages and UI</h4>
+          <p>Describe your landing page sections to v0.dev and get production-ready React components. A complete landing page — hero, features, pricing, FAQ, footer — in under two hours.</p>
+          <span class="ws-time">⏱ 2 hrs · replaces 2 days of design</span>
+        </div>
+      </div>
+      <div class="ws-item">
+        <div class="ws-num">4</div>
+        <div class="ws-body">
+          <h4>Bolt.new for Rapid Prototypes</h4>
+          <p>Need to show investors or early users something working before you commit to the full build? Bolt.new generates a functional prototype from a text description in minutes.</p>
+          <span class="ws-time">⏱ 30 min · prototype from text</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">03</span><div class="sec-div-line"></div></div>
+    <h2 id="marketing">Phase 3 — Marketing Without a Marketing Team</h2>
+    <p>Marketing used to be the hardest part for technical founders. You'd build something great and have no idea how to talk about it. AI hasn't made marketing automatic, but it's made it possible for one person to punch well above their weight.</p>
+
+    <div class="callout info sr">
+      <div class="callout-head">💡 The Content Flywheel</div>
+      <p>Use Claude to write a 2,000-word blog post about a problem your target customer has. From that one post, ask it to extract: 5 LinkedIn posts, 10 tweets, 3 email subject lines, 1 YouTube script outline, and 5 Reddit comments you could post in relevant communities. One piece of content becomes twelve distribution touchpoints.</p>
+    </div>
+
+    <div class="img-ph img-ph-md sr">
+      <span class="img-ph-icon">🖼️</span>
+      <span class="img-ph-label">Content Flywheel Diagram</span>
+      <span class="img-ph-hint">Recommended: 800×400px · Visual showing one blog post → multiple content channels → traffic back to product</span>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">04</span><div class="sec-div-line"></div></div>
+    <h2 id="operations">Phase 4 — Running Operations Solo</h2>
+    <p>Once users start arriving, the operational load explodes. Support tickets. Onboarding emails. Bug reports. Feature requests. Most founders at this stage hire — or burn out. AI is the third option.</p>
+
+    <div class="checklist sr">
+      <div class="cl-item"><div class="cl-check">✓</div><div class="cl-text"><strong>Customer support:</strong> Train a custom GPT on your documentation and common questions. First-touch support handled without a human — escalate only complex issues.</div></div>
+      <div class="cl-item"><div class="cl-check">✓</div><div class="cl-text"><strong>Onboarding emails:</strong> Use Claude to write a 5-email onboarding sequence. Give it your ICP, your product and what success looks like. Refine once, send forever.</div></div>
+      <div class="cl-item"><div class="cl-check">✓</div><div class="cl-text"><strong>Changelogs:</strong> Paste your git commit history into Claude and ask it to write a user-friendly changelog update. What takes 30 minutes takes 3.</div></div>
+      <div class="cl-item"><div class="cl-check">✓</div><div class="cl-text"><strong>Investor updates:</strong> Give Claude your metrics and ask it to write a monthly investor update in the format VCs actually want to read. Numbers + narrative, no fluff.</div></div>
+    </div>
+
+    <div class="pullquote sr">
+      <p>"I run a $12K MRR SaaS solo. The only reason that's possible is that AI handles everything that used to require hiring — except the judgment calls. Those I still make myself."</p>
+      <cite>— James L., Indie Founder, 2026</cite>
+    </div>
+
+    <div class="takeaway sr">
+      <h4>⚡ Key Takeaways</h4>
+      <ul>
+        <li>Validate before building — AI makes it easy to build fast, which makes validation even more important</li>
+        <li>Use the spec-first workflow: AI helps you design before it helps you build</li>
+        <li>The content flywheel: one long-form piece → 12 distribution formats</li>
+        <li>Operations solo is possible — custom GPTs, email sequences, and changelogs all run on AI</li>
+        <li>The judgment calls still belong to you — AI is the leverage, not the decision-maker</li>
+      </ul>
+    </div>
+
+    <a href="prompt-templates.html" class="next-article sr">
+      <div>
+        <div class="na-label">Read Next</div>
+        <div class="na-title">20+ Prompt Templates — Copy and Use Today</div>
+        <div class="na-meta">⏱ 10 min read · Templates</div>
+      </div>
+      <div class="na-arrow">→</div>
+    </a>
+
+  </article>
+
+  <aside class="art-sidebar">
+    <div class="toc-box">
+      <div class="toc-head"><span>☰</span><span class="toc-head-txt">In This Guide</span></div>
+      <nav class="toc-list">
+        <a href="#validation" class="toc-item" data-toc>Phase 1: Validate</a>
+        <a href="#building" class="toc-item" data-toc>Phase 2: Build</a>
+        <a href="#marketing" class="toc-item" data-toc>Phase 3: Market</a>
+        <a href="#operations" class="toc-item" data-toc>Phase 4: Operate</a>
+      </nav>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sw-title">Guide Stats</div>
+      <div class="sw-stat"><span class="sw-stat-label">Difficulty</span><span class="sw-stat-val">All Levels</span></div>
+      <div class="sw-stat"><span class="sw-stat-label">Tech Required</span><span class="sw-stat-val">None</span></div>
+      <div class="sw-stat"><span class="sw-stat-label">Last Updated</span><span class="sw-stat-val">March 2026</span></div>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sw-title">Related Guides</div>
+      <a href="saas-mvp-guide.html" class="related-item"><div class="ri-icon">🚀</div><div><div class="ri-title">Ship a SaaS MVP in 2 Weeks</div><div class="ri-time">45 min read</div></div></a>
+      <a href="prompt-templates.html" class="related-item"><div class="ri-icon">📋</div><div><div class="ri-title">Prompt Templates Library</div><div class="ri-time">10 min read</div></div></a>
+      <a href="ai-tools-clean.html" class="related-item"><div class="ri-icon">🔬</div><div><div class="ri-title">Best AI Tools 2026</div><div class="ri-time">10 min read</div></div></a>
+    </div>
+    <div class="sidebar-widget cta-widget">
+      <h4>Stay Sharp</h4>
+      <p>Weekly founder workflows, AI tools and build guides.</p>
+      <a href="../index.html#newsletter">Subscribe Free →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <a href="../index.html" class="foot-brand">
+      <div class="logo-pulse" style="width:26px;height:26px;"><svg viewBox="0 0 16 16" fill="none" style="width:14px;height:14px;"><path d="M2 8 Q5 3 8 8 Q11 13 14 8" stroke="#09090E" stroke-width="2" stroke-linecap="round" fill="none"/></svg></div>
+      <span class="foot-name">Prompt<em>Pulse</em></span>
+    </a>
+    <div class="foot-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#guides">All Guides</a>
+      <a href="ai-tools-clean.html">AI Tools</a>
+      <a href="../index.html#formula">Prompts</a>
+      <a href="../index.html#newsletter">Newsletter</a>
+    </div>
+    <span class="foot-copy">© 2026 PromptPulse · Built for builders</span>
+  </div>
+</footer>
+<script src="founders-script.js"></script>
+</body>
+</html>

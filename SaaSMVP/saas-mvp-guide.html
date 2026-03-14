@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ship a SaaS MVP in 2 Weeks With AI — PromptPulse</title>
+<meta name="description" content="The exact step-by-step workflow for building and launching a SaaS MVP using AI as your co-engineer. Architecture, database, UI, auth and deployment — nothing skipped.">
+<meta name="keywords" content="build SaaS with AI, MVP in 2 weeks, AI for startup founders, ship MVP fast 2026, Next.js SaaS template">
+<meta name="author" content="PromptPulse">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="guide-style.css">
+<style>
+.timeline{display:flex;flex-direction:column;gap:0;margin:40px 0;}
+.tl-item{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:32px 0;
+  border-bottom:1px solid var(--bdr);}
+.tl-item:last-child{border-bottom:none;}
+.tl-left{text-align:right;}
+.tl-week{font-family:var(--mono);font-size:10px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--acc);display:block;margin-bottom:4px;}
+.tl-days{font-family:var(--serif);font-size:28px;color:var(--txt);letter-spacing:-1px;}
+.tl-right h4{font-family:var(--serif);font-size:20px;margin-bottom:8px;color:var(--txt);}
+.tl-right p{font-size:13px;color:var(--muted2);line-height:1.7;margin-bottom:10px;}
+.tl-tasks{display:flex;flex-wrap:wrap;gap:6px;}
+.tl-task{font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px;
+  background:rgba(240,192,64,.08);border:1px solid rgba(240,192,64,.2);color:var(--acc);}
+.stack-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:12px;margin:28px 0;}
+.stack-item{background:var(--s1);border:1px solid var(--bdr);border-radius:10px;
+  padding:16px 18px;display:flex;align-items:center;gap:12px;transition:all .3s;}
+.stack-item:hover{border-color:var(--acc);transform:translateY(-2px);}
+.si-icon{font-size:22px;flex-shrink:0;}
+.si-name{font-size:13px;font-weight:700;color:var(--txt);}
+.si-role{font-size:11px;color:var(--muted);}
+.cost-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:13px;}
+.cost-table th{padding:12px 16px;background:var(--s2);color:var(--muted2);
+  font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  border-bottom:1px solid var(--bdr);text-align:left;}
+.cost-table td{padding:13px 16px;border-bottom:1px solid var(--bdr);color:var(--muted2);}
+.cost-table tr:hover td{background:rgba(255,255,255,.02);}
+.cost-free{color:var(--acc3);font-weight:700;}
+.cost-paid{color:var(--acc);font-weight:700;}
+@media(max-width:600px){
+  .tl-item{grid-template-columns:1fr;}
+  .tl-left{text-align:left;}
+}
+</style>
+</head>
+<body>
+<div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <div class="logo-pulse">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M2 8 Q5 3 8 8 Q11 13 14 8" stroke="#09090E" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+    </div>
+    <span class="logo-name">Prompt<em>Pulse</em></span>
+  </a>
+  <div class="nav-mid">
+    <a href="../index.html#guides" class="active">Guides</a>
+    <a href="ai-tools-clean.html">Tools</a>
+    <a href="../index.html#formula">Prompts</a>
+    <a href="../index.html#newsletter">Newsletter</a>
+  </div>
+  <div class="nav-right">
+    <a href="../index.html" class="nav-home">← Home</a>
+    <a href="../index.html#newsletter" class="nav-cta">Subscribe Free</a>
+  </div>
+</nav>
+
+<div class="art-hero">
+  <div class="hero-glow"></div>
+  <div class="art-hero-inner">
+    <div class="art-breadcrumb">
+      <a href="../index.html">Home</a><span>/</span>
+      <a href="../index.html#guides">Guides</a><span>/</span>
+      <span>SaaS MVP Guide</span>
+    </div>
+    <div class="art-cat">🚀 Build Guide</div>
+    <h1 class="art-h1">Ship a SaaS MVP in<br><em>2 Weeks</em> Using AI</h1>
+    <p class="art-deck">This is the exact workflow — week by week, day by day — for building and launching a real SaaS product using AI as your co-engineer. Architecture, database, auth, payments, deployment. Nothing skipped, nothing hand-waved.</p>
+    <div class="art-meta">
+      <div class="meta-author">
+        <div class="meta-av">PP</div>
+        <div><div class="meta-name">PromptPulse Editorial</div><div class="meta-date">March 2026 · Updated Monthly</div></div>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-stat">⏱ <strong>45 min</strong>&nbsp;read</div>
+      <div class="meta-sep"></div>
+      <div class="meta-stat">⚡ <strong>Intermediate</strong></div>
+      <div class="meta-sep"></div>
+      <div class="meta-stat">👁 <strong>29.4K</strong>&nbsp;views</div>
+      <div class="art-share">
+        <button class="share-btn" onclick="copyLink()">🔗</button>
+        <a class="share-btn" href="#">𝕏</a>
+        <a class="share-btn" href="#">in</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:760px;margin:0 auto;padding:0 clamp(16px,4vw,56px);">
+  <div class="img-ph img-ph-lg" style="margin-top:32px;">
+    <span class="img-ph-icon">🖼️</span>
+    <span class="img-ph-label">Hero Image</span>
+    <span class="img-ph-hint">Recommended: 1400×700px · Laptop with code + deployed website on second screen · progress bar or calendar showing 2 weeks</span>
+  </div>
+</div>
+
+<div class="art-layout">
+  <article class="art-body">
+
+    <p>Two weeks sounds ambitious. It is ambitious. But it's not unrealistic — and the gap between "ambitious but realistic" and "impossible" is almost entirely explained by how you use AI during the build.</p>
+
+    <p>I'm not talking about using AI to write a few components here and there. I mean treating AI as a genuine co-engineer who helps you make architectural decisions, write every layer of the stack, debug errors in real time, and ship features you'd normally spend days on. <strong>That changes the math of what one person can build in a fortnight.</strong></p>
+
+    <p>This guide is the exact playbook. No theory, no fluff. Week one builds the foundation. Week two ships the product. Let's go.</p>
+
+    <div class="stat-highlights sr">
+      <div class="sh-item"><span class="sh-num">14</span><span class="sh-lbl">Days to Ship</span></div>
+      <div class="sh-item"><span class="sh-num">~$0</span><span class="sh-lbl">Cost to Start</span></div>
+      <div class="sh-item"><span class="sh-num">1</span><span class="sh-lbl">Person Needed</span></div>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">01</span><div class="sec-div-line"></div></div>
+    <h2 id="before-you-build">Before You Write a Single Line of Code</h2>
+
+    <p>The biggest reason MVPs fail isn't bad code. It's building the wrong thing. Before you open your editor or type a single prompt, you need clear answers to four questions. AI can help you work through all of them — but you have to do this step.</p>
+
+    <div class="checklist sr">
+      <div class="cl-item">
+        <div class="cl-check">✓</div>
+        <div class="cl-text"><strong>Who is the user?</strong> Not "small businesses" — be specific. "Solo freelance designers who invoice 5–20 clients per month." The narrower the better for an MVP.</div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-check">✓</div>
+        <div class="cl-text"><strong>What is the one problem?</strong> Not "project management" — be specific. "They spend 3 hours a month chasing late invoice payments manually." One problem, solved properly.</div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-check">✓</div>
+        <div class="cl-text"><strong>What does success look like?</strong> Define the one action that proves your MVP works. "User sends an automated payment reminder in under 2 minutes." That's your north star.</div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-check">✓</div>
+        <div class="cl-text"><strong>What are you NOT building?</strong> Every feature you don't build in week one is a gift to yourself. Define the scope boundary before you start, or AI will happily help you scope-creep your way to month two.</div>
+      </div>
+    </div>
+
+    <div class="callout tip sr">
+      <div class="callout-head">💡 Use AI for Discovery</div>
+      <p>Prompt Claude or ChatGPT: <em>"I want to build [your idea]. Play devil's advocate — what are the 5 reasons this might fail, and what would I need to validate before building it?"</em> This 10-minute exercise has saved more MVPs than any framework.</p>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">02</span><div class="sec-div-line"></div></div>
+    <h2 id="tech-stack">The MVP Tech Stack (Tested and Proven)</h2>
+    <p>Don't reinvent this. Every tool below was chosen because it minimises configuration time and maximises how much AI can help you build with it. There are faster stacks for specific use cases, but this one gets you from zero to deployed the fastest.</p>
+
+    <div class="stack-row sr">
+      <div class="stack-item"><span class="si-icon">⚛️</span><div><div class="si-name">Next.js 15</div><div class="si-role">Frontend + API Routes</div></div></div>
+      <div class="stack-item"><span class="si-icon">📘</span><div><div class="si-name">TypeScript 5.4</div><div class="si-role">Type Safety</div></div></div>
+      <div class="stack-item"><span class="si-icon">🎨</span><div><div class="si-name">Tailwind + shadcn</div><div class="si-role">UI Components</div></div></div>
+      <div class="stack-item"><span class="si-icon">🔑</span><div><div class="si-name">Clerk</div><div class="si-role">Auth (10 min setup)</div></div></div>
+      <div class="stack-item"><span class="si-icon">🗄️</span><div><div class="si-name">Supabase</div><div class="si-role">Database + Storage</div></div></div>
+      <div class="stack-item"><span class="si-icon">💳</span><div><div class="si-name">Stripe</div><div class="si-role">Payments</div></div></div>
+      <div class="stack-item"><span class="si-icon">🚀</span><div><div class="si-name">Vercel</div><div class="si-role">Deployment</div></div></div>
+      <div class="stack-item"><span class="si-icon">💻</span><div><div class="si-name">Cursor IDE</div><div class="si-role">AI-powered Editor</div></div></div>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">03</span><div class="sec-div-line"></div></div>
+    <h2 id="week-one">Week One — Build the Foundation</h2>
+
+    <div class="timeline sr">
+      <div class="tl-item">
+        <div class="tl-left"><span class="tl-week">Week 1</span><span class="tl-days">Day 1–2</span></div>
+        <div class="tl-right">
+          <h4>Project Setup + Architecture</h4>
+          <p>Scaffold Next.js 15, configure TypeScript strict mode, set up Clerk auth, connect Supabase. Use AI to design your database schema before writing a single table — this is the most important session of the whole build.</p>
+          <div class="tl-tasks"><span class="tl-task">Next.js scaffold</span><span class="tl-task">Clerk auth</span><span class="tl-task">DB schema</span><span class="tl-task">Folder structure</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><span class="tl-week">Week 1</span><span class="tl-days">Day 3–4</span></div>
+        <div class="tl-right">
+          <h4>Core Feature — The One Thing</h4>
+          <p>Build the single feature that makes your product worth paying for. Nothing else. Use the 6-layer prompt framework for every component. This is where AI co-engineering pays off the most.</p>
+          <div class="tl-tasks"><span class="tl-task">Core UI</span><span class="tl-task">API routes</span><span class="tl-task">DB operations</span><span class="tl-task">Error handling</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><span class="tl-week">Week 1</span><span class="tl-days">Day 5–7</span></div>
+        <div class="tl-right">
+          <h4>Dashboard + User Flow</h4>
+          <p>Build the dashboard users see after login. Onboarding flow, empty states, loading skeletons. This is where most builders underinvest — a good first-run experience determines whether users come back.</p>
+          <div class="tl-tasks"><span class="tl-task">Dashboard</span><span class="tl-task">Onboarding</span><span class="tl-task">Empty states</span><span class="tl-task">Mobile responsive</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="img-ph img-ph-md sr">
+      <span class="img-ph-icon">🖼️</span>
+      <span class="img-ph-label">Week 1 Progress Screenshot</span>
+      <span class="img-ph-hint">Recommended: 800×400px · Screenshot of a real dashboard being built, terminal showing commands running</span>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">04</span><div class="sec-div-line"></div></div>
+    <h2 id="week-two">Week Two — Ship It</h2>
+
+    <div class="timeline sr">
+      <div class="tl-item">
+        <div class="tl-left"><span class="tl-week">Week 2</span><span class="tl-days">Day 8–9</span></div>
+        <div class="tl-right">
+          <h4>Stripe Payments + Billing</h4>
+          <p>Add Stripe Checkout, webhooks, and subscription management. Prompt AI with your exact Stripe version and Clerk user IDs. This used to take 3 days. With AI and the right prompts it's an afternoon.</p>
+          <div class="tl-tasks"><span class="tl-task">Stripe Checkout</span><span class="tl-task">Webhooks</span><span class="tl-task">Free trial</span><span class="tl-task">Billing portal</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><span class="tl-week">Week 2</span><span class="tl-days">Day 10–11</span></div>
+        <div class="tl-right">
+          <h4>Landing Page + SEO</h4>
+          <p>Build your marketing landing page. Hero, features, pricing, FAQ, testimonials. Use AI to write every section of copy too — give it your ICP details and let it write the first draft you'll refine.</p>
+          <div class="tl-tasks"><span class="tl-task">Hero section</span><span class="tl-task">Pricing table</span><span class="tl-task">Meta tags</span><span class="tl-task">OG images</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left"><span class="tl-week">Week 2</span><span class="tl-days">Day 12–14</span></div>
+        <div class="tl-right">
+          <h4>Polish, Test + Deploy</h4>
+          <p>Fix bugs, add loading states everywhere you missed them, test on mobile, deploy to Vercel, set up your custom domain and submit to Product Hunt. You're live.</p>
+          <div class="tl-tasks"><span class="tl-task">Bug fixes</span><span class="tl-task">Mobile QA</span><span class="tl-task">Vercel deploy</span><span class="tl-task">Custom domain</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">05</span><div class="sec-div-line"></div></div>
+    <h2 id="costs">What It Actually Costs</h2>
+    <p>One of the biggest surprises for first-time SaaS builders is how little the modern stack costs to start. Here's the honest breakdown for an MVP with under 100 users:</p>
+
+    <table class="cost-table sr">
+      <thead><tr><th>Service</th><th>What You Get</th><th>Monthly Cost</th></tr></thead>
+      <tbody>
+        <tr><td>Vercel</td><td>Hosting + deploys</td><td><span class="cost-free">Free</span></td></tr>
+        <tr><td>Supabase</td><td>Database + storage</td><td><span class="cost-free">Free (500MB)</span></td></tr>
+        <tr><td>Clerk</td><td>Auth up to 10K MAU</td><td><span class="cost-free">Free</span></td></tr>
+        <tr><td>Stripe</td><td>Payments (2.9% + 30¢)</td><td><span class="cost-free">Free (% of revenue)</span></td></tr>
+        <tr><td>Claude/ChatGPT</td><td>AI co-engineer</td><td><span class="cost-paid">$20/mo</span></td></tr>
+        <tr><td>Cursor IDE</td><td>AI editor</td><td><span class="cost-paid">$20/mo</span></td></tr>
+        <tr><td>Domain</td><td>.com domain name</td><td><span class="cost-paid">~$12/yr</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="pullquote sr">
+      <p>"I launched my first SaaS for $40/month total. The AI tools were $40 of that. Everything else was free until I had paying customers."</p>
+      <cite>— Sara M., Indie Founder, Berlin</cite>
+    </div>
+
+    <div class="img-ph img-ph-sm sr">
+      <span class="img-ph-icon">🖼️</span>
+      <span class="img-ph-label">Launch Screenshot</span>
+      <span class="img-ph-hint">Recommended: 800×300px · Product Hunt launch page or first Stripe payment notification</span>
+    </div>
+
+    <div class="takeaway sr">
+      <h4>⚡ Key Takeaways</h4>
+      <ul>
+        <li>Validate before building — use AI to stress-test your idea before writing code</li>
+        <li>Stick to the proven stack: Next.js 15, TypeScript, Clerk, Supabase, Stripe, Vercel</li>
+        <li>Week one is foundation — resist adding features until core works perfectly</li>
+        <li>Week two is ship — payments, landing page, deploy, launch</li>
+        <li>Total cost to start: $40/month, free until you have paying customers</li>
+        <li>The limiting factor isn't skill or tools — it's focus. One feature, done properly.</li>
+      </ul>
+    </div>
+
+    <a href="founders-playbook.html" class="next-article sr">
+      <div>
+        <div class="na-label">Read Next</div>
+        <div class="na-title">The Founder's AI Playbook — From Idea to Revenue</div>
+        <div class="na-meta">⏱ 30 min read · Business</div>
+      </div>
+      <div class="na-arrow">→</div>
+    </a>
+
+  </article>
+
+  <aside class="art-sidebar">
+    <div class="toc-box">
+      <div class="toc-head"><span>☰</span><span class="toc-head-txt">In This Guide</span></div>
+      <nav class="toc-list">
+        <a href="#before-you-build" class="toc-item" data-toc>Before You Build</a>
+        <a href="#tech-stack" class="toc-item" data-toc>The MVP Tech Stack</a>
+        <a href="#week-one" class="toc-item" data-toc>Week One</a>
+        <a href="#week-two" class="toc-item" data-toc>Week Two</a>
+        <a href="#costs" class="toc-item" data-toc>What It Costs</a>
+      </nav>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sw-title">Guide Stats</div>
+      <div class="sw-stat"><span class="sw-stat-label">Difficulty</span><span class="sw-stat-val">Intermediate</span></div>
+      <div class="sw-stat"><span class="sw-stat-label">Time to Build</span><span class="sw-stat-val">2 Weeks</span></div>
+      <div class="sw-stat"><span class="sw-stat-label">Cost to Start</span><span class="sw-stat-val">~$40/mo</span></div>
+      <div class="sw-stat"><span class="sw-stat-label">Last Updated</span><span class="sw-stat-val">March 2026</span></div>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sw-title">Related Guides</div>
+      <a href="guide-prompt-engineering-1.html" class="related-item"><div class="ri-icon">⚡</div><div><div class="ri-title">The 6-Layer Prompt Framework</div><div class="ri-time">15 min read</div></div></a>
+      <a href="founders-playbook.html" class="related-item"><div class="ri-icon">💼</div><div><div class="ri-title">The Founder's AI Playbook</div><div class="ri-time">30 min read</div></div></a>
+      <a href="ai-tools-clean.html" class="related-item"><div class="ri-icon">🔬</div><div><div class="ri-title">Best AI Tools 2026</div><div class="ri-time">10 min read</div></div></a>
+    </div>
+    <div class="sidebar-widget cta-widget">
+      <h4>Stay Sharp</h4>
+      <p>Weekly build guides, tool reviews and prompts for builders.</p>
+      <a href="../index.html#newsletter">Subscribe Free →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <a href="../index.html" class="foot-brand">
+      <div class="logo-pulse" style="width:26px;height:26px;"><svg viewBox="0 0 16 16" fill="none" style="width:14px;height:14px;"><path d="M2 8 Q5 3 8 8 Q11 13 14 8" stroke="#09090E" stroke-width="2" stroke-linecap="round" fill="none"/></svg></div>
+      <span class="foot-name">Prompt<em>Pulse</em></span>
+    </a>
+    <div class="foot-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#guides">All Guides</a>
+      <a href="ai-tools-clean.html">AI Tools</a>
+      <a href="../index.html#formula">Prompts</a>
+      <a href="../index.html#newsletter">Newsletter</a>
+    </div>
+    <span class="foot-copy">© 2026 PromptPulse · Built for builders</span>
+  </div>
+</footer>
+<script src="guide-script.js"></script>
+</body>
+</html>

@@ -63,11 +63,19 @@
 </div>
 
 <div style="max-width:760px;margin:0 auto;padding:0 clamp(16px,4vw,56px);">
-  <div class="img-ph img-ph-lg" style="margin-top:32px;">
-    <span class="img-ph-icon">🖼️</span>
-    <span class="img-ph-label">Hero Image</span>
-    <span class="img-ph-caption">Recommended: 1400×700px · Developer at terminal, dramatic lighting</span>
-  </div>
+  <<img 
+  src="images/hero.jpg" 
+  alt="Developer at terminal"
+  style="
+    width: 100%;
+    height: clamp(200px, 35vw, 440px);
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin: 32px 0;
+    display: block;
+  "
+>
 </div>
 
 <div class="art-layout">
@@ -93,11 +101,20 @@
     <p>No framework. No language version. No idea if this is a mobile app or enterprise SaaS. The AI isn't being lazy when it returns a generic React component using an outdated library — it's doing the best it can with almost nothing to go on.</p>
     <p>The mental model shift: <strong>think of AI like a brilliant contractor who just arrived on your project today.</strong> Talented. Willing to work hard. But completely in the dark about your codebase, standards, and users. Your job is to give a briefing so thorough that the contractor can hit the ground running without asking anything back.</p>
 
-    <div class="img-ph img-ph-md sr">
-      <span class="img-ph-icon">🖼️</span>
-      <span class="img-ph-label">Diagram Image</span>
-      <span class="img-ph-caption">Recommended: Side-by-side comparison · Vague vs detailed prompt with annotated arrows</span>
-    </div>
+<img 
+  src="images/diagram.jpg" 
+  alt="Prompt comparison"
+  style="
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 32px 0;
+    display: block;
+    background: #12121A;
+  "
+>
     <figcaption>Same AI, completely different results — the only variable is the prompt.</figcaption>
 
     <div class="pullquote sr">
@@ -129,12 +146,20 @@
     <h3 id="layer-stack">Layer 3 — Tech Stack: Version Numbers Are Not Optional</h3>
     <p>They say "React" when they mean "React 19." They say "Next.js" when they mean "Next.js 15 with the App Router." The AI makes assumptions, and those assumptions bite you.</p>
     <p>I watched a developer spend two full days debugging an authentication flow because the AI gave them NextAuth v4 patterns in a v5 project. The code looked plausible. It ran — until it didn't. One version number in the prompt would have prevented the entire ordeal.</p>
-
-    <div class="img-ph img-ph-sm sr">
-      <span class="img-ph-icon">🖼️</span>
-      <span class="img-ph-label">Screenshot Image</span>
-      <span class="img-ph-caption">Recommended: Console error from version mismatch — relatable, painful, real</span>
-    </div>
+<img 
+  src="images/diagram.jpg" 
+  alt="Prompt comparison"
+  style="
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 32px 0;
+    display: block;
+    background: #12121A;
+  "
+>
     <figcaption>The kind of error that ruins a Tuesday — a version number prevents it entirely.</figcaption>
 
     <h3 id="layer-constraints">Layer 4 — Constraints: The Layer Nobody Uses</h3>
@@ -215,11 +240,20 @@
       </tbody>
     </table>
 
-    <div class="img-ph img-ph-md sr">
-      <span class="img-ph-icon">🖼️</span>
-      <span class="img-ph-label">Before / After Code Screenshot</span>
-      <span class="img-ph-caption">Recommended: Side-by-side screenshots — messy generic output vs clean typed component</span>
-    </div>
+<img 
+  src="images/diagram.jpg" 
+  alt="Prompt comparison"
+  style="
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 32px 0;
+    display: block;
+    background: #12121A;
+  "
+>
     <figcaption>Left: vague prompt result. Right: framework result. Same AI, 3 minutes apart.</figcaption>
 
     <div class="sec-div sr"><span class="sec-div-num">05</span><div class="sec-div-line"></div></div>
@@ -257,11 +291,20 @@
     <h4>Mistake 5 — Using AI as a Search Engine</h4>
     <p>"How do I set up NextAuth v5?" gets documentation. "Set up NextAuth v5 in my Next.js 15 project with Google OAuth, magic link, protected routes, and session middleware — here's my file structure" gets working code.</p>
 
-    <div class="img-ph img-ph-sm sr">
-      <span class="img-ph-icon">🖼️</span>
-      <span class="img-ph-label">Illustration</span>
-      <span class="img-ph-caption">Recommended: Visual checklist of 5 mistakes with red X marks, clean editorial style</span>
-    </div>
+  <img 
+  src="images/diagram.jpg" 
+  alt="Prompt comparison"
+  style="
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 32px 0;
+    display: block;
+    background: #12121A;
+  "
+>
 
     <div class="takeaway sr">
       <h4>⚡ Key Takeaways</h4>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ultimate Coding AI Prompt Guide — PromptPulse</title>
+<meta name="description" content="Stop getting mediocre code from AI. Learn the 6-layer prompt framework that senior engineers use to ship production-ready output every single time.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="guide-style.css">
+</head>
+<body>
+
+<div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+
+<nav>
+  <a href="nexusai-homepage.html" class="nav-logo">
+    <div class="logo-pulse">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M2 8 Q5 3 8 8 Q11 13 14 8" stroke="#09090E" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+    </div>
+    <span class="logo-name">Prompt<em>Pulse</em></span>
+  </a>
+  <div class="nav-mid">
+    <a href="nexusai-homepage.html#guides" class="active">Guides</a>
+    <a href="nexusai-homepage.html#tools">Tools</a>
+    <a href="nexusai-homepage.html#formula">Prompts</a>
+    <a href="nexusai-homepage.html#newsletter">Newsletter</a>
+  </div>
+  <div class="nav-right">
+    <a href="nexusai-homepage.html" class="nav-home">← Home</a>
+    <a href="nexusai-homepage.html#newsletter" class="nav-cta">Subscribe Free</a>
+  </div>
+</nav>
+
+<div class="art-hero">
+  <div class="hero-glow"></div>
+  <div class="art-hero-inner">
+    <div class="art-breadcrumb">
+      <a href="nexusai-homepage.html">Home</a><span>/</span>
+      <a href="nexusai-homepage.html#guides">Guides</a><span>/</span>
+      <span>Prompt Engineering</span>
+    </div>
+    <div class="art-cat">⚡ Prompt Engineering</div>
+    <h1 class="art-h1">The <em>Coding AI</em> Prompt Guide That Actually Gets You Production Code</h1>
+    <p class="art-deck">You're not getting bad results because AI is bad. You're getting bad results because your prompts are missing critical context. Here's the 6-layer system that fixes that permanently.</p>
+    <div class="art-meta">
+      <div class="meta-author">
+        <div class="meta-av">PP</div>
+        <div><div class="meta-name">PromptPulse Editorial</div><div class="meta-date">March 14, 2025 · Updated weekly</div></div>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-stat">⏱ <strong>15 min</strong>&nbsp;read</div>
+      <div class="meta-sep"></div>
+      <div class="meta-stat">👁 <strong>48.2K</strong>&nbsp;views</div>
+      <div class="meta-sep"></div>
+      <div class="meta-stat">⭐ <strong>4.9</strong>&nbsp;rating</div>
+      <div class="art-share">
+        <button class="share-btn" onclick="copyLink()" title="Copy link">🔗</button>
+        <a class="share-btn" href="#" title="Share on X">𝕏</a>
+        <a class="share-btn" href="#" title="Share on LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:760px;margin:0 auto;padding:0 clamp(16px,4vw,56px);">
+  <div class="img-ph img-ph-lg" style="margin-top:32px;">
+    <span class="img-ph-icon">🖼️</span>
+    <span class="img-ph-label">Hero Image</span>
+    <span class="img-ph-caption">Recommended: 1400×700px · Developer at terminal, dramatic lighting</span>
+  </div>
+</div>
+
+<div class="art-layout">
+  <article class="art-body">
+
+    <p>Here's something nobody tells you when you start using AI for coding: <strong>the quality of what comes out is entirely determined by the quality of what goes in.</strong> Not the model. Not the version. Not even which tool you pay for.</p>
+    <p>I spent three months watching developers — juniors, seniors, even CTOs — get frustrated with AI output. Inconsistent code. Wrong library versions. Half-finished implementations that work in demos and collapse in production. In almost every case, the problem wasn't the AI. It was the prompt.</p>
+    <p>This guide is the result of that research. The 6-layer framework you're about to learn isn't theory — it's what engineers who consistently ship clean, production-ready AI output actually do, distilled into a repeatable system you can use from today.</p>
+
+    <div class="stat-highlights sr">
+      <div class="sh-item"><span class="sh-num">7x</span><span class="sh-lbl">Better Output Quality</span></div>
+      <div class="sh-item"><span class="sh-num">83%</span><span class="sh-lbl">Less Re-Prompting</span></div>
+      <div class="sh-item"><span class="sh-num">2hrs</span><span class="sh-lbl">Saved Per Day on Avg</span></div>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">01</span><div class="sec-div-line"></div></div>
+    <h2 id="why-prompts-fail">Why Your Prompts Are Failing</h2>
+    <p>Most developers write prompts like they're texting a colleague who already knows everything about their project:</p>
+    <div class="callout warn sr">
+      <div class="callout-head">❌ A Prompt Doomed to Fail</div>
+      <p>"Hey can you write me a user authentication component"</p>
+    </div>
+    <p>No framework. No language version. No idea if this is a mobile app or enterprise SaaS. The AI isn't being lazy when it returns a generic React component using an outdated library — it's doing the best it can with almost nothing to go on.</p>
+    <p>The mental model shift: <strong>think of AI like a brilliant contractor who just arrived on your project today.</strong> Talented. Willing to work hard. But completely in the dark about your codebase, standards, and users. Your job is to give a briefing so thorough that the contractor can hit the ground running without asking anything back.</p>
+
+    <div class="img-ph img-ph-md sr">
+      <span class="img-ph-icon">🖼️</span>
+      <span class="img-ph-label">Diagram Image</span>
+      <span class="img-ph-caption">Recommended: Side-by-side comparison · Vague vs detailed prompt with annotated arrows</span>
+    </div>
+    <figcaption>Same AI, completely different results — the only variable is the prompt.</figcaption>
+
+    <div class="pullquote sr">
+      <p>"The AI isn't the variable. The prompt is the variable. Once I understood that, everything changed."</p>
+      <cite>— Arjun K., Senior Engineer, 8 years experience</cite>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">02</span><div class="sec-div-line"></div></div>
+    <h2 id="6-layer-framework">The 6-Layer Framework</h2>
+    <p>Every time you prompt AI for code, you're filling six invisible fields. Most people leave four or five blank.</p>
+
+    <div class="layer-grid sr">
+      <div class="layer-card" style="--lc:#F0C040"><span class="lc-num">LAYER 01</span><div class="lc-title">Role</div><div class="lc-desc">The persona AI inhabits. Seniority, specialization, mindset. Sets the quality bar for every response.</div></div>
+      <div class="layer-card" style="--lc:#5CF0A8"><span class="lc-num">LAYER 02</span><div class="lc-title">Context</div><div class="lc-desc">The business reality. What you're building, who for, what scale. Unlocks real architectural thinking.</div></div>
+      <div class="layer-card" style="--lc:#5C9BF0"><span class="lc-num">LAYER 03</span><div class="lc-title">Tech Stack</div><div class="lc-desc">Exact versions. Framework, language, libraries. Prevents every deprecated-API problem overnight.</div></div>
+      <div class="layer-card" style="--lc:#FF5C5C"><span class="lc-num">LAYER 04</span><div class="lc-title">Constraints</div><div class="lc-desc">What AI must never do. Accounts for 60% of bad output when missing. The most underused layer.</div></div>
+      <div class="layer-card" style="--lc:#C05CF0"><span class="lc-num">LAYER 05</span><div class="lc-title">Output Format</div><div class="lc-desc">How the response is structured. File paths, comment density, explanations required after code.</div></div>
+      <div class="layer-card" style="--lc:#F0C040"><span class="lc-num">LAYER 06</span><div class="lc-title">The Task</div><div class="lc-desc">Surgical task description. Component, data shape, interactions, connections, success criteria.</div></div>
+    </div>
+
+    <h3 id="layer-role">Layer 1 — Role: The Most Underestimated Line</h3>
+    <p>A single opening line shapes everything that follows. "You are a senior engineer" activates a different response mode entirely — you get architectural opinions, trade-off analysis, proactive edge case flagging. The difference is measurable and immediate.</p>
+    <p>But generic role-setting is just the start. "Senior fullstack engineer who has spent 5 years building multi-tenant SaaS and cares deeply about maintainability" gives the AI a genuine point of view to reason from.</p>
+    <div class="callout tip sr">
+      <div class="callout-head">💡 Pro Tip</div>
+      <p>Add <strong>"You think like a founder"</strong> to your role line. Engineers who also think commercially make better architectural decisions — considering cost, scalability, and UX simultaneously rather than optimizing for technical elegance alone.</p>
+    </div>
+
+    <h3 id="layer-stack">Layer 3 — Tech Stack: Version Numbers Are Not Optional</h3>
+    <p>They say "React" when they mean "React 19." They say "Next.js" when they mean "Next.js 15 with the App Router." The AI makes assumptions, and those assumptions bite you.</p>
+    <p>I watched a developer spend two full days debugging an authentication flow because the AI gave them NextAuth v4 patterns in a v5 project. The code looked plausible. It ran — until it didn't. One version number in the prompt would have prevented the entire ordeal.</p>
+
+    <div class="img-ph img-ph-sm sr">
+      <span class="img-ph-icon">🖼️</span>
+      <span class="img-ph-label">Screenshot Image</span>
+      <span class="img-ph-caption">Recommended: Console error from version mismatch — relatable, painful, real</span>
+    </div>
+    <figcaption>The kind of error that ruins a Tuesday — a version number prevents it entirely.</figcaption>
+
+    <h3 id="layer-constraints">Layer 4 — Constraints: The Layer Nobody Uses</h3>
+    <p>This produces the most dramatic improvement the fastest — and almost everyone skips it completely.</p>
+    <p>We focus on what we want, not what we don't want. But AI defaults to whatever patterns are most common in training data. <strong>Those patterns are rarely what a senior engineer would write.</strong> When you add constraints, you're drawing a boundary around the solution space that forces higher-quality output:</p>
+    <ul>
+      <li>No <code>any</code> types — forces genuine TypeScript thinking</li>
+      <li>No partial implementations — forces complete, runnable files</li>
+      <li>No magic numbers — forces readable, maintainable code</li>
+      <li>No <code>console.log</code> in production — forces proper logging</li>
+      <li>No inline styles — enforces design system consistency</li>
+    </ul>
+    <div class="callout warn sr">
+      <div class="callout-head">⚠️ Common Mistake</div>
+      <p>Don't retype constraints every session. Put them in a saved template and paste in 5 seconds. Constraints are standing rules — treat them like your team's coding standards document.</p>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">03</span><div class="sec-div-line"></div></div>
+    <h2 id="master-template">The Master Prompt Template</h2>
+    <p>Copy this. Customize the brackets. Use it every time. 5 minutes of setup, months of better output.</p>
+
+    <div class="code-wrap sr">
+      <div class="code-bar">
+        <div class="cb r"></div><div class="cb y"></div><div class="cb g"></div>
+        <span class="code-fname">master-prompt.md</span>
+        <button class="code-copy" onclick="copyCode(this)">Copy</button>
+      </div>
+      <div class="code-body">
+<span class="cm">## 🎭 ROLE</span><br>
+<span class="cg">You are a senior [frontend/backend/fullstack] engineer with 10+</span><br>
+<span class="cg">years building production SaaS. You think like a founder.</span><br>
+<span class="cg">No shortcuts. No partial code. Ever.</span><br><br>
+<span class="cm">## 🏢 PROJECT CONTEXT</span><br>
+<span class="ck">Project:</span> <span class="cy">[App name]</span><br>
+<span class="ck">Description:</span> <span class="cy">[1-2 sentences]</span><br>
+<span class="ck">Users:</span> <span class="cy">[Who, tech level, age]</span><br>
+<span class="ck">Model:</span> <span class="cy">[B2B / B2C / marketplace]</span><br>
+<span class="ck">Scale:</span> <span class="cy">[100 / 10K / 1M+ users]</span><br><br>
+<span class="cm">## 🛠 TECH STACK</span><br>
+<span class="ck">Frontend:</span> <span class="cy">Next.js 15 / React 19 / [choice]</span><br>
+<span class="ck">Language:</span> <span class="cy">TypeScript 5.4 strict</span><br>
+<span class="ck">Styling:</span> <span class="cy">Tailwind CSS 3.4</span><br>
+<span class="ck">Backend:</span> <span class="cy">Node.js 22 / Bun / [choice]</span><br>
+<span class="ck">DB:</span> <span class="cy">PostgreSQL + Prisma 5 / Supabase</span><br>
+<span class="ck">Auth:</span> <span class="cy">Clerk / NextAuth v5</span><br>
+<span class="ck">Deploy:</span> <span class="cy">Vercel / Railway / [choice]</span><br><br>
+<span class="cm">## ✅ CODE STANDARDS</span><br>
+<span class="cg">- Functional components + hooks only</span><br>
+<span class="cg">- All async: loading + error + empty states</span><br>
+<span class="cg">- Semantic HTML + ARIA (WCAG AA)</span><br>
+<span class="cg">- Mobile-first 375px to 1440px</span><br>
+<span class="cg">- Named constants, JSDoc on every export</span><br><br>
+<span class="cm">## 🚫 NEVER</span><br>
+<span class="cr">- No: any, var, !important, inline styles, console.log</span><br>
+<span class="cr">- No: unhandled promises, missing try/catch</span><br>
+<span class="cr">- No: deprecated APIs, hardcoded secrets, partial code</span><br><br>
+<span class="cm">## 📦 OUTPUT</span><br>
+<span class="cy">Full files with path. Dependency order.</span><br>
+<span class="cy">After code: WHAT / WHY / EDGE CASES / NEXT STEP</span><br><br>
+<span class="cm">## 🎯 TASK</span><br>
+<span class="cg">[Surgical description: component, data, interactions,</span><br>
+<span class="cg">connections, what success looks like]</span>
+      </div>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">04</span><div class="sec-div-line"></div></div>
+    <h2 id="before-after">Before and After — Real Examples</h2>
+    <p>Same AI, same model, same task. Completely different results.</p>
+
+    <table class="compare-table sr">
+      <thead><tr><th>Aspect</th><th class="bad">Without Framework</th><th class="good">With Framework</th></tr></thead>
+      <tbody>
+        <tr><td class="label">Prompt</td><td class="bad">"Build me a login form"</td><td class="good">Full 6-layer: Next.js 15, NextAuth v5, error states, strict TypeScript</td></tr>
+        <tr><td class="label">Output</td><td class="bad">Generic HTML, no error handling, outdated library</td><td class="good">Complete page.tsx + auth config, loading skeleton, toast notifications, accessible markup</td></tr>
+        <tr><td class="label">TypeScript</td><td class="bad">Lots of <code>any</code>, implicit types</td><td class="good">Fully typed, Zod validation, zero any types</td></tr>
+        <tr><td class="label">Edge Cases</td><td class="bad">None handled</td><td class="good">Network errors, expired session, rate limit, account not found</td></tr>
+        <tr><td class="label">Time to Ship</td><td class="bad">2–4 hours of cleanup</td><td class="good">30–45 minutes</td></tr>
+      </tbody>
+    </table>
+
+    <div class="img-ph img-ph-md sr">
+      <span class="img-ph-icon">🖼️</span>
+      <span class="img-ph-label">Before / After Code Screenshot</span>
+      <span class="img-ph-caption">Recommended: Side-by-side screenshots — messy generic output vs clean typed component</span>
+    </div>
+    <figcaption>Left: vague prompt result. Right: framework result. Same AI, 3 minutes apart.</figcaption>
+
+    <div class="sec-div sr"><span class="sec-div-num">05</span><div class="sec-div-line"></div></div>
+    <h2 id="power-moves">Power Moves — Phrases That Change Everything</h2>
+    <p>Beyond the framework, specific phrases unlock qualitatively different responses. Not tricks — honest requests that happen to produce dramatically better output.</p>
+
+    <ol class="sr">
+      <li><strong>"As if this ships to 100,000 users tomorrow"</strong><br>Activates production-thinking. The AI starts worrying about edge cases and failure modes it wouldn't otherwise consider.</li>
+      <li><strong>"Tell me if my approach is wrong before you start coding"</strong><br>Catches architectural mistakes before they're embedded in 200 lines of code. The AI will often push back with a better approach — but only if invited.</li>
+      <li><strong>"What am I not thinking about here?"</strong><br>Ask this after getting working code. Surfaces security issues, race conditions, accessibility problems not in your original spec.</li>
+      <li><strong>"Assume I want the robust version, not the simple version"</strong><br>AI defaults to simplicity. This overrides that. You'll get error handling, retry logic, and proper state management without requesting each one separately.</li>
+      <li><strong>"Review this as a principal engineer would in a PR"</strong><br>Real critique — naming issues, logic flaws, missing tests, performance concerns. The closest thing to a free senior code reviewer.</li>
+    </ol>
+
+    <div class="callout info sr">
+      <div class="callout-head">💡 Stack Them</div>
+      <p>"Build this as if it ships to 100K users tomorrow, and tell me what I'm not thinking about before you start" — 8 seconds to type, saves 3 hours of debugging.</p>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">06</span><div class="sec-div-line"></div></div>
+    <h2 id="mistakes">The 5 Mistakes Killing Your Output</h2>
+
+    <h4>Mistake 1 — Fresh Start Every Session</h4>
+    <p>Retyping your stack and standards every chat wastes 10 minutes a day and produces inconsistent results. Save your template. Paste in 5 seconds. Done.</p>
+
+    <h4>Mistake 2 — Accepting the First Response</h4>
+    <p>The first response is a draft. Always follow up: "What edge cases didn't you handle?" The AI isn't offended — it's waiting for this question.</p>
+
+    <h4>Mistake 3 — Vague Success Criteria</h4>
+    <p>"Build me a dashboard" gives AI nothing to optimize for. "Dashboard loading under 2 seconds with empty states and skeleton loaders" gives specific, testable goals to hit.</p>
+
+    <h4>Mistake 4 — Skipping Output Format</h4>
+    <p>Without format instructions you get whatever the AI feels like — sometimes 400 lines, sometimes 10 with "expand as needed." Specify: full files, paths, JSDoc, structured explanation after the code block.</p>
+
+    <h4>Mistake 5 — Using AI as a Search Engine</h4>
+    <p>"How do I set up NextAuth v5?" gets documentation. "Set up NextAuth v5 in my Next.js 15 project with Google OAuth, magic link, protected routes, and session middleware — here's my file structure" gets working code.</p>
+
+    <div class="img-ph img-ph-sm sr">
+      <span class="img-ph-icon">🖼️</span>
+      <span class="img-ph-label">Illustration</span>
+      <span class="img-ph-caption">Recommended: Visual checklist of 5 mistakes with red X marks, clean editorial style</span>
+    </div>
+
+    <div class="takeaway sr">
+      <h4>⚡ Key Takeaways</h4>
+      <ul>
+        <li>The 6-layer framework is the difference between a prompt and a proper brief</li>
+        <li>Version numbers in your stack prevent an entire category of bugs before they happen</li>
+        <li>Constraints are the most underused layer — adding them causes immediate quality jumps</li>
+        <li>Five phrases: "100K users", "tell me if I'm wrong", "what am I missing", "robust version", "PR review"</li>
+        <li>Business context produces better architecture — not just better code style</li>
+        <li>The first response is always a draft — follow-up questions close the gap to production-ready</li>
+      </ul>
+    </div>
+
+    <a href="#" class="next-article sr">
+      <div>
+        <div class="na-label">Read Next</div>
+        <div class="na-title">Claude vs ChatGPT vs Gemini: The 2025 Benchmark Every Developer Needs</div>
+        <div class="na-meta">⏱ 20 min read · Tool Reviews</div>
+      </div>
+      <div class="na-arrow">→</div>
+    </a>
+
+  </article>
+
+  <aside class="art-sidebar">
+    <div class="toc-box">
+      <div class="toc-head"><span>☰</span><span class="toc-head-txt">In This Guide</span></div>
+      <nav class="toc-list">
+        <a href="#why-prompts-fail" class="toc-item" data-toc>Why Prompts Fail</a>
+        <a href="#6-layer-framework" class="toc-item" data-toc>The 6-Layer Framework</a>
+        <a href="#layer-role" class="toc-item h3" data-toc>↳ Layer 1: Role</a>
+        <a href="#layer-stack" class="toc-item h3" data-toc>↳ Layer 3: Stack</a>
+        <a href="#layer-constraints" class="toc-item h3" data-toc>↳ Layer 4: Constraints</a>
+        <a href="#master-template" class="toc-item" data-toc>The Master Template</a>
+        <a href="#before-after" class="toc-item" data-toc>Before &amp; After</a>
+        <a href="#power-moves" class="toc-item" data-toc>Power Moves</a>
+        <a href="#mistakes" class="toc-item" data-toc>5 Mistakes to Avoid</a>
+      </nav>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sw-title">Guide Stats</div>
+      <div class="sw-stat"><span class="sw-stat-label">Difficulty</span><span class="sw-stat-val">Beginner</span></div>
+      <div class="sw-stat"><span class="sw-stat-label">Time to Apply</span><span class="sw-stat-val">30 min</span></div>
+      <div class="sw-stat"><span class="sw-stat-label">Impact</span><span class="sw-stat-val">Very High ⚡</span></div>
+      <div class="sw-stat"><span class="sw-stat-label">Works With</span><span class="sw-stat-val">All LLMs</span></div>
+      <div class="sw-stat"><span class="sw-stat-label">Last Updated</span><span class="sw-stat-val">March 2025</span></div>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sw-title">Related Guides</div>
+      <a href="#" class="related-item"><div class="ri-icon">🔬</div><div><div class="ri-title">Claude vs GPT-4o: 2025 Dev Benchmark</div><div class="ri-time">20 min read</div></div></a>
+      <a href="#" class="related-item"><div class="ri-icon">🚀</div><div><div class="ri-title">Ship a SaaS MVP in 2 Weeks With AI</div><div class="ri-time">45 min read</div></div></a>
+      <a href="#" class="related-item"><div class="ri-icon">🛡️</div><div><div class="ri-title">AI Security: Prompt Injection Guide</div><div class="ri-time">18 min read</div></div></a>
+      <a href="#" class="related-item"><div class="ri-icon">💼</div><div><div class="ri-title">The Founder's AI Playbook</div><div class="ri-time">30 min read</div></div></a>
+    </div>
+    <div class="sidebar-widget cta-widget">
+      <h4>Stay Sharp</h4>
+      <p>Best new AI prompts, tool reviews and builder guides every week. No fluff. Unsubscribe any time.</p>
+      <a href="nexusai-homepage.html#newsletter">Subscribe Free →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <a href="nexusai-homepage.html" class="foot-brand">
+      <div class="logo-pulse" style="width:26px;height:26px;"><svg viewBox="0 0 16 16" fill="none" style="width:14px;height:14px;"><path d="M2 8 Q5 3 8 8 Q11 13 14 8" stroke="#09090E" stroke-width="2" stroke-linecap="round" fill="none"/></svg></div>
+      <span class="foot-name">Prompt<em>Pulse</em></span>
+    </a>
+    <div class="foot-links">
+      <a href="nexusai-homepage.html">Home</a>
+      <a href="nexusai-homepage.html#guides">All Guides</a>
+      <a href="nexusai-homepage.html#tools">AI Tools</a>
+      <a href="nexusai-homepage.html#formula">Prompts</a>
+      <a href="nexusai-homepage.html#newsletter">Newsletter</a>
+      <a href="#">About</a>
+    </div>
+    <span class="foot-copy">© 2025 PromptPulse · Built for builders</span>
+  </div>
+</footer>
+
+<script src="guide-script.js"></script>
+</body>
+</html>

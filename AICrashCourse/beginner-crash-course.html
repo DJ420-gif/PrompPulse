@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Zero to Hero: The Complete Beginner Crash Course — PromptPulse</title>
+<meta name="description" content="Never used AI seriously? Start here. Understand LLMs, prompts, and context windows in plain English. Go from curious to capable in one weekend — no CS degree needed.">
+<meta name="keywords" content="AI for beginners, learn AI tools, how to use ChatGPT, AI crash course, prompt engineering basics 2026">
+<meta name="author" content="PromptPulse">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="guide-style.css">
+<style>
+/* extra styles for this page */
+.progress-path{display:flex;flex-direction:column;gap:0;margin:40px 0;}
+.pp-item{display:flex;gap:20px;padding:24px 0;position:relative;}
+.pp-item:not(:last-child)::after{content:'';position:absolute;left:19px;top:60px;
+  width:2px;bottom:0;background:linear-gradient(var(--bdr),transparent);}
+.pp-circle{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  font-size:14px;font-weight:800;flex-shrink:0;font-family:var(--mono);
+  background:rgba(240,192,64,.1);border:2px solid var(--acc);color:var(--acc);}
+.pp-body h4{font-family:var(--serif);font-size:18px;margin-bottom:6px;}
+.pp-body p{font-size:13px;color:var(--muted2);line-height:1.7;}
+.concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0;}
+.concept-card{background:var(--s1);border:1px solid var(--bdr);border-radius:10px;
+  padding:20px;transition:all .3s;}
+.concept-card:hover{border-color:var(--cc,var(--acc));transform:translateY(-3px);}
+.cc-icon{font-size:28px;margin-bottom:10px;display:block;}
+.cc-title{font-family:var(--serif);font-size:17px;color:var(--cc,var(--acc));margin-bottom:6px;}
+.cc-desc{font-size:12px;color:var(--muted2);line-height:1.65;}
+.analogy-box{background:var(--s2);border:1px solid var(--bdr2);border-radius:10px;
+  padding:24px 28px;margin:28px 0;}
+.ab-label{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+  color:var(--acc);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.ab-label::before{content:'💡';}
+.ab-text{font-size:15px;color:var(--txt);line-height:1.75;font-style:italic;}
+.checklist{display:flex;flex-direction:column;gap:8px;margin:20px 0;}
+.cl-item{display:flex;align-items:flex-start;gap:12px;padding:10px 14px;
+  background:var(--s1);border:1px solid var(--bdr);border-radius:8px;}
+.cl-check{width:20px;height:20px;border-radius:4px;background:rgba(92,240,168,.1);
+  border:1px solid var(--acc3);display:grid;place-items:center;
+  font-size:11px;color:var(--acc3);flex-shrink:0;margin-top:1px;}
+.cl-text{font-size:13px;color:var(--muted2);line-height:1.6;}
+.cl-text strong{color:var(--txt);}
+.model-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0;}
+.mc{background:var(--s1);border:1px solid var(--bdr);border-radius:10px;padding:18px;
+  text-align:center;transition:all .3s;}
+.mc:hover{border-color:var(--mc,var(--acc));transform:translateY(-3px);}
+.mc-emoji{font-size:32px;display:block;margin-bottom:10px;}
+.mc-name{font-family:var(--serif);font-size:15px;color:var(--mc,var(--acc));margin-bottom:4px;}
+.mc-maker{font-size:10px;color:var(--muted);letter-spacing:1px;margin-bottom:8px;}
+.mc-tag{font-size:10px;font-weight:700;padding:3px 8px;border-radius:100px;
+  background:rgba(240,192,64,.1);color:var(--mc,var(--acc));}
+@media(max-width:768px){
+  .concept-grid{grid-template-columns:1fr;}
+  .model-cards{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){.model-cards{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <div class="logo-pulse">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M2 8 Q5 3 8 8 Q11 13 14 8" stroke="#09090E" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+    </div>
+    <span class="logo-name">Prompt<em>Pulse</em></span>
+  </a>
+  <div class="nav-mid">
+    <a href="../index.html#guides" class="active">Guides</a>
+    <a href="ai-tools-clean.html">Tools</a>
+    <a href="../index.html#formula">Prompts</a>
+    <a href="../index.html#newsletter">Newsletter</a>
+  </div>
+  <div class="nav-right">
+    <a href="../index.html" class="nav-home">← Home</a>
+    <a href="../index.html#newsletter" class="nav-cta">Subscribe Free</a>
+  </div>
+</nav>
+
+<div class="art-hero">
+  <div class="hero-glow"></div>
+  <div class="art-hero-inner">
+    <div class="art-breadcrumb">
+      <a href="../index.html">Home</a><span>/</span>
+      <a href="../index.html#guides">Guides</a><span>/</span>
+      <span>Beginner Course</span>
+    </div>
+    <div class="art-cat">🎓 Beginner Course</div>
+    <h1 class="art-h1">AI Zero to Hero:<br>The <em>Complete Crash Course</em></h1>
+    <p class="art-deck">You've heard AI can 10x your productivity. You've seen the demos. But every time you try it yourself, the results are... fine. This guide explains why — and fixes it permanently.</p>
+    <div class="art-meta">
+      <div class="meta-author">
+        <div class="meta-av">PP</div>
+        <div><div class="meta-name">PromptPulse Editorial</div><div class="meta-date">March 2026 · Beginner Friendly</div></div>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-stat">⏱ <strong>60 min</strong>&nbsp;read</div>
+      <div class="meta-sep"></div>
+      <div class="meta-stat">🎯 <strong>Beginner</strong></div>
+      <div class="meta-sep"></div>
+      <div class="meta-stat">👁 <strong>32.1K</strong>&nbsp;views</div>
+      <div class="art-share">
+        <button class="share-btn" onclick="copyLink()" title="Copy link">🔗</button>
+        <a class="share-btn" href="#" title="Share on X">𝕏</a>
+        <a class="share-btn" href="#" title="Share on LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:760px;margin:0 auto;padding:0 clamp(16px,4vw,56px);">
+  <div class="img-ph img-ph-lg" style="margin-top:32px;">
+    <span class="img-ph-icon">🖼️</span>
+    <span class="img-ph-label">Hero Image</span>
+    <span class="img-ph-hint">Recommended: 1400×700px · Person at laptop, light bulb moment, warm friendly lighting — approachable not intimidating</span>
+  </div>
+</div>
+
+<div class="art-layout">
+  <article class="art-body">
+
+    <p>Let me be honest with you about something. When most people say they "use AI," what they actually mean is they open ChatGPT, type a question the way they'd type it into Google, get a mediocre answer, shrug and close the tab. Then they go back to doing things the slow way.</p>
+
+    <p>That's not using AI. That's using AI wrong. And it's not your fault — nobody taught you the right way. The good news is that once you understand <strong>how these tools actually work under the hood</strong>, even just conceptually, your results improve dramatically and immediately.</p>
+
+    <p>This guide is designed for someone who has used AI casually but wants to start using it seriously. No computer science required. No jargon without explanation. Just a clear, honest explanation of what's happening and how to get the most from it.</p>
+
+    <div class="stat-highlights sr">
+      <div class="sh-item"><span class="sh-num">5</span><span class="sh-lbl">Core Concepts</span></div>
+      <div class="sh-item"><span class="sh-num">60</span><span class="sh-lbl">Min to Complete</span></div>
+      <div class="sh-item"><span class="sh-num">∞</span><span class="sh-lbl">Value After</span></div>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">01</span><div class="sec-div-line"></div></div>
+    <h2 id="what-is-ai">What AI Actually Is (And Isn't)</h2>
+
+    <p>First, let's kill a myth. AI tools like ChatGPT, Claude and Gemini are not search engines. They are not databases of facts that you query for answers. They are not connected to the internet in real time (unless specifically told to search). They don't "know" things the way you know your phone number.</p>
+
+    <p>What they actually are is this: <strong>incredibly sophisticated pattern-completion machines</strong> that were trained on an enormous amount of human writing. When you type a message, the AI predicts what text would most plausibly come next, given everything it learned during training and everything you've told it in the current conversation.</p>
+
+    <div class="analogy-box sr">
+      <div class="ab-label">The Best Analogy</div>
+      <div class="ab-text">"Imagine hiring a brilliant person who has read every book, article, forum post and code repository ever written — but who graduated and never read anything again after a certain date. They're incredibly knowledgeable and can reason about almost anything, but they only know what was in those books, and they have no memory of any previous conversation you've had with them."</div>
+    </div>
+
+    <p>That analogy captures the three most important things to understand: AI is knowledgeable, AI has a knowledge cutoff date, and AI has no memory between sessions. Each of these has practical implications for how you use it.</p>
+
+    <div class="img-ph img-ph-md sr">
+      <span class="img-ph-icon">🖼️</span>
+      <span class="img-ph-label">Diagram</span>
+      <span class="img-ph-hint">Recommended: 800×400px · Simple diagram showing how LLMs work — input → processing → output with human-friendly labels</span>
+    </div>
+    <figcaption>How an LLM processes your message — simplified but accurate.</figcaption>
+
+    <div class="sec-div sr"><span class="sec-div-num">02</span><div class="sec-div-line"></div></div>
+    <h2 id="key-concepts">5 Concepts That Change Everything</h2>
+
+    <p>You don't need to understand the math behind AI to use it well. But you do need to understand these five concepts. Each one directly changes how you write prompts and what results you get.</p>
+
+    <div class="concept-grid sr">
+      <div class="concept-card" style="--cc:#F0C040">
+        <span class="cc-icon">🧠</span>
+        <div class="cc-title">Context Window</div>
+        <div class="cc-desc">The amount of text an AI can "see" at once in a conversation. Longer context = AI can consider more information. Once you exceed the limit, it forgets earlier parts of the chat.</div>
+      </div>
+      <div class="concept-card" style="--cc:#5CF0A8">
+        <span class="cc-icon">🌡️</span>
+        <div class="cc-title">Temperature</div>
+        <div class="cc-desc">How creative vs predictable the AI's responses are. Low temperature = precise and consistent. High temperature = creative and varied. Most tools let you control this.</div>
+      </div>
+      <div class="concept-card" style="--cc:#5C9BF0">
+        <span class="cc-icon">⏰</span>
+        <div class="cc-title">Training Cutoff</div>
+        <div class="cc-desc">The date after which the AI has no knowledge. Ask about events after this date and it either guesses or admits it doesn't know. Always verify time-sensitive facts.</div>
+      </div>
+      <div class="concept-card" style="--cc:#FF5C5C">
+        <span class="cc-icon">🎭</span>
+        <div class="cc-title">System Prompt</div>
+        <div class="cc-desc">Instructions given to the AI before your conversation starts. This is how tools like ChatGPT are customized — there are hidden instructions shaping every response.</div>
+      </div>
+      <div class="concept-card" style="--cc:#C05CF0">
+        <span class="cc-icon">🔢</span>
+        <div class="cc-title">Tokens</div>
+        <div class="cc-desc">The unit AI uses to measure text. Roughly 1 token = 0.75 words. This matters for pricing (you pay per token) and context limits (measured in tokens, not words).</div>
+      </div>
+      <div class="concept-card" style="--cc:#F0C040">
+        <span class="cc-icon">🔄</span>
+        <div class="cc-title">Hallucination</div>
+        <div class="cc-desc">When AI confidently states something that is simply wrong. It's not lying — it's pattern-matching gone off-track. Always verify critical facts from AI with a primary source.</div>
+      </div>
+    </div>
+
+    <div class="callout tip sr">
+      <div class="callout-head">💡 The Hallucination Rule</div>
+      <p>If what the AI tells you matters — a legal fact, a medical detail, a historical date, a technical specification — verify it. AI is a brilliant first draft of an answer, not the final word. The fastest way to get in trouble with AI is to trust it blindly on things that can be verified.</p>
+    </div>
+
+    <div class="sec-div sr"><span class="sec-div-num">03</span><div class="sec-div-line"></div></div>
+    <h2 id="which-tool">Which Tool Should You Start With?</h2>
+
+    <p>In 2026, there are more AI tools than ever — and the gap between them is smaller than the marketing suggests. Here's the honest breakdown for beginners:</p>
+
+    <div class="model-cards sr">
+      <div class="mc" style="--mc:#5C9BF0">
+        <span class="mc-emoji">🤖</span>
+        <div class="mc-name">Claude</div>
+        <div class="mc-maker">Anthropic</div>
+        <span class="mc-tag" style="background:rgba(92,155,240,.1);color:#5C9BF0;">Best for coding</span>
+      </div>
+      <div class="mc" style="--mc:#5CF0A8">
+        <span class="mc-emoji">💬</span>
+        <div class="mc-name">ChatGPT</div>
+        <div class="mc-maker">OpenAI</div>
+        <span class="mc-tag" style="background:rgba(92,240,168,.1);color:#5CF0A8;">Best all-rounder</span>
+      </div>
+      <div class="mc" style="--mc:#F0C040">
+        <span class="mc-emoji">🔷</span>
+        <div class="mc-name">Gemini</div>
+        <div class="mc-maker">Google</div>
+        <span class="mc-tag">Best free option</span>
+      </div>
+    </div>
+
+    <p>My honest recommendation for a beginner: <strong>start with ChatGPT's free tier</strong>. The interface is the most polished, the free version is genuinely capable, and there are more beginner tutorials for it than anything else. Once you outgrow it — and you will — switch to Claude for coding or keep both running.</p>
+
+    <div class="sec-div sr"><span class="sec-div-num">04</span><div class="sec-div-line"></div></div>
+    <h2 id="first-prompts">Writing Your First Good Prompts</h2>
+
+    <p>Most people start by typing one sentence and hoping for the best. That works about 20% of the time. Here's what the other 80% looks like — and why the difference is so dramatic.</p>
+
+    <div class="callout warn sr">
+      <div class="callout-head">❌ What Most Beginners Do</div>
+      <p>"Write me a cover letter for a marketing job"</p>
+    </div>
+
+    <p>The AI has no idea what job, what company, what your experience is, what tone you want, how long it should be, or what you want it to emphasise. It will write something generic that could apply to literally anyone — which is useless.</p>
+
+    <div class="callout tip sr">
+      <div class="callout-head">✅ What Actually Works</div>
+      <p>"Write a cover letter for a Senior Marketing Manager role at a B2B SaaS company called Notion. I have 5 years of experience in content marketing and grew organic traffic by 300% at my last job. The tone should be confident but not arrogant, around 250 words, focused on results not responsibilities."</p>
+    </div>
+
+    <p>Same task. Completely different output. The second prompt takes 30 seconds longer to write and saves you 20 minutes of editing. That's the trade-off every time — <strong>a little more input gets dramatically better output.</strong></p>
+
+    <h3 id="the-3-rules">The 3 Golden Rules for Beginners</h3>
+
+    <div class="checklist sr">
+      <div class="cl-item">
+        <div class="cl-check">1</div>
+        <div class="cl-text"><strong>Give context, not just a command.</strong> Who are you, what are you building, who is it for? The more the AI knows about your situation, the more tailored the answer.</div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-check">2</div>
+        <div class="cl-text"><strong>Specify the format you want.</strong> "In bullet points." "As a table." "In under 100 words." "Explained like I'm 12." Format instructions dramatically change output quality.</div>
+      </div>
+      <div class="cl-item">
+        <div class="cl-check">3</div>
+        <div class="cl-text"><strong>Iterate, don't restart.</strong> If the first response isn't quite right, don't start a new chat. Say "make it shorter" or "make it more formal" or "add a section on X." Refining is faster than restarting.</div>
+      </div>
+    </div>
+
+    <div class="img-ph img-ph-md sr">
+      <span class="img-ph-icon">🖼️</span>
+      <span class="img-ph-label">Before / After Screenshot</span>
+      <span class="img-ph-hint">Recommended: 800×400px · Side-by-side of vague prompt vs detailed prompt and their outputs</span>
+    </div>
+    <figcaption>Thirty extra seconds of context in your prompt. Hours saved in editing.</figcaption>
+
+    <div class="sec-div sr"><span class="sec-div-num">05</span><div class="sec-div-line"></div></div>
+    <h2 id="common-uses">10 Things You Can Do With AI Right Now</h2>
+
+    <p>Theory is great. But the fastest way to actually learn AI is to use it on real problems today. Here are ten things you can do in the next hour — no technical background required.</p>
+
+    <ol class="sr">
+      <li><strong>Summarise any document.</strong> Paste in a long contract, report or article and ask "summarise the 5 most important points." Saves hours of reading.</li>
+      <li><strong>Improve your writing.</strong> Paste anything you've written and ask "make this clearer and more professional while keeping my voice." Works for emails, reports, anything.</li>
+      <li><strong>Explain anything confusing.</strong> Paste in a confusing piece of text and ask "explain this in plain English." Legal documents, technical specs, tax forms — all fair game.</li>
+      <li><strong>Brainstorm ideas.</strong> "Give me 20 ideas for a side project a designer could build solo." Just having a list to react to is 10x faster than staring at a blank page.</li>
+      <li><strong>Draft emails you've been avoiding.</strong> "Write a polite but firm email asking for a refund from a hotel that overcharged me." Done in 30 seconds.</li>
+      <li><strong>Learn any topic faster.</strong> "Explain how compound interest works using a real example with numbers." Better than most textbooks.</li>
+      <li><strong>Write basic code.</strong> "Write a Python script that renames all files in a folder by adding today's date at the start." No coding knowledge needed.</li>
+      <li><strong>Build a plan.</strong> "Give me a week-by-week plan to learn Spanish from zero to conversational in 6 months." Structured plans in seconds.</li>
+      <li><strong>Research a topic.</strong> "What are the main arguments for and against remote work? Give me both sides fairly." Better starting point than a Google search.</li>
+      <li><strong>Practice for interviews.</strong> "Act as a tough interviewer for a product manager role. Ask me questions and give feedback on my answers." Unlimited practice, zero judgment.</li>
+    </ol>
+
+    <div class="sec-div sr"><span class="sec-div-num">06</span><div class="sec-div-line"></div></div>
+    <h2 id="what-next">Where to Go From Here</h2>
+
+    <p>You now understand what AI tools actually are, the five concepts that govern how they work, which tool to start with, how to write prompts that get real results, and ten things you can do right now.</p>
+    <p>That puts you ahead of roughly 80% of people who "use AI." The next step is getting the results that put you in the top 5% — and that's what the rest of PromptPulse is built for.</p>
+
+    <div class="takeaway sr">
+      <h4>⚡ Key Takeaways</h4>
+      <ul>
+        <li>AI is a pattern-completion machine, not a search engine — understanding this changes how you use it</li>
+        <li>Context window, temperature, hallucination, tokens and training cutoff are the 5 concepts every user needs</li>
+        <li>Start with ChatGPT free tier — graduate to Claude when you're doing serious coding work</li>
+        <li>Three rules: give context, specify format, iterate don't restart</li>
+        <li>The gap between a vague and specific prompt is the gap between mediocre and excellent output</li>
+        <li>Always verify critical facts — AI is a brilliant first draft, not a primary source</li>
+      </ul>
+    </div>
+
+    <a href="guide-prompt-engineering-1.html" class="next-article sr">
+      <div>
+        <div class="na-label">Read Next</div>
+        <div class="na-title">The Ultimate Coding AI Prompt Guide — The 6-Layer Framework</div>
+        <div class="na-meta">⏱ 15 min read · Prompt Engineering</div>
+      </div>
+      <div class="na-arrow">→</div>
+    </a>
+
+  </article>
+
+  <aside class="art-sidebar">
+    <div class="toc-box">
+      <div class="toc-head"><span>☰</span><span class="toc-head-txt">In This Guide</span></div>
+      <nav class="toc-list">
+        <a href="#what-is-ai" class="toc-item" data-toc>What AI Actually Is</a>
+        <a href="#key-concepts" class="toc-item" data-toc>5 Key Concepts</a>
+        <a href="#which-tool" class="toc-item" data-toc>Which Tool to Start With</a>
+        <a href="#first-prompts" class="toc-item" data-toc>Your First Good Prompts</a>
+        <a href="#the-3-rules" class="toc-item h3" data-toc>↳ The 3 Golden Rules</a>
+        <a href="#common-uses" class="toc-item" data-toc>10 Things to Do Now</a>
+        <a href="#what-next" class="toc-item" data-toc>Where to Go Next</a>
+      </nav>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sw-title">Guide Stats</div>
+      <div class="sw-stat"><span class="sw-stat-label">Difficulty</span><span class="sw-stat-val">Beginner ✅</span></div>
+      <div class="sw-stat"><span class="sw-stat-label">Time to Read</span><span class="sw-stat-val">60 min</span></div>
+      <div class="sw-stat"><span class="sw-stat-label">No CS needed</span><span class="sw-stat-val">100% ✅</span></div>
+      <div class="sw-stat"><span class="sw-stat-label">Last Updated</span><span class="sw-stat-val">March 2026</span></div>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sw-title">Read Next</div>
+      <a href="guide-prompt-engineering-1.html" class="related-item">
+        <div class="ri-icon">⚡</div>
+        <div><div class="ri-title">The 6-Layer Prompt Framework</div><div class="ri-time">15 min read</div></div>
+      </a>
+      <a href="ai-tools-clean.html" class="related-item">
+        <div class="ri-icon">🔬</div>
+        <div><div class="ri-title">Best AI Tools 2026</div><div class="ri-time">10 min read</div></div>
+      </a>
+      <a href="saas-mvp-guide.html" class="related-item">
+        <div class="ri-icon">🚀</div>
+        <div><div class="ri-title">Build a SaaS MVP in 2 Weeks</div><div class="ri-time">45 min read</div></div>
+      </a>
+    </div>
+    <div class="sidebar-widget cta-widget">
+      <h4>Stay Sharp</h4>
+      <p>Weekly AI tips for builders. No fluff. Unsubscribe any time.</p>
+      <a href="../index.html#newsletter">Subscribe Free →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <a href="../index.html" class="foot-brand">
+      <div class="logo-pulse" style="width:26px;height:26px;"><svg viewBox="0 0 16 16" fill="none" style="width:14px;height:14px;"><path d="M2 8 Q5 3 8 8 Q11 13 14 8" stroke="#09090E" stroke-width="2" stroke-linecap="round" fill="none"/></svg></div>
+      <span class="foot-name">Prompt<em>Pulse</em></span>
+    </a>
+    <div class="foot-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#guides">All Guides</a>
+      <a href="ai-tools-clean.html">AI Tools</a>
+      <a href="../index.html#formula">Prompts</a>
+      <a href="../index.html#newsletter">Newsletter</a>
+    </div>
+    <span class="foot-copy">© 2026 PromptPulse · Built for builders</span>
+  </div>
+</footer>
+<script src="guide-script.js"></script>
+</body>
+</html>

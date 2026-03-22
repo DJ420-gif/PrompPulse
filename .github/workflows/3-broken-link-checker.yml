@@ -1,0 +1,48 @@
+name: 🔗 Broken Link Checker
+on:
+  schedule:
+    - cron: '0 8 * * 0'
+  workflow_dispatch:
+  push:
+    branches: [main]
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check key pages are live
+        run: |
+          PAGES=(
+            "https://dj420-gif.github.io/PromptPulse/index.html"
+            "https://dj420-gif.github.io/PromptPulse/AITools/ai-tools.html"
+            "https://dj420-gif.github.io/PromptPulse/Blog/blog.html"
+            "https://dj420-gif.github.io/PromptPulse/prompts/prompts.html"
+            "https://dj420-gif.github.io/PromptPulse/AITools/claude/claude-review.html"
+            "https://dj420-gif.github.io/PromptPulse/AITools/chatgpt/chatgpt-review.html"
+            "https://dj420-gif.github.io/PromptPulse/AITools/grok/grok-review.html"
+            "https://dj420-gif.github.io/PromptPulse/AITools/cursor/cursor-review.html"
+            "https://dj420-gif.github.io/PromptPulse/AITools/GitHub/copilot-review.html"
+            "https://dj420-gif.github.io/PromptPulse/AITools/gemini/gemini-review.html"
+            "https://dj420-gif.github.io/PromptPulse/AITools/Meta/meta-ai-review.html"
+            "https://dj420-gif.github.io/PromptPulse/AICrashCourse/beginner-crash-course.html"
+            "https://dj420-gif.github.io/PromptPulse/SaaSMVP/saas-mvp-guide.html"
+            "https://dj420-gif.github.io/PromptPulse/AISecurityGuide/ai-security-guide.html"
+            "https://dj420-gif.github.io/PromptPulse/2026Benchmark/llm-benchmarks.html"
+            "https://dj420-gif.github.io/PromptPulse/FounderAIPlayBook/founders-playbook.html"
+          )
+          FAIL=0
+          for PAGE in "${PAGES[@]}"; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 "$PAGE")
+            if [[ "$STATUS" == "200" ]]; then
+              echo "✅ $STATUS — $PAGE"
+            else
+              echo "❌ $STATUS — $PAGE"
+              FAIL=1
+            fi
+          done
+          if [ "$FAIL" -eq 1 ]; then
+            echo "⚠️ Some pages returned errors — fix broken links!"
+            exit 1
+          else
+            echo "🎉 All pages live and working!"
+          fi

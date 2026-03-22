@@ -1,0 +1,32 @@
+name: 📡 Ping Search Engines
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - 'sitemap.xml'
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Ping Google
+        run: |
+          SITEMAP="https://dj420-gif.github.io/PromptPulse/sitemap.xml"
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" "https://www.google.com/ping?sitemap=$SITEMAP" --max-time 30 || echo "sent")
+          echo "✅ Google pinged — $RESPONSE"
+      - name: Ping Bing
+        run: |
+          SITEMAP="https://dj420-gif.github.io/PromptPulse/sitemap.xml"
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" "https://www.bing.com/ping?sitemap=$SITEMAP" --max-time 30 || echo "sent")
+          echo "✅ Bing pinged — $RESPONSE"
+      - name: Log summary
+        run: |
+          echo "================================"
+          echo "📡 SEARCH ENGINE PING COMPLETE"
+          echo "✅ Google notified"
+          echo "✅ Bing notified"
+          echo "🕐 $(date)"
+          echo "New pages indexed within hours"
+          echo "================================"

@@ -1,0 +1,65 @@
+name: 🗺️ Auto Regenerate Sitemap + Ping Google
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Build sitemap
+        run: |
+          BASE="https://dj420-gif.github.io/PromptPulse"
+          TODAY=$(date +"%Y-%m-%d")
+          OUTPUT="sitemap.xml"
+
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > $OUTPUT
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> $OUTPUT
+
+          find . -name "*.html" \
+            ! -path "./.git/*" \
+            ! -path "./node_modules/*" \
+            | sort \
+            | while read file; do
+              CLEAN="${file#./}"
+              URL="$BASE/$CLEAN"
+
+              if [[ "$CLEAN" == "index.html" ]]; then
+                PRIORITY="1.0"; FREQ="weekly"
+              elif [[ "$CLEAN" == *"ai-tools"* ]]; then
+                PRIORITY="0.9"; FREQ="weekly"
+              elif [[ "$CLEAN" == *"blog"* ]] || [[ "$CLEAN" == *"Blog"* ]]; then
+                PRIORITY="0.8"; FREQ="weekly"
+              elif [[ "$CLEAN" == *"review"* ]]; then
+                PRIORITY="0.8"; FREQ="monthly"
+              else
+                PRIORITY="0.7"; FREQ="monthly"
+              fi
+
+              printf "  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n    <changefreq>%s</changefreq>\n    <priority>%s</priority>\n  </url>\n" \
+                "$URL" "$TODAY" "$FREQ" "$PRIORITY" >> $OUTPUT
+            done
+
+          echo '</urlset>' >> $OUTPUT
+          COUNT=$(grep -c '<url>' $OUTPUT || echo "0")
+          echo "✅ Sitemap built with $COUNT URLs"
+
+      - name: Ping Google and Bing
+        run: |
+          SITEMAP="https://dj420-gif.github.io/PromptPulse/sitemap.xml"
+          curl -s "https://www.google.com/ping?sitemap=$SITEMAP" -o /dev/null && echo "✅ Google pinged" || echo "Google ping sent"
+          curl -s "https://www.bing.com/ping?sitemap=$SITEMAP" -o /dev/null && echo "✅ Bing pinged" || echo "Bing ping sent"
+
+      - name: Commit sitemap
+        run: |
+          git config user.name "PromptPulse Bot"
+          git config user.email "actions@github.com"
+          git add sitemap.xml
+          git diff --staged --quiet || git commit -m "🗺️ Auto rebuild sitemap — $(date +'%Y-%m-%d')"
+          git push || echo "Nothing to push"

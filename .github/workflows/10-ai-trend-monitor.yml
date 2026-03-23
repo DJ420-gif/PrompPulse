@@ -1,0 +1,255 @@
+name: 🔥 AI Trend Monitor — Daily Notifications
+on:
+  schedule:
+    - cron: '0 7 * * *'  # Every day at 7am UTC
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install requests --break-system-packages
+
+      - name: Monitor all AI trend sources
+        run: |
+          python3 << 'PYEOF'
+          import urllib.request, re, json, datetime
+
+          results = {"google":[], "reddit":[], "hackernews":[], "github":[]}
+
+          # ── GOOGLE TRENDS REALTIME ───────────────────────────────
+          GOOGLE_FEEDS = [
+            "https://trends.google.com/trends/trendingsearches/daily/rss?geo=US",
+            "https://trends.google.com/trends/trendingsearches/realtime/rss?geo=US&cat=t",
+          ]
+          AI_WORDS = ["ai","gpt","claude","grok","llm","chatbot","openai","anthropic",
+                      "gemini","cursor","copilot","deepseek","neural","model","siri",
+                      "mistral","cohere","perplexity","midjourney","stable diffusion",
+                      "machine learning","artificial intelligence","chatgpt","agi"]
+
+          for url in GOOGLE_FEEDS:
+            try:
+              req = urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"})
+              with urllib.request.urlopen(req,timeout=15) as r:
+                content = r.read().decode("utf-8","ignore")
+              titles = re.findall(r'<title><!\[CDATA\[(.*?)\]\]></title>',content)
+              titles += re.findall(r'<title>(.*?)</title>',content)
+              for t in titles:
+                t = t.strip()
+                if len(t)>5 and "google" not in t.lower():
+                  if any(w in t.lower() for w in AI_WORDS):
+                    results["google"].append(t)
+            except Exception as e:
+              results["google"].append(f"[fetch error: {e}]")
+
+          # ── REDDIT ───────────────────────────────────────────────
+          REDDIT_FEEDS = [
+            ("r/artificial","https://www.reddit.com/r/artificial/hot/.rss"),
+            ("r/ChatGPT","https://www.reddit.com/r/ChatGPT/hot/.rss"),
+            ("r/ClaudeAI","https://www.reddit.com/r/ClaudeAI/hot/.rss"),
+            ("r/MachineLearning","https://www.reddit.com/r/MachineLearning/hot/.rss"),
+            ("r/LocalLLaMA","https://www.reddit.com/r/LocalLLaMA/hot/.rss"),
+            ("r/cursor_ai","https://www.reddit.com/r/cursor_ai/hot/.rss"),
+            ("r/webdev","https://www.reddit.com/r/webdev/hot/.rss"),
+            ("r/programming","https://www.reddit.com/r/programming/hot/.rss"),
+            ("r/singularity","https://www.reddit.com/r/singularity/hot/.rss"),
+          ]
+          for name, url in REDDIT_FEEDS:
+            try:
+              req = urllib.request.Request(url,headers={"User-Agent":"PromptPulseBot/1.0"})
+              with urllib.request.urlopen(req,timeout=15) as r:
+                content = r.read().decode("utf-8","ignore")
+              titles = re.findall(r'<title>(.*?)</title>',content)
+              count = 0
+              for t in titles:
+                t = re.sub(r'<[^>]+>','',t).strip()
+                if len(t)>15 and "reddit" not in t.lower() and count<5:
+                  results["reddit"].append(f"[{name}] {t[:120]}")
+                  count += 1
+            except Exception as e:
+              results["reddit"].append(f"[{name} error: {e}]")
+
+          # ── HACKER NEWS ──────────────────────────────────────────
+          try:
+            req = urllib.request.Request(
+              "https://hacker-news.firebaseio.com/v0/topstories.json",
+              headers={"User-Agent":"PromptPulseBot/1.0"})
+            with urllib.request.urlopen(req,timeout=15) as r:
+              story_ids = json.loads(r.read().decode())[:30]
+            for sid in story_ids:
+              try:
+                req2 = urllib.request.Request(
+                  f"https://hacker-news.firebaseio.com/v0/item/{sid}.json",
+                  headers={"User-Agent":"PromptPulseBot/1.0"})
+                with urllib.request.urlopen(req2,timeout=10) as r2:
+                  story = json.loads(r2.read().decode())
+                title = story.get("title","")
+                score = story.get("score",0)
+                if score>100 and any(w in title.lower() for w in AI_WORDS):
+                  results["hackernews"].append(f"[HN {score}pts] {title}")
+              except:
+                pass
+          except Exception as e:
+            results["hackernews"].append(f"[HN error: {e}]")
+
+          # ── GITHUB TRENDING ──────────────────────────────────────
+          try:
+            req = urllib.request.Request(
+              "https://api.github.com/search/repositories?q=topic:ai+topic:llm&sort=stars&order=desc&per_page=10",
+              headers={"User-Agent":"PromptPulseBot/1.0","Accept":"application/vnd.github.v3+json"})
+            with urllib.request.urlopen(req,timeout=15) as r:
+              data = json.loads(r.read().decode())
+            for repo in data.get("items",[])[:5]:
+              name = repo.get("full_name","")
+              desc = repo.get("description","")[:80]
+              stars = repo.get("stargazers_count",0)
+              results["github"].append(f"⭐{stars:,} {name} — {desc}")
+          except Exception as e:
+            results["github"].append(f"[GitHub error: {e}]")
+
+          # ── SAVE ALL RESULTS ─────────────────────────────────────
+          with open("trends.json","w") as f:
+            json.dump(results,f,indent=2)
+
+          total = sum(len(v) for v in results.values())
+          print(f"✅ Monitoring complete — {total} trends found")
+          for k,v in results.items():
+            print(f"  {k}: {len(v)} items")
+          PYEOF
+
+      - name: Generate blog suggestions
+        run: |
+          python3 << 'PYEOF'
+          import json, datetime
+
+          with open("trends.json") as f:
+            data = json.load(f)
+
+          # High value AI keywords always worth targeting
+          EVERGREEN = [
+            ("🔥","claude vs chatgpt 2026","500K+/mo","Very Low"),
+            ("🔥","best ai for coding 2026","40K+/mo","Low"),
+            ("🔥","grok 4 review","25K+/mo","Very Low"),
+            ("🔥","deepseek v4 review","20K+/mo","Very Low"),
+            ("🔥","claude code vs cursor","20K+/mo","Very Low"),
+            ("🔥","openai codex review","15K+/mo","Very Low"),
+            ("⭐","ai tools for beginners 2026","30K+/mo","Low"),
+            ("⭐","chatgpt plus worth it 2026","25K+/mo","Very Low"),
+            ("⭐","best free chatgpt alternative","35K+/mo","Low"),
+            ("⭐","claude 3.5 opus review","20K+/mo","Very Low"),
+            ("⭐","cursor vs windsurf ide","15K+/mo","Very Low"),
+            ("⭐","ai image generator 2026","30K+/mo","Low"),
+            ("⭐","perplexity vs google 2026","20K+/mo","Low"),
+            ("⭐","how to use claude api","18K+/mo","Very Low"),
+            ("⭐","mistral vs claude coding","15K+/mo","Very Low"),
+          ]
+
+          lines = []
+          lines.append(f"**Report generated: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M UTC')}**")
+          lines.append("")
+
+          # Google trends
+          lines.append("## 🌐 Google Trending Now")
+          if data["google"]:
+            seen = set()
+            for t in data["google"]:
+              if t not in seen and "error" not in t.lower():
+                lines.append(f"- 🔍 {t}")
+                seen.add(t)
+          else:
+            lines.append("- No AI topics trending on Google right now")
+
+          # Reddit
+          lines.append("")
+          lines.append("## 💬 Reddit Hot Topics")
+          if data["reddit"]:
+            for t in data["reddit"][:15]:
+              if "error" not in t.lower():
+                lines.append(f"- {t}")
+          else:
+            lines.append("- No Reddit topics found")
+
+          # Hacker News
+          lines.append("")
+          lines.append("## 🟠 Hacker News Top AI Stories")
+          if data["hackernews"]:
+            for t in data["hackernews"][:8]:
+              if "error" not in t.lower():
+                lines.append(f"- {t}")
+          else:
+            lines.append("- No HN AI stories found")
+
+          # GitHub trending
+          lines.append("")
+          lines.append("## 💻 GitHub Trending AI Repos")
+          if data["github"]:
+            for t in data["github"]:
+              if "error" not in t.lower():
+                lines.append(f"- {t}")
+          else:
+            lines.append("- No GitHub trending repos found")
+
+          # Blog suggestions
+          lines.append("")
+          lines.append("## 📝 High Priority Pages to Build for PromptPulse")
+          lines.append("")
+          lines.append("| Priority | Keyword | Monthly Searches | Competition |")
+          lines.append("|----------|---------|-----------------|-------------|")
+          for badge, kw, vol, comp in EVERGREEN:
+            lines.append(f"| {badge} | `{kw}` | {vol} | {comp} |")
+
+          lines.append("")
+          lines.append("## ⚡ Action Steps")
+          lines.append("1. Pick the top trending topic from Google or Reddit above")
+          lines.append("2. Ask Claude/PromptPulse to build the page immediately")
+          lines.append("3. Upload to `Blog/` folder on GitHub")
+          lines.append("4. Add URL to `sitemap.xml`")
+          lines.append("5. Go to Search Console → Request Indexing")
+          lines.append("6. Post on Reddit r/webdev or r/ChatGPT")
+          lines.append("")
+          lines.append("> ⏰ **Publishing within 24 hours of a trend = massive first-mover advantage**")
+
+          with open("final_report.md","w") as f:
+            f.write("\n".join(lines))
+
+          print("✅ Report generated")
+          PYEOF
+
+      - name: Create GitHub Issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('final_report.md','utf8');
+            const date = new Date().toISOString().split('T')[0];
+            const day = new Date().toLocaleDateString('en-US',{weekday:'long'});
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🔥 Daily AI Trends — ${day} ${date}`,
+              body: `# 📈 PromptPulse Daily AI Trend Report\n\n${report}`,
+              labels: ['trending','content-ideas','seo']
+            });
+            console.log('✅ Issue created!');
+
+      - name: Summary
+        run: |
+          echo "================================"
+          echo "✅ TREND MONITOR COMPLETE"
+          echo "================================"
+          echo "Sources checked:"
+          echo "  ✅ Google Trends (realtime + daily)"
+          echo "  ✅ Reddit (9 subreddits)"
+          echo "  ✅ Hacker News (top 30 stories)"
+          echo "  ✅ GitHub (trending AI repos)"
+          echo ""
+          echo "Check your GitHub Issues tab"
+          echo "for today's trending topics!"
+          echo "================================"

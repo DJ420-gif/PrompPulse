@@ -1,0 +1,67 @@
+name: 🤖 Auto Add Author Box to All Pages
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type YES to confirm adding author box to all HTML files'
+        required: true
+        default: 'NO'
+jobs:
+  add-author-box:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check confirmation
+        run: |
+          if [ "${{ github.event.inputs.confirm }}" != "YES" ]; then
+            echo "❌ You must type YES to confirm. Stopping."
+            exit 1
+          fi
+          echo "✅ Confirmed — proceeding"
+
+      - name: Add author box to all HTML files
+        run: |
+          AUTHOR_BOX='    <div class="author-box sr"><div class="ab-avatar">PP<\/div><div class="ab-info"><div class="ab-name">PromptPulse Editorial<\/div><div class="ab-role">200+ AI tools tested \&middot; Zero sponsorships \&middot; March 2026<\/div><\/div><div class="ab-badge">\u2705 Verified Review<\/div><\/div>'
+          ADDED=0
+          SKIPPED=0
+
+          find . -name "*.html" ! -path "./.git/*" | while read file; do
+            # Skip if author box already exists
+            if grep -q "author-box" "$file"; then
+              echo "⏭️  SKIP (already has author box): $(basename $file)"
+              continue
+            fi
+
+            # Add after <article class="art-body"> tag
+            if grep -q 'class="art-body"' "$file"; then
+              sed -i 's|<article class="art-body">|<article class="art-body">\n'"$AUTHOR_BOX"'|' "$file"
+              echo "✅ ADDED to art-body: $(basename $file)"
+
+            # Add after <article class="post-body"> tag
+            elif grep -q 'class="post-body"' "$file"; then
+              sed -i 's|<article class="post-body">|<article class="post-body">\n'"$AUTHOR_BOX"'|' "$file"
+              echo "✅ ADDED to post-body: $(basename $file)"
+
+            else
+              echo "⚠️  SKIPPED (no article tag found): $(basename $file)"
+            fi
+          done
+
+      - name: Show summary
+        run: |
+          echo "================================"
+          echo "✅ Author box addition complete"
+          echo "================================"
+          TOTAL=$(grep -rl "author-box" --include="*.html" . | wc -l)
+          echo "Pages with author box: $TOTAL"
+
+      - name: Commit changes
+        run: |
+          git config user.name "PromptPulse Bot"
+          git config user.email "actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "🤖 Auto add author box to all HTML pages"
+          git push || echo "Nothing to push"

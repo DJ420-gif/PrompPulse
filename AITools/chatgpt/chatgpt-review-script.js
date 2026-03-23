@@ -50,14 +50,18 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 });
-// FAQ Accordion
+// ── FAQ ACCORDION ─────────────────────────
 document.querySelectorAll('.faq-q').forEach(function(q) {
   q.addEventListener('click', function() {
     var item = q.parentElement;
     var isOpen = item.classList.contains('open');
+    // Close all first
     document.querySelectorAll('.faq-item').forEach(function(i) {
       i.classList.remove('open');
     });
-    if (!isOpen) item.classList.add('open');
+    // Open clicked one if it was closed
+    if (!isOpen) {
+      item.classList.add('open');
+    }
   });
 });

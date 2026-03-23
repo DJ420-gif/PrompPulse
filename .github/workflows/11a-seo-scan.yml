@@ -1,0 +1,68 @@
+name: 🔍 SEO Analyser — Part 1 Scan
+on:
+  schedule:
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan all HTML pages for SEO issues
+        run: |
+          python3 << 'PYEOF'
+          import os,re,json
+          BASE="https://dj420-gif.github.io/PromptPulse"
+          results=[]
+          def check(file):
+            with open(file,encoding="utf-8",errors="ignore") as f: html=f.read()
+            path=file.replace("./",""); url=f"{BASE}/{path}"
+            tips=[]; score=100
+            t=re.search(r'<title>(.*?)</title>',html,re.IGNORECASE|re.DOTALL)
+            title=t.group(1).strip() if t else ""
+            if not title: tips.append("❌ CRITICAL: Missing title tag — Add <title>Keyword — PromptPulse</title>"); score-=20
+            elif len(title)>65: tips.append(f"⚠️ Title too long ({len(title)} chars) — Shorten to under 65"); score-=8
+            elif len(title)<30: tips.append(f"⚠️ Title too short ({len(title)} chars) — Expand to 40-65 chars"); score-=5
+            d=re.search(r'name=["\']description["\'].*?content=["\']([^"\']*)["\']',html,re.IGNORECASE)
+            desc=d.group(1).strip() if d else ""
+            if not desc: tips.append("❌ CRITICAL: Missing meta description — Add <meta name='description' content='...'> under 155 chars"); score-=15
+            elif len(desc)>155: tips.append(f"⚠️ Description too long ({len(desc)} chars) — Shorten to under 155"); score-=6
+            c=re.search(r'rel=["\']canonical["\'].*?href=["\']([^"\']*)["\']',html,re.IGNORECASE)
+            if not c: tips.append(f"❌ CRITICAL: Missing canonical — Add <link rel='canonical' href='{url}'>"); score-=15
+            elif c.group(1)!=url: tips.append(f"⚠️ Wrong canonical: {c.group(1)} → Should be: {url}"); score-=10
+            if not re.search(r'<h1[^>]*>',html,re.IGNORECASE): tips.append("❌ CRITICAL: Missing H1 tag — Add one <h1> with primary keyword"); score-=12
+            elif len(re.findall(r'<h1[^>]*>',html,re.IGNORECASE))>1: tips.append("⚠️ Multiple H1 tags — Keep only one H1"); score-=6
+            if not re.search(r'og:title',html,re.IGNORECASE): tips.append("⚠️ Missing og:title — Add <meta property='og:title' content='...'>"); score-=5
+            if not re.search(r'og:url',html,re.IGNORECASE): tips.append(f"⚠️ Missing og:url — Add <meta property='og:url' content='{url}'>"); score-=3
+            if not re.search(r'application/ld\+json',html,re.IGNORECASE): tips.append("❌ CRITICAL: Missing schema markup — Add Article or Review schema"); score-=12
+            if not re.search(r'FAQPage',html,re.IGNORECASE): tips.append("💡 TIP: Missing FAQ schema — Adds Google FAQ dropdowns in search results"); score-=5
+            if not re.search(r'name=["\']robots["\']',html,re.IGNORECASE): tips.append("⚠️ Missing robots meta — Add <meta name='robots' content='index, follow'>"); score-=4
+            if not re.search(r'name=["\']viewport["\']',html,re.IGNORECASE): tips.append("❌ CRITICAL: Missing viewport — Mobile layout broken"); score-=15
+            if not re.search(r'author-box',html,re.IGNORECASE): tips.append("💡 TIP: Missing author box — Add for E-E-A-T signals"); score-=4
+            text=re.sub(r'<[^>]+>',' ',html); words=len(re.sub(r'\s+',' ',text).split())
+            if words<300: tips.append(f"❌ CRITICAL: Only {words} words — Google may not index (need 300+)"); score-=15
+            elif words<800: tips.append(f"⚠️ Light content ({words} words) — Aim for 1000+ for better rankings"); score-=5
+            il=len(re.findall(r'href=["\'][^"\']*\.html["\']',html,re.IGNORECASE))
+            if il<3: tips.append(f"⚠️ Only {il} internal links — Add 5+ links to related pages"); score-=5
+            return {"file":path,"url":url,"score":max(0,min(100,score)),"title":title,"words":words,"tips":tips}
+          for root,dirs,files in os.walk("."):
+            dirs[:]=[d for d in dirs if d not in['.git','node_modules']]
+            for file in files:
+              if file.endswith(".html"):
+                try: results.append(check(os.path.join(root,file)))
+                except Exception as e: results.append({"file":file,"url":"","score":0,"title":"","words":0,"tips":[f"❌ ERROR: {e}"]})
+          results.sort(key=lambda x:x["score"])
+          with open("seo_report.json","w") as f: json.dump(results,f,indent=2)
+          total=len(results); avg=sum(r["score"] for r in results)//max(total,1)
+          crits=sum(len([t for t in r["tips"] if "CRITICAL" in t]) for r in results)
+          print(f"✅ Scanned {total} pages | Avg score: {avg}/100 | Critical issues: {crits}")
+          PYEOF
+      - name: Commit report
+        run: |
+          git config user.name "PromptPulse Bot"
+          git config user.email "actions@github.com"
+          git add seo_report.json
+          git diff --staged --quiet || git commit -m "🔍 SEO report — $(date +'%Y-%m-%d')"
+          git push || echo "Nothing to push"

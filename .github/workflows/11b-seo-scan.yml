@@ -1,0 +1,126 @@
+name: 🔍 SEO Analyser — Part 2 Report
+on:
+  workflow_run:
+    workflows: ["🔍 SEO Analyser — Part 1 Scan"]
+    types: [completed]
+  workflow_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Create SEO issue report
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const date = new Date().toISOString().split('T')[0];
+
+            let results = [];
+            try {
+              results = JSON.parse(fs.readFileSync('seo_report.json', 'utf8'));
+            } catch(e) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `⚠️ SEO Report — No Data Found — ${date}`,
+                body: 'Run the Part 1 Scan workflow first to generate seo_report.json',
+                labels: ['seo']
+              });
+              return;
+            }
+
+            const total = results.length;
+            const avg = total ? Math.round(results.reduce((a,r) => a + r.score, 0) / total) : 0;
+            const perfect = results.filter(r => r.score >= 90).length;
+            const good = results.filter(r => r.score >= 70 && r.score < 90).length;
+            const needs = results.filter(r => r.score >= 50 && r.score < 70).length;
+            const poor = results.filter(r => r.score < 50).length;
+            const em = s => s >= 90 ? '🟢' : s >= 70 ? '🟡' : s >= 50 ? '🟠' : '🔴';
+            const allTips = results.flatMap(r => r.tips);
+            const critCount = allTips.filter(t => t.includes('CRITICAL')).length;
+            const warnCount = allTips.filter(t => t.includes('⚠️')).length;
+
+            const freq = {};
+            allTips.forEach(t => {
+              const k = t.split(':')[1]?.trim().split('—')[0]?.trim() || t.slice(0,50);
+              freq[k] = (freq[k] || 0) + 1;
+            });
+            const topIssues = Object.entries(freq)
+              .sort((a,b) => b[1] - a[1]).slice(0,8)
+              .map(([i,c]) => `| ${c} pages | ${i} |`).join('\n');
+
+            let pageDetails = '';
+            results.filter(r => r.tips.some(t => t.includes('CRITICAL'))).slice(0,15).forEach(r => {
+              const crits = r.tips.filter(t => t.includes('CRITICAL'));
+              const warns = r.tips.filter(t => t.includes('⚠️'));
+              const tips  = r.tips.filter(t => t.includes('💡'));
+              pageDetails += `<details>\n<summary>${em(r.score)} Score ${r.score}/100 — \`${r.file}\` — ${r.words} words</summary>\n\n`;
+              if (crits.length) { pageDetails += `**Critical Issues:**\n`; crits.forEach(t => { pageDetails += `- ${t}\n`; }); }
+              if (warns.length) { pageDetails += `\n**Warnings:**\n`;   warns.forEach(t => { pageDetails += `- ${t}\n`; }); }
+              if (tips.length)  { pageDetails += `\n**Tips:**\n`;       tips.forEach(t  => { pageDetails += `- ${t}\n`; }); }
+              pageDetails += `\n</details>\n\n`;
+            });
+
+            const perfectList = results.filter(r => r.score >= 90)
+              .map(r => `- ✅ Score ${r.score}/100 — \`${r.file}\``).join('\n') || 'None yet';
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              title: `🔍 SEO Audit — Score ${avg}/100 — ${critCount} Critical Issues — ${date}`,
+              body: `# 🔍 PromptPulse Full SEO Audit — ${date}
+
+## 📊 Site Overview
+
+| Metric | Result |
+|--------|--------|
+| Pages analysed | **${total}** |
+| Average score | **${avg}/100** |
+| 🟢 Perfect (90+) | **${perfect}** |
+| 🟡 Good (70-89) | **${good}** |
+| 🟠 Needs work (50-69) | **${needs}** |
+| 🔴 Poor (<50) | **${poor}** |
+| ❌ Critical issues | **${critCount}** |
+| ⚠️ Warnings | **${warnCount}** |
+
+---
+
+## 🏆 Most Common Issues
+
+| Pages | Issue |
+|-------|-------|
+${topIssues}
+
+---
+
+## ❌ Pages Needing Critical Fixes
+
+${pageDetails || 'No critical issues — great work!'}
+
+---
+
+## ✅ Perfect Pages
+
+${perfectList}
+
+---
+
+## ⚡ Fix Priority
+1. Fix all ❌ CRITICAL issues today
+2. Fix ⚠️ warnings this week
+3. Apply 💡 tips this month
+
+---
+*PromptPulse SEO Analyser · Every Monday 8am UTC*`,
+              labels: ['seo', 'audit']
+            });
+
+            console.log(`✅ SEO issue created — ${total} pages, avg ${avg}/100`);

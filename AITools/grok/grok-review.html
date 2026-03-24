@@ -29,6 +29,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="grok-review-style.css">
+  <style>
+.faq-wrap{display:flex;flex-direction:column;gap:10px;margin:24px 0 36px;}
+.faq-item{border:1px solid var(--bdr);border-radius:10px;overflow:hidden;transition:border-color .3s;}
+.faq-item:hover{border-color:rgba(255,107,53,.4);}
+.faq-item.open{border-color:#FF6B35;}
+.faq-q{padding:16px 20px;font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--s1);color:var(--txt);transition:background .2s;gap:12px;user-select:none;}
+.faq-q:hover{background:var(--s2);}
+.faq-q::after{content:'▼';font-size:10px;color:#FF6B35;transition:transform .3s;flex-shrink:0;}
+.faq-item.open .faq-q{background:var(--s2);color:#FF6B35;}
+.faq-item.open .faq-q::after{transform:rotate(180deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;font-size:14px;color:var(--muted2);line-height:1.8;padding:0 20px;}
+.faq-item.open .faq-a{max-height:400px;padding:16px 20px;}
+  </style>
 </head>
 <body>
 <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>

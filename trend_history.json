@@ -250,5 +250,26 @@
       "\u2b50128,574 open-webui/open-webui \u2014 User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "\u2b5097,842 firecrawl/firecrawl \u2014 \ud83d\udd25 The Web Data API for AI - Turn entire websites into LLM-ready markdown or stru"
     ]
+  },
+  {
+    "date": "2026-03-26",
+    "google": [],
+    "reddit": [],
+    "hackernews": [
+      "[567pts] Running Tesla Model 3's computer on my desk using parts from crashed cars",
+      "[370pts] ARC-AGI-3",
+      "[833pts] My astrophotography in the movie Project Hail Mary",
+      "[259pts] 90% of Claude-linked output going to GitHub repos w <2 stars",
+      "[252pts] False claims in a widely-cited paper",
+      "[85pts] Show HN: A plain-text cognitive architecture for Claude Code",
+      "[371pts] Apple randomly closes bug reports unless you \"verify\" the bug remains unfixed"
+    ],
+    "github": [
+      "\u2b50154,275 f/prompts.chat \u2014 f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the co",
+      "\u2b50134,519 langgenius/dify \u2014 Production-ready platform for agentic workflow development.",
+      "\u2b50131,134 langchain-ai/langchain \u2014 The agent engineering platform",
+      "\u2b50128,757 open-webui/open-webui \u2014 User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "\u2b5098,422 firecrawl/firecrawl \u2014 \ud83d\udd25 The Web Data API for AI - Turn entire websites into LLM-ready markdown or stru"
+    ]
   }
 ]

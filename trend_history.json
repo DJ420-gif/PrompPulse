@@ -271,5 +271,66 @@
       "\u2b50128,757 open-webui/open-webui \u2014 User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "\u2b5098,422 firecrawl/firecrawl \u2014 \ud83d\udd25 The Web Data API for AI - Turn entire websites into LLM-ready markdown or stru"
     ]
+  },
+  {
+    "date": "2026-03-27",
+    "google": [],
+    "reddit": [
+      "r/artificial: Artificial Intelligence (AI)",
+      "r/artificial: Judge rejects Pentagon's attempt to 'cripple' Anthropic",
+      "r/artificial: OpenAI shuts down Sora AI video app as Disney exits $1B partnership",
+      "r/artificial: CodexLib \u2014 compressed knowledge packs any AI can ingest instantly (100+ packs, 50 domains, REST API)",
+      "r/artificial: Marriage over, \u20ac100,000 down the drain: the AI users whose lives were wrecked by delusion",
+      "r/ChatGPT: Updates for ChatGPT",
+      "r/ChatGPT: GPT-4o/GPT-5 complaints megathread",
+      "r/ChatGPT: At least bro is honest",
+      "r/ChatGPT: What was the age varification for then?",
+      "r/ChatGPT: What\u2019s something unconventional you use ChatGPT for?",
+      "r/ClaudeAI: Usage Limits, Bugs and Performance Discussion Megathread - beginning December 29, 2025",
+      "r/ClaudeAI: Update on Session Limits",
+      "r/ClaudeAI: Exclusive: Anthropic acknowledges testing new AI model representing \u2018step change\u2019 in capabilities, after accidental data",
+      "r/ClaudeAI: 25 years. Multiple specialists. Zero answers. One Claude conversation cracked it.",
+      "r/ClaudeAI: Hard data on Claude\u2019s recent token inflation: How usage is being silently reduced",
+      "r/MachineLearning: Machine Learning",
+      "r/MachineLearning: [D] Self-Promotion Thread",
+      "r/MachineLearning: [D] Monthly Who's Hiring and Who wants to be Hired?",
+      "r/MachineLearning: [D] OOD and Spandrels, or What you should know about EBM.",
+      "r/MachineLearning: Retraining vs Fine-tuning or Transfer Learning? [D]",
+      "r/LocalLLaMA: Announcing LocalLlama discord server &amp; bot!",
+      "r/LocalLLaMA: Mistral AI to release Voxtral TTS, a 3-billion-parameter text-to-speech model with open weights that the company says ou",
+      "r/LocalLLaMA: Dual DGX Sparks vs Mac Studio M3 Ultra 512GB: Running Qwen3.5 397B locally on both. Here's what I found.",
+      "r/LocalLLaMA: Apple stopped selling 512gb URAM mac studios, now the max amount is 256GB!",
+      "r/LocalLLaMA: Qwen 3.5 27B at 1.1M tok/s on B200s, all configs on GitHub",
+      "r/cursor_ai: Anyone else maintaining .cursorrules AND CLAUDE.md? It's becoming a nightmare",
+      "r/webdev: Monthly Getting Started / Web Dev Career Thread",
+      "r/webdev: Monthly Getting Started / Web Dev Career Thread",
+      "r/webdev: maybe a silly question, but i remember a long time ago instead of `target=&quot;_blank&quot;` everyone used `onclick=&qu",
+      "r/webdev: That npm package your AI coding assistant just suggested might be pulling in a credential stealer. spent 3 hours cleanin",
+      "r/webdev: Can't we just... build things anymore",
+      "r/programming: GitHub will use your repos to train AI models",
+      "r/programming: Google warns quantum computers could hack encrypted systems by 2029",
+      "r/programming: Shell Tricks That Actually Make Life Easier (And Save Your Sanity)",
+      "r/programming: Database Performance Bottlenecks: N+1 Queries, Missing Indexes, and Connection Pools",
+      "r/programming: Quantum frontiers may be closer than they appear - Google's timeline for PQC migration",
+      "r/singularity: Marc Benioff (CEO of Salesforce) tweeted video of him messing with a Figure 03 robot flipping packages",
+      "r/singularity: The era of human coding is over",
+      "r/singularity: Anthropic is testing 'Mythos' its 'most powerful AI model ever developed' | Fortune",
+      "r/singularity: Federal Judge halts Anthropic supply chain risk designation",
+      "r/singularity: Claude reducing token limits on all tiers during busy hours"
+    ],
+    "hackernews": [
+      "[206pts] Show HN: I put an AI agent on a $7/month VPS with IRC as its transport layer",
+      "[198pts] $500 GPU outperforms Claude Sonnet on coding benchmarks",
+      "[134pts] We rewrote JSONata with AI in a day, saved $500k/year",
+      "[352pts] My minute-by-minute response to the LiteLLM malware attack",
+      "[890pts] Running Tesla Model 3's computer on my desk using parts from crashed cars"
+    ],
+    "github": [
+      "\u2b50182,864 Significant-Gravitas/AutoGPT \u2014 AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our",
+      "\u2b50154,370 f/prompts.chat \u2014 f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the co",
+      "\u2b50134,680 langgenius/dify \u2014 Production-ready platform for agentic workflow development.",
+      "\u2b50131,277 langchain-ai/langchain \u2014 The agent engineering platform",
+      "\u2b50128,887 open-webui/open-webui \u2014 User-friendly AI Interface (Supports Ollama, OpenAI API, ...)"
+    ]
   }
 ]

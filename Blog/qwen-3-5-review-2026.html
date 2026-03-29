@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qwen 3.5 Review — Free Open-Source AI That Beats GPT-5.2? [2026]</title>
+<meta name="description" content="Alibaba's Qwen 3.5 9B matches models 13x its size on benchmarks. The 397B version beats GPT-5.2 on instruction following. Free and open source. Honest developer review 2026.">
+<meta name="keywords" content="qwen 3.5 review,qwen 3.5 vs claude,qwen3.5 review 2026,alibaba qwen review,qwen 3.5 9b review,qwen open source model 2026">
+<meta name="author" content="PromptPulse">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dj420-gif.github.io/PromptPulse/Blog/qwen-3-5-review-2026.html">
+<meta property="og:title" content="Qwen 3.5 Review — Free Open-Source AI That Beats GPT-5.2? [2026]">
+<meta property="og:description" content="Alibaba's Qwen 3.5 9B matches models 13x its size on benchmarks. The 397B version beats GPT-5.2 on instruction following. Free and open source. Honest developer review 2026.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dj420-gif.github.io/PromptPulse/Blog/qwen-3-5-review-2026.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Qwen 3.5 Review — Free Open-Source AI That Beats GPT-5.2? [2026]","description":"Alibaba's Qwen 3.5 9B matches models 13x its size on benchmarks. The 397B version beats GPT-5.2 on instruction following. Free and open source. Honest developer review 2026.","author":{"@type":"Organization","name":"PromptPulse"},"publisher":{"@type":"Organization","name":"PromptPulse"},"datePublished":"2026-03-24","dateModified":"2026-03-24","mainEntityOfPage":"https://dj420-gif.github.io/PromptPulse/Blog/qwen-3-5-review-2026.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Qwen 3.5 free?","acceptedAnswer":{"@type":"Answer","text":"The model weights are open source and free to download. Smaller variants including the 9B model are available under Apache 2.0. API access via Alibaba Cloud is priced at approximately $0.40 per million input tokens — significantly cheaper than Western frontier models."}},{"@type":"Question","name":"Qwen 3.5 vs Claude — which is better?","acceptedAnswer":{"@type":"Answer","text":"Claude wins on complex coding — 80.9% vs Qwen 3.5's 76.4% on SWE-bench. Qwen wins on cost — approximately 13x cheaper per token. Qwen 3.5 9B is remarkable for its size — outperforming models 13x large"}},{"@type":"Question","name":"Can Qwen 3.5 run on a phone?","acceptedAnswer":{"@type":"Answer","text":"Yes — the 2B model runs on any recent iPhone in airplane mode with just 4GB of RAM. This makes it the most capable on-device AI available without cloud dependency. The 9B model runs on a MacBook Pro w"}},{"@type":"Question","name":"Is Qwen 3.5 safe for enterprise use?","acceptedAnswer":{"@type":"Answer","text":"Safe for internal use. For client-facing applications involving sensitive data self-hosting under Apache 2.0 eliminates data sovereignty concerns. Approach with caution for client data on the hosted A"}},{"@type":"Question","name":"What is Qwen 3.5's context window?","acceptedAnswer":{"@type":"Answer","text":"The open-weight model handles 262,144 tokens natively extensible to over 1M. The hosted Qwen3.5-Plus handles 1M tokens by default. Supports MCP search and code interpreter natively for agentic workflo"}}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="qwen-3-5-review-2026-style.css">
+<style>
+.faq-wrap{display:flex;flex-direction:column;gap:10px;margin:24px 0 36px;}
+.faq-item{border:1px solid var(--bdr);border-radius:10px;overflow:hidden;transition:border-color .3s;}
+.faq-item:hover{border-color:rgba(255,107,53,.4);}
+.faq-item.open{border-color:var(--rc);}
+.faq-q{padding:16px 20px;font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--s1);color:var(--txt);transition:background .2s;gap:12px;user-select:none;}
+.faq-q:hover{background:var(--s2);}
+.faq-q::after{content:'▼';font-size:10px;color:var(--rc);transition:transform .3s;flex-shrink:0;}
+.faq-item.open .faq-q{background:var(--s2);color:var(--rc);}
+.faq-item.open .faq-q::after{transform:rotate(180deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;font-size:14px;color:var(--muted2);line-height:1.8;padding:0 20px;}
+.faq-item.open .faq-a{max-height:400px;padding:16px 20px;}
+</style>
+</head>
+<body>
+<div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+<nav>
+  <a href="../index.html" class="nav-logo"><div class="logo-pulse"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8 Q5 3 8 8 Q11 13 14 8" stroke="#09090E" stroke-width="2" stroke-linecap="round" fill="none"/></svg></div><span class="logo-name">Prompt<em>Pulse</em></span></a>
+  <div class="nav-mid"><a href="../Blog/blog.html" class="active">Blog</a><a href="../AITools/ai-tools.html">Tools</a><a href="../prompts/prompts.html">Prompts</a><a href="../index.html#newsletter">Newsletter</a></div>
+  <div class="nav-right"><a href="../Blog/blog.html" class="nav-home">← Blog</a><a href="../index.html#newsletter" class="nav-cta">Subscribe Free</a></div>
+</nav>
+<section class="page-hero" style="--rc:#FF6B35;--rc-rgb:255,107,53;">
+  <div class="hero-glow"></div><div class="hero-grid"></div>
+  <div class="ph-inner">
+    <div class="ph-breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="../Blog/blog.html">Blog</a><span>/</span><span>Article</span></div>
+    <div class="ph-tag"><span class="ph-dot"></span>🟠 Alibaba AI · March 2026</div>
+    <h1 class="ph-h1">Qwen 3.5 Review 2026 —<br><em>Free Open-Source AI</em> That Beats GPT-5.2?</h1>
+    <p class="ph-deck">Alibaba's Qwen 3.5 9B outperformed a model 13x its size on GPQA Diamond. The 397B version beats GPT-5.2 on instruction following. Open source, free to self-host, and already running on iPhones. Honest verdict.</p>
+    <div class="author-box">
+      <div class="ab-av">PP</div>
+      <div class="ab-info"><div class="ab-name">PromptPulse Editorial</div><div class="ab-role">200+ AI tools tested · Zero sponsorships · March 2026</div></div>
+      <div class="ab-badge">✅ Verified</div>
+    </div>
+  </div>
+</section>
+<div class="art-wrap">
+  <div class="img-ph sr"><span class="ipi">🖼️</span><span class="ipl">Hero Image</span><span class="iph">1200×500px · Qwen 3.5 Review — Free Open-Source AI That Beats GPT-5. · dark theme</span></div>
+  <div class="stat-row sr">
+    <div class="si"><span class="sn">Real</span><span class="sl">Benchmark Data</span></div>
+    <div class="si"><span class="sn">0</span><span class="sl">Sponsored</span></div>
+    <div class="si"><span class="sn">Mar 2026</span><span class="sl">Updated</span></div>
+    <div class="si"><span class="sn">Honest</span><span class="sl">Zero Bias</span></div>
+  </div>
+  <div class="sec-div sr"><span class="sdn">01</span><div class="sdl"></div></div>
+<h2 id="s1">What Qwen 3.5 Is and Why the AI Community Is Paying Attention</h2>
+<p class="sr">Qwen 3.5 is Alibaba's latest open-source model family released in early March 2026. It made immediate impact: within hours of the 397B flagship announcement it had 363 points and 173 comments on Hacker News. The 9B variant is the headline story — it scored 81.7% on GPQA Diamond a graduate-level reasoning benchmark typically dominated by models 10-15x larger. For context GPT-OSS-120B scores 71.5% on the same benchmark. The architecture uses mixture-of-experts activating only 17B parameters per forward pass on the 397B model making self-hosting more practical than the parameter count suggests. Natively multimodal supporting text images and video through the same weights with no separate vision adapter. Supports 201 languages and dialects.</p>
+<div class="sec-div sr"><span class="sdn">02</span><div class="sdl"></div></div>
+<h2 id="s2">Benchmark Results — Where Qwen 3.5 Wins and Loses</h2>
+<p class="sr">On instruction following Qwen 3.5 leads GPT-5.2 on IFBench with 76.5 versus 75.4 and beats Gemini on MultiChallenge with 67.6 versus 64.2. On web browsing the BrowseComp benchmark shows Qwen 3.5 at 78.6 beating all competitors. On coding SWE-bench Verified shows 76.4 which is competitive but trails GPT-5.2 at 80.0 and Claude at 80.9. On vision tasks Qwen 3.5 leads on MathVision at 88.6 and several OCR benchmarks. Decoding throughput is 8.6x to 19x faster than the previous Qwen3-Max depending on context length. The 9B model runs on any recent iPhone in airplane mode with just 4GB of RAM — on-device AI that actually works without any cloud dependency.</p>
+<div class="sec-div sr"><span class="sdn">03</span><div class="sdl"></div></div>
+<h2 id="s3">Pricing — The Cost Advantage That Changes the Calculation</h2>
+<p class="sr">Via API Qwen 3.5 costs approximately $0.40 per million input tokens and $1.20 per million output tokens. Claude Opus 4.6 costs roughly 13x more. For startups running high-volume inference the cost difference between Qwen 3.5 and frontier closed models can determine whether a product is economically viable. The open-weight availability under an open licence means teams can self-host entirely eliminating per-token costs. The 9B variant is the most cost-efficient serious reasoning model available — running locally on a MacBook Pro with 16GB RAM with no ongoing costs.</p>
+<div class="sec-div sr"><span class="sdn">04</span><div class="sdl"></div></div>
+<h2 id="s4">Who Should Use Qwen 3.5 and Data Privacy Considerations</h2>
+<p class="sr">Qwen 3.5 is best suited for cost-sensitive high-volume applications fine-tuning on proprietary data and teams that need to self-host for data sovereignty reasons. For client-facing applications involving sensitive data the China-based training origin is worth evaluating — self-hosting under Apache 2.0 eliminates the data sovereignty concern entirely. Not recommended as a primary model for the most complex production coding tasks where Claude or GPT-5.4 produce meaningfully better results. Excellent for internal tools research pipelines and applications where the 80th percentile of capability at 5% of the cost is the right tradeoff.</p>
+
+  <div class="sec-div sr"><span class="sdn">05</span><div class="sdl"></div></div>
+  <h2 id="faq">Frequently Asked Questions</h2>
+  <div class="faq-wrap sr">
+  <div class="faq-item">
+    <div class="faq-q">Is Qwen 3.5 free?</div>
+    <div class="faq-a">The model weights are open source and free to download. Smaller variants including the 9B model are available under Apache 2.0. API access via Alibaba Cloud is priced at approximately $0.40 per million input tokens — significantly cheaper than Western frontier models.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Qwen 3.5 vs Claude — which is better?</div>
+    <div class="faq-a">Claude wins on complex coding — 80.9% vs Qwen 3.5's 76.4% on SWE-bench. Qwen wins on cost — approximately 13x cheaper per token. Qwen 3.5 9B is remarkable for its size — outperforming models 13x larger on GPQA Diamond reasoning benchmarks.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can Qwen 3.5 run on a phone?</div>
+    <div class="faq-a">Yes — the 2B model runs on any recent iPhone in airplane mode with just 4GB of RAM. This makes it the most capable on-device AI available without cloud dependency. The 9B model runs on a MacBook Pro with 16GB RAM.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Is Qwen 3.5 safe for enterprise use?</div>
+    <div class="faq-a">Safe for internal use. For client-facing applications involving sensitive data self-hosting under Apache 2.0 eliminates data sovereignty concerns. Approach with caution for client data on the hosted API unless self-hosted.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What is Qwen 3.5's context window?</div>
+    <div class="faq-a">The open-weight model handles 262,144 tokens natively extensible to over 1M. The hosted Qwen3.5-Plus handles 1M tokens by default. Supports MCP search and code interpreter natively for agentic workflows.</div>
+  </div>
+  </div>
+  <div class="takeaway sr"><h4>⚡ Key Takeaways</h4><ul><li>Qwen 3.5 9B outperforms models 13x its size on GPQA Diamond reasoning</li><li>Approximately 13x cheaper than Claude Opus 4.6 per token via API</li><li>Runs on iPhone with 4GB RAM — fully on-device with zero cloud dependency</li><li>Loses to Claude and GPT-5.4 on complex coding — 76.4 vs 80+ on SWE-bench</li><li>Best for cost-sensitive high-volume applications and self-hosted data-private workflows</li></ul></div>
+  <div class="last-updated sr">📅 Last updated: March 2026 · PromptPulse Editorial · Verified</div>
+  <div class="related-wrap sr"><div class="rw-head">Related Reading</div><div class="rel-grid"><a href="../AITools/claude/claude-review.html" class="rel-card">🤖 Claude 3.5 Review</a><a href="deepseek-r2-review-2026.html" class="rel-card">🆓 DeepSeek R2 Review</a><a href="best-ai-for-coding-2026.html" class="rel-card">🏆 Best AI for Coding</a><a href="../AITools/ai-tools.html" class="rel-card">🔬 All AI Tools</a></div></div>
+  <div class="cta-box sr"><h3>Get Weekly AI Model Updates Free</h3><p>New honest reviews every week. Zero sponsorships. Zero fluff.</p><a href="../index.html#newsletter">Subscribe Free →</a></div>
+  <a href="../Blog/blog.html" class="back-btn sr">← Back to Blog</a>
+</div>
+<footer><div class="foot-inner">
+  <a href="../index.html" class="foot-brand"><div class="logo-pulse" style="width:26px;height:26px;"><svg viewBox="0 0 16 16" fill="none" style="width:14px;height:14px;"><path d="M2 8 Q5 3 8 8 Q11 13 14 8" stroke="#09090E" stroke-width="2" stroke-linecap="round" fill="none"/></svg></div><span class="foot-name">Prompt<em>Pulse</em></span></a>
+  <div class="foot-links"><a href="../index.html">Home</a><a href="../Blog/blog.html">Blog</a><a href="../AITools/ai-tools.html">AI Tools</a><a href="../index.html#newsletter">Newsletter</a></div>
+  <span class="foot-copy">© 2026 PromptPulse · No sponsored content. Ever.</span>
+</div></footer>
+<script src="qwen-3-5-review-2026-script.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;var el=document.getElementById('progress');if(el)el.style.width=(scrollY/h*100)+'%';},{passive:true});
+  var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:.08});
+  document.querySelectorAll('.sr').forEach(function(el){obs.observe(el);});
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var item=q.parentElement;var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});if(!isOpen)item.classList.add('open');});});
+});
+</script>
+</body>
+  </html>

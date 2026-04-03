@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: '0 0 1 * *'  # Runs automatically on 1st of every month at midnight UTC
   workflow_dispatch:      # Also lets you trigger it manually anytime from GitHub
+  
 permissions:
   contents: write 
 jobs:
@@ -12,8 +13,8 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-with:
+  uses: actions/checkout@v3
+  with:
     persist-credentials: true
     fetch-depth: 0
       - name: Get current and previous month

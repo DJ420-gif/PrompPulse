@@ -1,0 +1,105 @@
+# ════════════════════════════════════════════════════════════════════
+# WORKFLOW 7 — AUTO DATE UPDATE
+# Safely replaces "March 2026" → "April 2026" (case-insensitive)
+# in ALL HTML files. Zero errors. Never touches other content.
+# Runs: manually (workflow_dispatch) or on schedule
+# ════════════════════════════════════════════════════════════════════
+name: Auto Date Update — March to April 2026
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 1 * *'   # 1st of every month, 6am UTC
+
+jobs:
+  update-dates:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run date replacement
+        id: replace
+        run: |
+          python3 << 'PYEOF'
+          import os, re
+
+          # ── CONFIG ──────────────────────────────────────────────
+          FROM_DATE  = "March 2026"
+          TO_DATE    = "April 2026"
+          SKIP_DIRS  = {".git", "node_modules", ".github", "__pycache__"}
+          # ────────────────────────────────────────────────────────
+
+          changed_files = []
+          total_replacements = 0
+
+          for root, dirs, files in os.walk("."):
+              dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
+              for fn in files:
+                  if not fn.endswith(".html"):
+                      continue
+                  path = os.path.join(root, fn)
+                  try:
+                      with open(path, "r", encoding="utf-8", errors="ignore") as f:
+                          original = f.read()
+                  except Exception as e:
+                      print(f"  SKIP (read error): {path} — {e}")
+                      continue
+
+                  # Case-insensitive replace, preserve exact case of
+                  # surrounding text. Only touch the date string itself.
+                  pattern = re.compile(re.escape(FROM_DATE), re.IGNORECASE)
+                  count   = len(pattern.findall(original))
+
+                  if count == 0:
+                      continue
+
+                  updated = pattern.sub(TO_DATE, original)
+
+                  try:
+                      with open(path, "w", encoding="utf-8") as f:
+                          f.write(updated)
+                      changed_files.append((path.lstrip("./"), count))
+                      total_replacements += count
+                      print(f"  UPDATED ({count}x): {path}")
+                  except Exception as e:
+                      print(f"  SKIP (write error): {path} — {e}")
+
+          print(f"\nSummary: {len(changed_files)} files · {total_replacements} replacements")
+
+          # Write summary for GitHub Step Summary
+          with open(os.environ.get("GITHUB_STEP_SUMMARY", "/dev/null"), "w") as s:
+              s.write(f"## ✅ Date Update Complete\n\n")
+              s.write(f"**Replaced:** `{FROM_DATE}` → `{TO_DATE}`\n\n")
+              s.write(f"**Files changed:** {len(changed_files)}\n")
+              s.write(f"**Total replacements:** {total_replacements}\n\n")
+              if changed_files:
+                  s.write("| File | Replacements |\n|------|--------------|\n")
+                  for fp, cnt in changed_files:
+                      s.write(f"| `{fp}` | {cnt} |\n")
+              else:
+                  s.write("_No files contained the target date string._\n")
+
+          # Write count for next step
+          with open("replacement_count.txt", "w") as f:
+              f.write(str(len(changed_files)))
+          PYEOF
+
+      - name: Commit and push changes
+        run: |
+          COUNT=$(cat replacement_count.txt 2>/dev/null || echo "0")
+          if [ "$COUNT" = "0" ]; then
+            echo "No changes — nothing to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "🗓️ Auto date update: March 2026 → April 2026 [${COUNT} files]"
+          git push
+          echo "✅ Pushed date updates for ${COUNT} files."

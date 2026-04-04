@@ -1,0 +1,34 @@
+name: Free AI Auditor
+on: [push, pull_request]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # Only fetch enough to see the latest changes
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install google-generativeai
+
+      - name: Find Changed HTML
+        id: changed-files
+        run: |
+          # Only audit files that were actually modified in this push
+          FILES=$(git diff --name-only HEAD^ HEAD | grep '\.html$' | xargs)
+          echo "files=$FILES" >> $GITHUB_OUTPUT
+
+      - name: Run Audit
+        if: steps.changed-files.outputs.files != ''
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/ai_audit.py ${{ steps.changed-files.outputs.files }} >> audit_results.md
+
+      - name: Display Results
+        run: cat audit_results.md >> $GITHUB_STEP_SUMMARY

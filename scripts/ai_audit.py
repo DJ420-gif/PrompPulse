@@ -1,26 +1,34 @@
 import os
 import sys
-import google.generativeai as genai
+from google import genai
 
-# Configure with Free Tier Key
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-model = genai.GenerativeModel("gemini-3-flash")
+# Initialize the 2026 Gemini Client
+# The API Key is pulled from your GitHub Secrets
+client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 def audit_files(files):
-    # Process files together to save API requests
     for file_path in files:
-        if not os.path.exists(file_path): continue
+        if not os.path.exists(file_path):
+            continue
+            
+        print(f"--- Analyzing {file_path} ---")
         
-        with open(file_path, "r") as f:
+        with open(file_path, "r", encoding="utf-8") as f:
             content = f.read()
 
-        prompt = f"Identify critical HTML/JSON-LD errors in this code. Be brief:\n\n{content}"
+        # Prompt optimized for the Free Tier (concise and fast)
+        prompt = f"Perform a technical audit of this HTML. List only critical errors (broken tags, truncated JSON-LD, missing alt text). Be brief:\n\n{content}"
         
         try:
-            response = model.generate_content(prompt)
-            print(f"### Report for {file_path}\n{response.text}\n")
+            response = client.models.generate_content(
+                model="gemini-2.0-flash", 
+                contents=prompt
+            )
+            print(response.text)
+            print("\n" + "="*20 + "\n")
         except Exception as e:
-            print(f"Error on {file_path}: {e}")
+            print(f"⚠️ Skipping {file_path} due to API limit or error: {e}")
 
 if __name__ == "__main__":
+    # Takes file list from the GitHub Action argument
     audit_files(sys.argv[1:])

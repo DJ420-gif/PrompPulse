@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Anthropic Compliance API 2026 — Audit Logs for Claude Enterprise</title>
+<meta name="description" content="Anthropic Compliance API launched March 30. Admin and resource audit logs for Claude Platform. Built for finance, healthcare and legal. How to integrate.">
+<meta name="keywords" content="anthropic compliance api,claude compliance api 2026,anthropic audit logs api,claude enterprise compliance,anthropic api for regulated industries">
+<meta name="author" content="PromptPulse Editorial">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dj420-gif.github.io/PromptPulse/Blog/anthropic-compliance-api-2026.html">
+<meta property="og:title" content="Anthropic Compliance API Review 2026 — Audit Logs for Claude Enterprise">
+<meta property="og:description" content="Anthropic Compliance API launched March 30. Admin and resource audit logs for Claude Platform. Built for finance, healthcare and legal. How to integrate.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dj420-gif.github.io/PromptPulse/Blog/anthropic-compliance-api-2026.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":'Anthropic Compliance API Review 2026 — Audit Logs for Claude Enterprise',"description":'Anthropic launched the Compliance API on March 30 2026. Programmatic audit logs for Claude Platform — built for finance, healthcare and legal. Full review of what it does, who needs it and how to use it.',"datePublished":"2026-04-03","dateModified":"2026-04-03","author":{"@type":"Organization","name":"PromptPulse"},"publisher":{"@type":"Organization","name":"PromptPulse","logo":{"@type":"ImageObject","url":"https://dj420-gif.github.io/PromptPulse/assets/logo.png"}},"mainEntityOfPage":'https://dj420-gif.github.io/PromptPulse/Blog/anthropic-compliance-api-2026.html'}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":'What does the Anthropic Compliance API do?',"acceptedAnswer":{"@type":"Answer","text":'Provides programmatic access to audit logs for Claude Platform deployments. Tracks admin activities like member management and API key creation, and resource activities like file creation and deletion'}},{"@type":"Question","name":'Which industries need the Anthropic Compliance API?',"acceptedAnswer":{"@type":"Answer","text":'Financial services organisations under SOX and banking regulations, healthcare organisations under HIPAA, legal firms under professional conduct rules, and any regulated enterprise deploying Claude ag'}},{"@type":"Question","name":'How is the Anthropic Compliance API different from Claude Enterprise?',"acceptedAnswer":{"@type":"Answer","text":'Claude Enterprise is the subscription tier. The Compliance API is a new feature within that tier — launched March 30 2026 — that adds programmatic audit log access. Organisations already on Claude Ent'}},{"@type":"Question","name":'Does the Anthropic Compliance API log conversation content?',"acceptedAnswer":{"@type":"Answer","text":'No — the Compliance API explicitly does not log model inference interactions or conversation content. It logs admin and system activities and resource-level operations. This preserves confidentiality '}},{"@type":"Question","name":'Anthropic Compliance API vs Azure OpenAI audit logs — which is better?',"acceptedAnswer":{"@type":"Answer","text":"Azure OpenAI audit logging via Azure Monitor has broader SIEM integration ecosystem and more established compliance certification documentation. Anthropic's Compliance API differentiates on multi-work"}}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#09090E;--bg2:#0D0D16;--s1:#121219;--s2:#1A1A26;--s3:#20202E;
+  --bdr:#252538;--bdr2:#32324A;--txt:#EEEDF5;--m1:#8080A8;--m2:#A8A8C8;
+  --acc:#F0C040;--gr:#5CF0A8;--rc:#5C9BF0;--rgb:92,155,240;
+  --serif:'DM Serif Display',serif;
+  --sans:'Plus Jakarta Sans',sans-serif;
+  --mono:'JetBrains Mono',monospace
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;height:62px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(16px,4vw,56px);
+  background:rgba(9,9,14,.88);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--bdr)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:30px;height:30px;background:var(--acc);border-radius:8px;
+  display:grid;place-items:center;flex-shrink:0}
+.logo-mark svg{width:16px;height:16px}
+.logo-word{font-family:var(--serif);font-size:19px;color:var(--txt)}
+.logo-word em{font-style:normal;color:var(--acc)}
+.nav-links{display:flex;gap:4px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--m2);text-decoration:none;
+  padding:5px 12px;border-radius:6px;transition:all .2s}
+.nav-links a:hover{color:var(--txt);background:var(--s2)}
+.nav-links a.cur{color:var(--rc)}
+.nav-r{display:flex;gap:8px;align-items:center}
+.btn-ghost{font-size:12px;font-weight:600;color:var(--m2);text-decoration:none;
+  padding:7px 16px;border:1px solid var(--bdr2);border-radius:7px;transition:all .2s}
+.btn-ghost:hover{color:var(--rc);border-color:var(--rc)}
+.btn-cta{font-size:12px;font-weight:700;color:var(--bg);
+  background:var(--acc);padding:7px 18px;border-radius:7px;text-decoration:none}
+/* ── PROGRESS ── */
+#pgbar{position:fixed;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--rc),var(--gr));
+  transform-origin:left;transform:scaleX(0);z-index:1000;transition:transform .1s}
+/* ── HERO ── */
+.hero{position:relative;overflow:hidden;
+  padding:clamp(96px,12vw,140px) clamp(16px,5vw,64px) clamp(56px,7vw,88px)}
+.hero-glow{position:absolute;top:-100px;left:50%;transform:translateX(-50%);
+  width:1000px;height:600px;pointer-events:none;
+  background:radial-gradient(ellipse,rgba(92,155,240,.10) 0%,transparent 65%)}
+.hero-grid{position:absolute;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(92,155,240,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(92,155,240,.018) 1px,transparent 1px);
+  background-size:56px 56px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,#000 30%,transparent 100%)}
+.hero-inner{max-width:880px;margin:0 auto;position:relative;z-index:1}
+.crumb{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--m1);margin-bottom:22px;flex-wrap:wrap}
+.crumb a{color:var(--m1);text-decoration:none;transition:color .2s}
+.crumb a:hover{color:var(--rc)}
+.crumb span{color:var(--bdr2)}
+.pill{display:inline-flex;align-items:center;gap:8px;
+  padding:5px 16px;border:1px solid rgba(92,155,240,.35);border-radius:100px;
+  font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--rc);
+  margin-bottom:24px}
+.pill-dot{width:7px;height:7px;border-radius:50%;background:var(--rc);
+  animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:var(--serif);font-size:clamp(34px,6vw,68px);
+  line-height:1.05;letter-spacing:-2.5px;margin-bottom:20px;
+  opacity:0;animation:slideUp .75s .1s forwards}
+.hero h1 em{font-style:italic;color:var(--rc)}
+.hero-deck{font-size:clamp(15px,1.7vw,18px);line-height:1.8;color:var(--m2);
+  max-width:680px;margin-bottom:28px;
+  opacity:0;animation:slideUp .75s .2s forwards}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+/* ── AUTHOR BOX ── */
+.author{display:flex;align-items:center;gap:14px;
+  padding:14px 20px;background:var(--s1);
+  border:1px solid var(--bdr);border-left:3px solid var(--rc);
+  border-radius:11px;flex-wrap:wrap;
+  opacity:0;animation:slideUp .75s .35s forwards}
+.av{width:42px;height:42px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--rc),var(--gr));
+  display:grid;place-items:center;font-size:13px;font-weight:800;color:var(--bg)}
+.av-info{flex:1}
+.av-name{font-size:14px;font-weight:700;color:var(--txt);margin-bottom:2px}
+.av-role{font-size:11px;color:var(--m1)}
+.av-badge{font-size:11px;font-weight:700;padding:3px 11px;border-radius:100px;
+  background:rgba(92,240,168,.1);border:1px solid rgba(92,240,168,.3);color:var(--gr)}
+/* ── ARTICLE WRAP ── */
+.wrap{max-width:880px;margin:0 auto;padding:36px clamp(16px,5vw,64px) 100px}
+/* ── IMAGE PLACEHOLDER ── */
+.img-ph{width:100%;height:clamp(200px,28vw,340px);
+  border:2px dashed var(--bdr2);border-radius:14px;background:var(--s1);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;margin-bottom:36px}
+.img-ph .ico{font-size:36px;opacity:.18}
+.img-ph .lbl{font-size:10px;font-weight:700;letter-spacing:3px;
+  text-transform:uppercase;color:var(--m1)}
+.img-ph .hint{font-size:11px;color:var(--bdr2);text-align:center;padding:0 24px}
+/* ── STATS ROW ── */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--bdr);border-radius:13px;overflow:hidden;margin-bottom:44px}
+.si{padding:20px;text-align:center;border-right:1px solid var(--bdr)}
+.si:last-child{border-right:none}
+.sn{font-family:var(--serif);font-size:24px;color:var(--rc);
+  letter-spacing:-1px;display:block;margin-bottom:4px}
+.sl{font-size:10px;color:var(--m1);letter-spacing:1.5px;text-transform:uppercase}
+/* ── SECTION DIVIDERS ── */
+.sdiv{display:flex;align-items:center;gap:14px;margin:52px 0 0}
+.snum{font-family:var(--mono);font-size:11px;color:var(--rc);
+  letter-spacing:3px;flex-shrink:0}
+.sline{flex:1;height:1px;background:linear-gradient(90deg,var(--rc),transparent)}
+/* ── PROSE ── */
+h2{font-family:var(--serif);font-size:clamp(24px,3.2vw,36px);
+  letter-spacing:-1px;line-height:1.14;margin:14px 0 16px;color:var(--txt)}
+p{font-size:clamp(15px,1.5vw,17px);line-height:1.9;color:var(--m2);margin-bottom:26px}
+p strong{color:var(--txt);font-weight:700}
+a{color:var(--rc);text-decoration:none}
+ul.prose{list-style:none;padding:0;margin-bottom:24px}
+ul.prose li{font-size:clamp(15px,1.5vw,17px);line-height:1.85;color:var(--m2);
+  padding:6px 0 6px 26px;position:relative;
+  border-bottom:1px solid rgba(255,255,255,.03)}
+ul.prose li::before{content:'→';position:absolute;left:0;color:var(--rc);font-size:12px;top:9px}
+/* ── DATA TABLE ── */
+.tbl-wrap{overflow-x:auto;margin:28px 0 36px;border-radius:12px;
+  border:1px solid var(--bdr)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+thead th{background:var(--s2);padding:12px 16px;text-align:left;
+  font-size:11px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--m1);border-bottom:1px solid var(--bdr)}
+tbody td{padding:12px 16px;color:var(--m2);border-bottom:1px solid var(--bdr)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:var(--s1)}
+.hi{color:var(--rc);font-weight:700}
+.ok{color:var(--gr);font-weight:600}
+.no{color:#FF6B6B}
+/* ── CALLOUT ── */
+.callout{background:linear-gradient(135deg,rgba(92,155,240,.09),rgba(92,240,168,.04));
+  border:1px solid rgba(92,155,240,.22);border-radius:13px;
+  padding:28px 30px;margin:36px 0}
+.callout h4{font-family:var(--serif);font-size:20px;color:var(--rc);
+  margin-bottom:12px}
+/* ── FAQ ── */
+.faq-wrap{display:flex;flex-direction:column;gap:10px;margin:24px 0 40px}
+.faq-item{border:1px solid var(--bdr);border-radius:11px;
+  overflow:hidden;transition:border-color .25s}
+.faq-item:hover{border-color:rgba(92,155,240,.4)}
+.faq-item.open{border-color:var(--rc)}
+.faq-q{padding:17px 22px;font-size:15px;font-weight:600;
+  cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+  background:var(--s1);color:var(--txt);gap:14px;user-select:none;
+  transition:background .2s}
+.faq-q:hover,.faq-item.open .faq-q{background:var(--s2)}
+.faq-item.open .faq-q{color:var(--rc)}
+.faq-q::after{content:'▼';font-size:10px;color:var(--rc);
+  transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-q::after{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;
+  transition:max-height .38s ease,padding .38s ease;
+  font-size:14px;color:var(--m2);line-height:1.82;padding:0 22px}
+.faq-item.open .faq-a{max-height:600px;padding:18px 22px}
+/* ── TAKEAWAY ── */
+.take{background:linear-gradient(135deg,rgba(92,155,240,.09),rgba(92,240,168,.05));
+  border:1px solid rgba(92,155,240,.22);border-radius:13px;padding:28px 30px;margin:40px 0}
+.take h4{font-family:var(--serif);font-size:20px;color:var(--rc);margin-bottom:14px}
+.take ul{list-style:none;padding:0}
+.take ul li{font-size:15px;color:var(--m2);line-height:1.8;
+  padding:5px 0 5px 22px;position:relative;
+  border-bottom:1px solid rgba(255,255,255,.04)}
+.take ul li:last-child{border-bottom:none}
+.take ul li::before{content:'✓';position:absolute;left:0;color:var(--gr);font-weight:700}
+/* ── LAST UPDATED ── */
+.lu{font-size:12px;color:var(--m1);padding:14px 0;
+  border-top:1px solid var(--bdr);margin-bottom:36px}
+/* ── RELATED ── */
+.related{background:var(--s1);border:1px solid var(--bdr);
+  border-radius:13px;padding:26px;margin:36px 0}
+.rel-hd{font-size:11px;font-weight:700;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--m1);margin-bottom:16px}
+.rel-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rc{display:flex;align-items:center;gap:10px;padding:13px 16px;
+  background:var(--s2);border:1px solid var(--bdr);border-radius:9px;
+  text-decoration:none;font-size:13px;font-weight:600;color:var(--m2);
+  transition:all .2s}
+.rc:hover{border-color:var(--rc);color:var(--rc);transform:translateY(-2px)}
+/* ── CTA ── */
+.cta{background:linear-gradient(135deg,rgba(92,155,240,.11),rgba(92,240,168,.06));
+  border:1px solid rgba(92,155,240,.25);border-radius:14px;
+  padding:36px;text-align:center;margin:44px 0}
+.cta h3{font-family:var(--serif);font-size:28px;margin-bottom:12px}
+.cta p{color:var(--m2);font-size:14px;margin-bottom:22px}
+.cta a{display:inline-block;background:var(--rc);color:var(--bg);
+  padding:14px 36px;border-radius:10px;font-size:14px;font-weight:700;
+  text-decoration:none;transition:opacity .2s}
+.cta a:hover{opacity:.88}
+/* ── BACK ── */
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--m2);
+  text-decoration:none;font-size:14px;font-weight:600;padding:16px 0}
+.back:hover{color:var(--rc)}
+/* ── FOOTER ── */
+footer{background:var(--s1);border-top:1px solid var(--bdr);
+  padding:40px clamp(16px,4vw,56px)}
+.foot{max-width:1160px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+.foot-links{display:flex;gap:20px;flex-wrap:wrap}
+.foot-links a{font-size:12px;color:var(--m1);text-decoration:none}
+.foot-links a:hover{color:var(--acc)}
+.copy{font-size:11px;color:var(--m1)}
+/* ── SR (scroll reveal) ── */
+.sr{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.sr.vis{opacity:1;transform:none}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .rel-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div id="pgbar"></div>
+<nav class="nav">
+  <a href="../index.html" class="nav-logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 16 16" fill="none">
+        <path d="M2 8 Q5 3 8 8 Q11 13 14 8" stroke="#09090E" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <span class="logo-word">Prompt<em>Pulse</em></span>
+  </a>
+  <div class="nav-links">
+    <a href="../Blog/blog.html" class="cur">Blog</a>
+    <a href="../AITools/ai-tools.html">Tools</a>
+    <a href="../prompts/prompts.html">Prompts</a>
+    <a href="../index.html#newsletter">Newsletter</a>
+  </div>
+  <div class="nav-r">
+    <a href="../Blog/blog.html" class="btn-ghost">← Blog</a>
+    <a href="../index.html#newsletter" class="btn-cta">Subscribe Free</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="crumb">
+      <a href="../index.html">Home</a><span>/</span>
+      <a href="../Blog/blog.html">Blog</a><span>/</span>
+      <span>🔒 Enterprise AI</span>
+    </div>
+    <div class="pill"><span class="pill-dot"></span>🔒 Enterprise AI · April 2026</div>
+    <h1>Anthropic Compliance API 2026 —<br><em>Audit Logs for Regulated</em> Industries</h1>
+    <p class="hero-deck">Anthropic launched its Compliance API on March 30 2026 — programmatic access to admin and resource audit logs for Claude Platform. Built for finance, healthcare and legal teams. This is the enterprise trust signal regulated industries were waiting for.</p>
+    <div class="author">
+      <div class="av">PP</div>
+      <div class="av-info">
+        <div class="av-name">PromptPulse Editorial</div>
+        <div class="av-role">200+ AI tools tested · Zero sponsorships · April 2026</div>
+      </div>
+      <div class="av-badge">✅ Verified Research</div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="img-ph sr">
+    <span class="ico">🖼️</span>
+    <span class="lbl">Hero Image</span>
+    <span class="hint">1200 × 500 px — dark theme — Anthropic Compliance API Review 2026 — Audit Log</span>
+  </div>
+
+  <div class="stats sr">
+    <div class="si sr"><span class="sn">Launched</span><span class="sl">March 30 2026</span></div><div class="si sr"><span class="sn">Industries</span><span class="sl">Finance, Health, Legal</span></div><div class="si sr"><span class="sn">Events</span><span class="sl">Admin + Resource</span></div><div class="si sr"><span class="sn">Access</span><span class="sl">Enterprise API</span></div>
+  </div>
+
+  
+<div class="sdiv sr"><span class="snum">01</span><div class="sline"></div></div>
+<h2 class="sr">What the Compliance API Does</h2>
+<p class="sr">The Anthropic Compliance API gives organisations programmatic access to audit logs across their Claude Platform deployment. It tracks two categories of events. Admin and system activities — adding or removing workspace members, creating or rotating API keys, modifying system configurations and any administrative action taken on the Claude Platform account. Resource activities — file creation, file deletion and resource-level operations performed by Claude agents or users within the workspace. The API does not log model inference interactions — the content of conversations between users and Claude is not captured in audit logs. This distinction matters for legal and privacy reasons: organisations can audit who did what at the system and resource level without Anthropic holding records of conversation content. For regulated organisations already using Claude Enterprise the Compliance API allows consolidation of multiple workspace audit feeds under a single parent organisation — giving compliance teams a unified view across all their Claude deployments rather than requiring manual aggregation across multiple accounts.</p>
+<div class="sdiv sr"><span class="snum">02</span><div class="sline"></div></div>
+<h2 class="sr">Why Regulated Industries Need This Now</h2>
+<p class="sr">Finance, healthcare and legal organisations face a structural compliance requirement that has blocked meaningful adoption of AI tools: you cannot deploy a system that takes actions — creating files, calling APIs, modifying records — in a regulated environment without an immutable audit trail of what the system did and when. This is not optional. SOX, HIPAA, and legal professional conduct rules all require audit trails for systems handling sensitive operations. Before the Compliance API, Claude could be used for reading and analysis tasks without issue but deploying Claude agents with write permissions in regulated environments required building custom audit infrastructure around the Claude API — a significant engineering investment that most compliance teams would not approve. The Compliance API removes that blocker. Organisations can now prove to auditors, regulators and internal compliance functions that every admin action and resource modification by Claude or Claude users is captured in a tamper-evident log accessible via API and exportable to their existing SIEM and compliance tooling.</p>
+<div class="sdiv sr"><span class="snum">03</span><div class="sline"></div></div>
+<h2 class="sr">How to Integrate the Compliance API</h2>
+<p class="sr">The Compliance API is available to organisations already using Claude Enterprise via the Anthropic admin console and API. The integration follows Anthropic's standard API authentication model — your existing API key authenticates to the compliance endpoint. Event streams are paginated and filterable by event type, timestamp range, user and resource. For SIEM integration the recommended approach is polling the API on a scheduled interval and forwarding events to your existing log aggregation infrastructure — Splunk, Datadog, Elastic or equivalent. The event schema is documented in Anthropic's developer documentation and events are delivered in JSON format compatible with standard log processing pipelines. For organisations with multiple Claude workspaces the parent organisation consolidation feature eliminates the need to poll multiple endpoints separately — a single authenticated request returns events across all child workspaces.</p>
+<div class="sdiv sr"><span class="snum">04</span><div class="sline"></div></div>
+<h2 class="sr">The Competitive Position — Compliance vs OpenAI and Google</h2>
+<p class="sr">Microsoft Azure OpenAI Service has offered audit logging for enterprise deployments for over a year — the Compliance API brings Anthropic's enterprise offering to feature parity on this dimension. Google Cloud Vertex AI similarly provides audit logging for Gemini deployments via Google Cloud Audit Logs. What differentiates Anthropic's Compliance API is the explicit design for multi-workspace enterprise deployments with parent organisation consolidation — a capability that enterprise customers with multiple business unit deployments have been requesting. The compliance posture also signals Anthropic's commitment to regulated industry expansion. The company's stated $19 billion ARR trajectory requires significant enterprise revenue, and regulated industries represent the largest untapped enterprise opportunity for AI platforms that can demonstrate appropriate compliance infrastructure. The Compliance API is both a technical feature and a strategic market signal.</p>
+
+  <div class="sdiv sr"><span class="snum">05</span><div class="sline"></div></div>
+  <h2 class="sr">Frequently Asked Questions</h2>
+  <div class="faq-wrap sr">
+    <div class="faq-item"><div class="faq-q">What does the Anthropic Compliance API do?</div><div class="faq-a">Provides programmatic access to audit logs for Claude Platform deployments. Tracks admin activities like member management and API key creation, and resource activities like file creation and deletion. Does not log conversation content. Available to Claude Enterprise organisations.</div></div><div class="faq-item"><div class="faq-q">Which industries need the Anthropic Compliance API?</div><div class="faq-a">Financial services organisations under SOX and banking regulations, healthcare organisations under HIPAA, legal firms under professional conduct rules, and any regulated enterprise deploying Claude agents with write permissions where an immutable audit trail is required by regulators.</div></div><div class="faq-item"><div class="faq-q">How is the Anthropic Compliance API different from Claude Enterprise?</div><div class="faq-a">Claude Enterprise is the subscription tier. The Compliance API is a new feature within that tier — launched March 30 2026 — that adds programmatic audit log access. Organisations already on Claude Enterprise can enable the Compliance API without upgrading their subscription tier.</div></div><div class="faq-item"><div class="faq-q">Does the Anthropic Compliance API log conversation content?</div><div class="faq-a">No — the Compliance API explicitly does not log model inference interactions or conversation content. It logs admin and system activities and resource-level operations. This preserves confidentiality of conversation content while providing the operational audit trail regulators require.</div></div><div class="faq-item"><div class="faq-q">Anthropic Compliance API vs Azure OpenAI audit logs — which is better?</div><div class="faq-a">Azure OpenAI audit logging via Azure Monitor has broader SIEM integration ecosystem and more established compliance certification documentation. Anthropic's Compliance API differentiates on multi-workspace parent organisation consolidation. For organisations not already on Azure infrastructure Anthropic's offering is a viable enterprise alternative.</div></div>
+  </div>
+
+  <div class="take sr">
+    <h4>⚡ Key Takeaways</h4>
+    <ul><li>Launched March 30 2026 — the compliance capability regulated industries were blocking adoption over</li><li>Tracks admin and resource events — does NOT log conversation content, preserving privacy</li><li>Multi-workspace consolidation under parent org — single API call covers all business unit deployments</li><li>Brings Anthropic to feature parity with Azure OpenAI and Google Cloud for regulated enterprise</li><li>Strategic signal: Anthropic's path to $19B ARR requires regulated industry enterprise revenue</li></ul>
+  </div>
+
+  <div class="lu sr">📅 Last updated: April 2026 · PromptPulse Editorial · Verified</div>
+
+  <div class="related sr">
+    <div class="rel-hd">Related Reading</div>
+    <div class="rel-grid"><a class="rc" href="../AITools/claude/claude-review.html">🤖<span>Claude Review</span></a><a class="rc" href="claude-code-review-2026.html">🤖<span>Claude Code Review</span></a><a class="rc" href="microsoft-copilot-review-2026.html">💼<span>Microsoft Copilot Review</span></a><a class="rc" href="../AITools/ai-tools.html">🔬<span>All AI Tools</span></a></div>
+  </div>
+
+  <div class="cta sr">
+    <h3>Get Weekly AI Reviews Free</h3>
+    <p>Honest breakdowns every week. Zero sponsorships. Zero fluff.</p>
+    <a href="../index.html#newsletter">Subscribe Free →</a>
+  </div>
+
+  <a href="../Blog/blog.html" class="back sr">← Back to Blog</a>
+</div>
+
+<footer>
+  <div class="foot">
+    <a href="../index.html" class="nav-logo">
+      <div class="logo-mark" style="width:26px;height:26px">
+        <svg viewBox="0 0 16 16" fill="none" style="width:14px;height:14px">
+          <path d="M2 8 Q5 3 8 8 Q11 13 14 8" stroke="#09090E" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <span class="logo-word">Prompt<em>Pulse</em></span>
+    </a>
+    <div class="foot-links">
+      <a href="../index.html">Home</a>
+      <a href="../AITools/ai-tools.html">AI Tools</a>
+      <a href="../Blog/blog.html">Blog</a>
+      <a href="../index.html#newsletter">Newsletter</a>
+    </div>
+    <span class="copy">© 2026 PromptPulse · No sponsored content. Ever.</span>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Progress bar
+  var bar = document.getElementById('pgbar');
+  window.addEventListener('scroll', function() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')';
+  }, {passive: true});
+
+  // Scroll reveal
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('vis'); });
+  }, {threshold: 0.07});
+  document.querySelectorAll('.sr').forEach(function(el) { obs.observe(el); });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = q.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+});
+</script>
+</body>
+</html>

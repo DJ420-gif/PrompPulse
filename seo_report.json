@@ -22,19 +22,25 @@
     ]
   },
   {
-    "file": "AICrashCourse/beginner-crash-course.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/AICrashCourse/beginner-crash-course.html",
-    "score": 50,
-    "title": "AI Zero to Hero: The Complete Beginner Crash Course \u2014 PromptPulse",
-    "words": 1892,
+    "file": "Blog/shopify-ai-toolkit-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/shopify-ai-toolkit-2026.html",
+    "score": 0,
+    "title": "",
+    "words": 1,
     "tips": [
-      "\u26a0\ufe0f Description too long (165 chars) \u2014 Shorten to under 155",
-      "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/AICrashCourse/beginner-crash-course.html'>",
+      "\u274c CRITICAL: Missing title tag \u2014 Add <title>Keyword \u2014 PromptPulse</title>",
+      "\u274c CRITICAL: Missing meta description \u2014 Add <meta name='description' content='...'> under 155 chars",
+      "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/Blog/shopify-ai-toolkit-2026.html'>",
+      "\u274c CRITICAL: Missing H1 tag \u2014 Add one <h1> with primary keyword",
       "\u26a0\ufe0f Missing og:title \u2014 Add <meta property='og:title' content='...'>",
-      "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/AICrashCourse/beginner-crash-course.html'>",
+      "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/Blog/shopify-ai-toolkit-2026.html'>",
       "\u274c CRITICAL: Missing schema markup \u2014 Add Article or Review schema",
       "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
-      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+      "\u26a0\ufe0f Missing robots meta \u2014 Add <meta name='robots' content='index, follow'>",
+      "\u274c CRITICAL: Missing viewport \u2014 Mobile layout broken",
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals",
+      "\u274c CRITICAL: Only 1 words \u2014 Google may not index (need 300+)",
+      "\u26a0\ufe0f Only 0 internal links \u2014 Add 5+ links to related pages"
     ]
   },
   {
@@ -48,6 +54,22 @@
       "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/SaaSMVP/saas-mvp-guide.html'>",
       "\u26a0\ufe0f Missing og:title \u2014 Add <meta property='og:title' content='...'>",
       "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/SaaSMVP/saas-mvp-guide.html'>",
+      "\u274c CRITICAL: Missing schema markup \u2014 Add Article or Review schema",
+      "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "AICrashCourse/beginner-crash-course.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/AICrashCourse/beginner-crash-course.html",
+    "score": 50,
+    "title": "AI Zero to Hero: The Complete Beginner Crash Course \u2014 PromptPulse",
+    "words": 1892,
+    "tips": [
+      "\u26a0\ufe0f Description too long (165 chars) \u2014 Shorten to under 155",
+      "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/AICrashCourse/beginner-crash-course.html'>",
+      "\u26a0\ufe0f Missing og:title \u2014 Add <meta property='og:title' content='...'>",
+      "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/AICrashCourse/beginner-crash-course.html'>",
       "\u274c CRITICAL: Missing schema markup \u2014 Add Article or Review schema",
       "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
       "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
@@ -102,6 +124,21 @@
     ]
   },
   {
+    "file": "AISecurityGuide/ai-security-guide.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/AISecurityGuide/ai-security-guide.html",
+    "score": 56,
+    "title": "AI Security Guide \u2014 PromptPulse",
+    "words": 1123,
+    "tips": [
+      "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/AISecurityGuide/ai-security-guide.html'>",
+      "\u26a0\ufe0f Missing og:title \u2014 Add <meta property='og:title' content='...'>",
+      "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/AISecurityGuide/ai-security-guide.html'>",
+      "\u274c CRITICAL: Missing schema markup \u2014 Add Article or Review schema",
+      "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
     "file": "2026Benchmark/llm-benchmarks.html",
     "url": "https://dj420-gif.github.io/PromptPulse/2026Benchmark/llm-benchmarks.html",
     "score": 56,
@@ -126,21 +163,6 @@
       "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/FounderAIPlayBook/founders-playbook.html'>",
       "\u26a0\ufe0f Missing og:title \u2014 Add <meta property='og:title' content='...'>",
       "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/FounderAIPlayBook/founders-playbook.html'>",
-      "\u274c CRITICAL: Missing schema markup \u2014 Add Article or Review schema",
-      "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
-      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
-    ]
-  },
-  {
-    "file": "AISecurityGuide/ai-security-guide.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/AISecurityGuide/ai-security-guide.html",
-    "score": 56,
-    "title": "AI Security Guide \u2014 PromptPulse",
-    "words": 1123,
-    "tips": [
-      "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/AISecurityGuide/ai-security-guide.html'>",
-      "\u26a0\ufe0f Missing og:title \u2014 Add <meta property='og:title' content='...'>",
-      "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/AISecurityGuide/ai-security-guide.html'>",
       "\u274c CRITICAL: Missing schema markup \u2014 Add Article or Review schema",
       "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
       "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
@@ -179,18 +201,18 @@
     ]
   },
   {
-    "file": "AITools/Devin/devin-review.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/AITools/Devin/devin-review.html",
+    "file": "AITools/Perplexity/perplexity-review.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/AITools/Perplexity/perplexity-review.html",
     "score": 60,
-    "title": "Devin AI Review 2026 \u2014 The First AI That Can Actually Ship Code Autonomously",
-    "words": 545,
+    "title": "Perplexity AI Review 2026 \u2014 The Search Engine That Replaced Google for Developers",
+    "words": 544,
     "tips": [
-      "\u26a0\ufe0f Title too long (76 chars) \u2014 Shorten to under 65",
-      "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/AITools/Devin/devin-review.html'>",
-      "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/AITools/Devin/devin-review.html'>",
+      "\u26a0\ufe0f Title too long (81 chars) \u2014 Shorten to under 65",
+      "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/AITools/Perplexity/perplexity-review.html'>",
+      "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/AITools/Perplexity/perplexity-review.html'>",
       "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
       "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals",
-      "\u26a0\ufe0f Light content (545 words) \u2014 Aim for 1000+ for better rankings"
+      "\u26a0\ufe0f Light content (544 words) \u2014 Aim for 1000+ for better rankings"
     ]
   },
   {
@@ -224,36 +246,6 @@
     ]
   },
   {
-    "file": "AITools/Llama/devin-review.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/AITools/Llama/devin-review.html",
-    "score": 60,
-    "title": "Devin AI Review 2026 \u2014 The First AI That Can Actually Ship Code Autonomously",
-    "words": 545,
-    "tips": [
-      "\u26a0\ufe0f Title too long (76 chars) \u2014 Shorten to under 65",
-      "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/AITools/Llama/devin-review.html'>",
-      "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/AITools/Llama/devin-review.html'>",
-      "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
-      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals",
-      "\u26a0\ufe0f Light content (545 words) \u2014 Aim for 1000+ for better rankings"
-    ]
-  },
-  {
-    "file": "AITools/Perplexity/perplexity-review.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/AITools/Perplexity/perplexity-review.html",
-    "score": 60,
-    "title": "Perplexity AI Review 2026 \u2014 The Search Engine That Replaced Google for Developers",
-    "words": 544,
-    "tips": [
-      "\u26a0\ufe0f Title too long (81 chars) \u2014 Shorten to under 65",
-      "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/AITools/Perplexity/perplexity-review.html'>",
-      "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/AITools/Perplexity/perplexity-review.html'>",
-      "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
-      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals",
-      "\u26a0\ufe0f Light content (544 words) \u2014 Aim for 1000+ for better rankings"
-    ]
-  },
-  {
     "file": "AITools/DalleE/dalle-review.html",
     "url": "https://dj420-gif.github.io/PromptPulse/AITools/DalleE/dalle-review.html",
     "score": 60,
@@ -266,6 +258,36 @@
       "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
       "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals",
       "\u26a0\ufe0f Light content (526 words) \u2014 Aim for 1000+ for better rankings"
+    ]
+  },
+  {
+    "file": "AITools/Devin/devin-review.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/AITools/Devin/devin-review.html",
+    "score": 60,
+    "title": "Devin AI Review 2026 \u2014 The First AI That Can Actually Ship Code Autonomously",
+    "words": 545,
+    "tips": [
+      "\u26a0\ufe0f Title too long (76 chars) \u2014 Shorten to under 65",
+      "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/AITools/Devin/devin-review.html'>",
+      "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/AITools/Devin/devin-review.html'>",
+      "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals",
+      "\u26a0\ufe0f Light content (545 words) \u2014 Aim for 1000+ for better rankings"
+    ]
+  },
+  {
+    "file": "AITools/Llama/devin-review.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/AITools/Llama/devin-review.html",
+    "score": 60,
+    "title": "Devin AI Review 2026 \u2014 The First AI That Can Actually Ship Code Autonomously",
+    "words": 545,
+    "tips": [
+      "\u26a0\ufe0f Title too long (76 chars) \u2014 Shorten to under 65",
+      "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/AITools/Llama/devin-review.html'>",
+      "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/AITools/Llama/devin-review.html'>",
+      "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals",
+      "\u26a0\ufe0f Light content (545 words) \u2014 Aim for 1000+ for better rankings"
     ]
   },
   {
@@ -355,19 +377,6 @@
     ]
   },
   {
-    "file": "prompts/prompts.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/prompts/prompts.html",
-    "score": 72,
-    "title": "AI Prompt Library 2026 \u2014 Every Prompt You'll Ever Need | PromptPulse",
-    "words": 2232,
-    "tips": [
-      "\u26a0\ufe0f Title too long (68 chars) \u2014 Shorten to under 65",
-      "\u26a0\ufe0f Description too long (173 chars) \u2014 Shorten to under 155",
-      "\u26a0\ufe0f Wrong canonical: https://DJ420-gif.github.io/PromptPulse/ultimate-prompt-guide/prompts.html \u2192 Should be: https://dj420-gif.github.io/PromptPulse/prompts/prompts.html",
-      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
-    ]
-  },
-  {
     "file": "Blog/free-ai-tools-coding.html",
     "url": "https://dj420-gif.github.io/PromptPulse/Blog/free-ai-tools-coding.html",
     "score": 72,
@@ -404,6 +413,19 @@
       "\u26a0\ufe0f Description too long (160 chars) \u2014 Shorten to under 155",
       "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/AITools/gemini/gemini-review.html'>",
       "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/AITools/gemini/gemini-review.html'>",
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "prompts/prompts.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/prompts/prompts.html",
+    "score": 72,
+    "title": "AI Prompt Library 2026 \u2014 Every Prompt You'll Ever Need | PromptPulse",
+    "words": 2232,
+    "tips": [
+      "\u26a0\ufe0f Title too long (68 chars) \u2014 Shorten to under 65",
+      "\u26a0\ufe0f Description too long (173 chars) \u2014 Shorten to under 155",
+      "\u26a0\ufe0f Wrong canonical: https://DJ420-gif.github.io/PromptPulse/ultimate-prompt-guide/prompts.html \u2192 Should be: https://dj420-gif.github.io/PromptPulse/prompts/prompts.html",
       "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
     ]
   },
@@ -458,39 +480,6 @@
     ]
   },
   {
-    "file": "Blog/kling-ai-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/kling-ai-review-2026.html",
-    "score": 86,
-    "title": "Kling AI Review 2026 \u2014 Chinese Video Generator Going Viral [Tested]",
-    "words": 1352,
-    "tips": [
-      "\u26a0\ufe0f Title too long (67 chars) \u2014 Shorten to under 65",
-      "\u26a0\ufe0f Description too long (200 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/grammarly-ai-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/grammarly-ai-review-2026.html",
-    "score": 86,
-    "title": "Grammarly AI Review 2026 \u2014 40M Users, Is It Still Worth $12/Month?",
-    "words": 1329,
-    "tips": [
-      "\u26a0\ufe0f Title too long (66 chars) \u2014 Shorten to under 65",
-      "\u26a0\ufe0f Description too long (199 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/claude-vs-chatgpt-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/claude-vs-chatgpt-2026.html",
-    "score": 86,
-    "title": "Claude vs ChatGPT 2026 \u2014 Tested on 200 Real Coding Tasks. Honest Verdict.",
-    "words": 1062,
-    "tips": [
-      "\u26a0\ufe0f Title too long (73 chars) \u2014 Shorten to under 65",
-      "\u26a0\ufe0f Description too long (177 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
     "file": "Blog/gemini-3-1-pro-review-2026.html",
     "url": "https://dj420-gif.github.io/PromptPulse/Blog/gemini-3-1-pro-review-2026.html",
     "score": 86,
@@ -499,17 +488,6 @@
     "tips": [
       "\u26a0\ufe0f Title too long (66 chars) \u2014 Shorten to under 65",
       "\u26a0\ufe0f Description too long (183 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/claude-vs-chatgpt-coding-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/claude-vs-chatgpt-coding-2026.html",
-    "score": 86,
-    "title": "Claude vs ChatGPT for Coding 2026 \u2014 50 TypeScript Tasks, Honest Scores",
-    "words": 1041,
-    "tips": [
-      "\u26a0\ufe0f Title too long (70 chars) \u2014 Shorten to under 65",
-      "\u26a0\ufe0f Description too long (184 chars) \u2014 Shorten to under 155"
     ]
   },
   {
@@ -524,6 +502,39 @@
     ]
   },
   {
+    "file": "Blog/grammarly-ai-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/grammarly-ai-review-2026.html",
+    "score": 86,
+    "title": "Grammarly AI Review 2026 \u2014 40M Users, Is It Still Worth $12/Month?",
+    "words": 1329,
+    "tips": [
+      "\u26a0\ufe0f Title too long (66 chars) \u2014 Shorten to under 65",
+      "\u26a0\ufe0f Description too long (199 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/kling-ai-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/kling-ai-review-2026.html",
+    "score": 86,
+    "title": "Kling AI Review 2026 \u2014 Chinese Video Generator Going Viral [Tested]",
+    "words": 1352,
+    "tips": [
+      "\u26a0\ufe0f Title too long (67 chars) \u2014 Shorten to under 65",
+      "\u26a0\ufe0f Description too long (200 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/claude-vs-chatgpt-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/claude-vs-chatgpt-2026.html",
+    "score": 86,
+    "title": "Claude vs ChatGPT 2026 \u2014 Tested on 200 Real Coding Tasks. Honest Verdict.",
+    "words": 1062,
+    "tips": [
+      "\u26a0\ufe0f Title too long (73 chars) \u2014 Shorten to under 65",
+      "\u26a0\ufe0f Description too long (177 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
     "file": "Blog/microsoft-copilot-review-2026.html",
     "url": "https://dj420-gif.github.io/PromptPulse/Blog/microsoft-copilot-review-2026.html",
     "score": 86,
@@ -535,23 +546,14 @@
     ]
   },
   {
-    "file": "Blog/openclaw-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/openclaw-review-2026.html",
-    "score": 92,
-    "title": "OpenClaw Review 2026 \u2014 The AI Agent That Became GitHub's Most Starred Project",
-    "words": 1145,
+    "file": "Blog/claude-vs-chatgpt-coding-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/claude-vs-chatgpt-coding-2026.html",
+    "score": 86,
+    "title": "Claude vs ChatGPT for Coding 2026 \u2014 50 TypeScript Tasks, Honest Scores",
+    "words": 1041,
     "tips": [
-      "\u26a0\ufe0f Title too long (77 chars) \u2014 Shorten to under 65"
-    ]
-  },
-  {
-    "file": "Blog/notion-ai-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/notion-ai-review-2026.html",
-    "score": 92,
-    "title": "Notion AI Review 2026 \u2014 Paid Attach Rate Hit 50%. Worth Upgrading?",
-    "words": 1407,
-    "tips": [
-      "\u26a0\ufe0f Title too long (66 chars) \u2014 Shorten to under 65"
+      "\u26a0\ufe0f Title too long (70 chars) \u2014 Shorten to under 65",
+      "\u26a0\ufe0f Description too long (184 chars) \u2014 Shorten to under 155"
     ]
   },
   {
@@ -575,43 +577,83 @@
     ]
   },
   {
-    "file": "Blog/deepseek-v4-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/deepseek-v4-review-2026.html",
-    "score": 94,
-    "title": "DeepSeek V4 Review 2026 \u2014 1 Trillion Parameters, Still Free?",
-    "words": 1161,
+    "file": "Blog/openclaw-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/openclaw-review-2026.html",
+    "score": 92,
+    "title": "OpenClaw Review 2026 \u2014 The AI Agent That Became GitHub's Most Starred Project",
+    "words": 1145,
     "tips": [
-      "\u26a0\ufe0f Description too long (192 chars) \u2014 Shorten to under 155"
+      "\u26a0\ufe0f Title too long (77 chars) \u2014 Shorten to under 65"
     ]
   },
   {
-    "file": "Blog/lovable-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/lovable-review-2026.html",
-    "score": 94,
-    "title": "Lovable Review 2026 \u2014 $20M ARR in 2 Months. Best AI App Builder?",
-    "words": 1142,
+    "file": "Blog/notion-ai-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/notion-ai-review-2026.html",
+    "score": 92,
+    "title": "Notion AI Review 2026 \u2014 Paid Attach Rate Hit 50%. Worth Upgrading?",
+    "words": 1407,
     "tips": [
-      "\u26a0\ufe0f Description too long (171 chars) \u2014 Shorten to under 155"
+      "\u26a0\ufe0f Title too long (66 chars) \u2014 Shorten to under 65"
     ]
   },
   {
-    "file": "Blog/leadxpro-ai-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/leadxpro-ai-review-2026.html",
+    "file": "Blog/google-veo-3-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/google-veo-3-review-2026.html",
     "score": 94,
-    "title": "LeadXpro AI Review 2026 \u2014 AI Lead Generation Tool Honest Verdict",
-    "words": 1163,
+    "title": "Google Veo 3.1 Review 2026 \u2014 The AI Video That Broke the Internet",
+    "words": 1350,
     "tips": [
-      "\u26a0\ufe0f Description too long (177 chars) \u2014 Shorten to under 155"
+      "\u26a0\ufe0f Description too long (197 chars) \u2014 Shorten to under 155"
     ]
   },
   {
-    "file": "Blog/blaze-ai-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/blaze-ai-review-2026.html",
+    "file": "Blog/suno-ai-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/suno-ai-review-2026.html",
     "score": 94,
-    "title": "Blaze AI Review 2026 \u2014 Best AI Content Tool for Solopreneurs?",
-    "words": 1229,
+    "title": "Suno AI Review 2026 \u2014 Best AI Music Generator? Tested Honestly",
+    "words": 1221,
     "tips": [
-      "\u26a0\ufe0f Description too long (187 chars) \u2014 Shorten to under 155"
+      "\u26a0\ufe0f Description too long (184 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/notebooklm-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/notebooklm-review-2026.html",
+    "score": 94,
+    "title": "NotebookLM Review 2026 \u2014 Google's AI Research Tool Tested",
+    "words": 1189,
+    "tips": [
+      "\u26a0\ufe0f Description too long (188 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/chatgpt-agent-mode-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/chatgpt-agent-mode-2026.html",
+    "score": 94,
+    "title": "ChatGPT Agent Mode 2026 \u2014 Complete Guide for Developers",
+    "words": 1099,
+    "tips": [
+      "\u26a0\ufe0f Description too long (174 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/how-to-learn-ai-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/how-to-learn-ai-2026.html",
+    "score": 94,
+    "title": "How to Learn AI in 2026 \u2014 Complete Beginner Roadmap (Free)",
+    "words": 1136,
+    "tips": [
+      "\u26a0\ufe0f Description too long (174 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/ai-for-seo-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/ai-for-seo-2026.html",
+    "score": 94,
+    "title": "Best AI Tools for SEO 2026 \u2014 Tested by a Developer Who Ranks",
+    "words": 1404,
+    "tips": [
+      "\u26a0\ufe0f Description too long (189 chars) \u2014 Shorten to under 155"
     ]
   },
   {
@@ -635,53 +677,13 @@
     ]
   },
   {
-    "file": "Blog/gpt5-vs-claude-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/gpt5-vs-claude-2026.html",
+    "file": "Blog/lovable-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/lovable-review-2026.html",
     "score": 94,
-    "title": "GPT-5 vs Claude 3.5 \u2014 Which AI Should Developers Use in 2026?",
-    "words": 972,
+    "title": "Lovable Review 2026 \u2014 $20M ARR in 2 Months. Best AI App Builder?",
+    "words": 1142,
     "tips": [
-      "\u26a0\ufe0f Description too long (180 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/claude-opus-4-6-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/claude-opus-4-6-review-2026.html",
-    "score": 94,
-    "title": "Claude Opus 4.6 Review 2026 \u2014 Anthropic's Most Powerful Model",
-    "words": 1189,
-    "tips": [
-      "\u26a0\ufe0f Description too long (183 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/ai-for-seo-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/ai-for-seo-2026.html",
-    "score": 94,
-    "title": "Best AI Tools for SEO 2026 \u2014 Tested by a Developer Who Ranks",
-    "words": 1404,
-    "tips": [
-      "\u26a0\ufe0f Description too long (189 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/how-to-learn-ai-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/how-to-learn-ai-2026.html",
-    "score": 94,
-    "title": "How to Learn AI in 2026 \u2014 Complete Beginner Roadmap (Free)",
-    "words": 1136,
-    "tips": [
-      "\u26a0\ufe0f Description too long (174 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/gpt-5-4-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/gpt-5-4-review-2026.html",
-    "score": 94,
-    "title": "GPT-5.4 Review 2026: vs Claude Opus 4.6, Benchmarks & Codex",
-    "words": 1110,
-    "tips": [
-      "\u26a0\ufe0f Description too long (180 chars) \u2014 Shorten to under 155"
+      "\u26a0\ufe0f Description too long (171 chars) \u2014 Shorten to under 155"
     ]
   },
   {
@@ -695,83 +697,13 @@
     ]
   },
   {
-    "file": "Blog/chatgpt-agent-mode-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/chatgpt-agent-mode-2026.html",
+    "file": "Blog/blaze-ai-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/blaze-ai-review-2026.html",
     "score": 94,
-    "title": "ChatGPT Agent Mode 2026 \u2014 Complete Guide for Developers",
-    "words": 1099,
-    "tips": [
-      "\u26a0\ufe0f Description too long (174 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/jobhire-ai-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/jobhire-ai-review-2026.html",
-    "score": 94,
-    "title": "JobHire.AI Review 2026 \u2014 Does It Actually Get You Interviews?",
-    "words": 1228,
-    "tips": [
-      "\u26a0\ufe0f Description too long (170 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/google-veo-3-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/google-veo-3-review-2026.html",
-    "score": 94,
-    "title": "Google Veo 3.1 Review 2026 \u2014 The AI Video That Broke the Internet",
-    "words": 1350,
-    "tips": [
-      "\u26a0\ufe0f Description too long (197 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/nemotron-3-super-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/nemotron-3-super-review-2026.html",
-    "score": 94,
-    "title": "Nemotron 3 Super Review \u2014 Free 120B Model Beats GPT? [2026]",
-    "words": 1204,
+    "title": "Blaze AI Review 2026 \u2014 Best AI Content Tool for Solopreneurs?",
+    "words": 1229,
     "tips": [
       "\u26a0\ufe0f Description too long (187 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/suno-ai-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/suno-ai-review-2026.html",
-    "score": 94,
-    "title": "Suno AI Review 2026 \u2014 Best AI Music Generator? Tested Honestly",
-    "words": 1221,
-    "tips": [
-      "\u26a0\ufe0f Description too long (184 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/gamma-ai-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/gamma-ai-review-2026.html",
-    "score": 94,
-    "title": "Gamma AI Review 2026 \u2014 70M Users, AI Presentations in Seconds",
-    "words": 1357,
-    "tips": [
-      "\u26a0\ufe0f Description too long (184 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/best-ai-for-coding-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/best-ai-for-coding-2026.html",
-    "score": 94,
-    "title": "Best AI for Coding 2026 \u2014 6 Tools Tested, 1 Clear Winner",
-    "words": 1014,
-    "tips": [
-      "\u26a0\ufe0f Description too long (192 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "Blog/ltx-2-3-video-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/ltx-2-3-video-review-2026.html",
-    "score": 94,
-    "title": "LTX 2.3 Review 2026 \u2014 Free Open Source 4K AI Video Generator",
-    "words": 1174,
-    "tips": [
-      "\u26a0\ufe0f Description too long (184 chars) \u2014 Shorten to under 155"
     ]
   },
   {
@@ -785,13 +717,33 @@
     ]
   },
   {
-    "file": "Blog/notebooklm-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/notebooklm-review-2026.html",
+    "file": "Blog/deepseek-v4-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/deepseek-v4-review-2026.html",
     "score": 94,
-    "title": "NotebookLM Review 2026 \u2014 Google's AI Research Tool Tested",
-    "words": 1189,
+    "title": "DeepSeek V4 Review 2026 \u2014 1 Trillion Parameters, Still Free?",
+    "words": 1161,
     "tips": [
-      "\u26a0\ufe0f Description too long (188 chars) \u2014 Shorten to under 155"
+      "\u26a0\ufe0f Description too long (192 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/gpt5-vs-claude-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/gpt5-vs-claude-2026.html",
+    "score": 94,
+    "title": "GPT-5 vs Claude 3.5 \u2014 Which AI Should Developers Use in 2026?",
+    "words": 972,
+    "tips": [
+      "\u26a0\ufe0f Description too long (180 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/best-ai-for-coding-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/best-ai-for-coding-2026.html",
+    "score": 94,
+    "title": "Best AI for Coding 2026 \u2014 6 Tools Tested, 1 Clear Winner",
+    "words": 1014,
+    "tips": [
+      "\u26a0\ufe0f Description too long (192 chars) \u2014 Shorten to under 155"
     ]
   },
   {
@@ -805,6 +757,76 @@
     ]
   },
   {
+    "file": "Blog/leadxpro-ai-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/leadxpro-ai-review-2026.html",
+    "score": 94,
+    "title": "LeadXpro AI Review 2026 \u2014 AI Lead Generation Tool Honest Verdict",
+    "words": 1163,
+    "tips": [
+      "\u26a0\ufe0f Description too long (177 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/ltx-2-3-video-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/ltx-2-3-video-review-2026.html",
+    "score": 94,
+    "title": "LTX 2.3 Review 2026 \u2014 Free Open Source 4K AI Video Generator",
+    "words": 1174,
+    "tips": [
+      "\u26a0\ufe0f Description too long (184 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/gpt-5-4-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/gpt-5-4-review-2026.html",
+    "score": 94,
+    "title": "GPT-5.4 Review 2026: vs Claude Opus 4.6, Benchmarks & Codex",
+    "words": 1110,
+    "tips": [
+      "\u26a0\ufe0f Description too long (180 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/nemotron-3-super-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/nemotron-3-super-review-2026.html",
+    "score": 94,
+    "title": "Nemotron 3 Super Review \u2014 Free 120B Model Beats GPT? [2026]",
+    "words": 1204,
+    "tips": [
+      "\u26a0\ufe0f Description too long (187 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/claude-opus-4-6-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/claude-opus-4-6-review-2026.html",
+    "score": 94,
+    "title": "Claude Opus 4.6 Review 2026 \u2014 Anthropic's Most Powerful Model",
+    "words": 1189,
+    "tips": [
+      "\u26a0\ufe0f Description too long (183 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/gamma-ai-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/gamma-ai-review-2026.html",
+    "score": 94,
+    "title": "Gamma AI Review 2026 \u2014 70M Users, AI Presentations in Seconds",
+    "words": 1357,
+    "tips": [
+      "\u26a0\ufe0f Description too long (184 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/jobhire-ai-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/jobhire-ai-review-2026.html",
+    "score": 94,
+    "title": "JobHire.AI Review 2026 \u2014 Does It Actually Get You Interviews?",
+    "words": 1228,
+    "tips": [
+      "\u26a0\ufe0f Description too long (170 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
     "file": "AITools/perplexity-comet-review-2026.html",
     "url": "https://dj420-gif.github.io/PromptPulse/AITools/perplexity-comet-review-2026.html",
     "score": 94,
@@ -812,26 +834,6 @@
     "words": 1303,
     "tips": [
       "\u26a0\ufe0f Description too long (198 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "AITools/synthesia-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/AITools/synthesia-review-2026.html",
-    "score": 94,
-    "title": "Synthesia Review 2026 \u2014 Enterprise AI Video Platform Tested",
-    "words": 1284,
-    "tips": [
-      "\u26a0\ufe0f Description too long (207 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
-    "file": "AITools/zapier-ai-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/AITools/zapier-ai-review-2026.html",
-    "score": 94,
-    "title": "Zapier AI Review 2026 \u2014 Is It Still Worth It vs n8n in 2026?",
-    "words": 1343,
-    "tips": [
-      "\u26a0\ufe0f Description too long (180 chars) \u2014 Shorten to under 155"
     ]
   },
   {
@@ -845,16 +847,6 @@
     ]
   },
   {
-    "file": "AITools/grok-4-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/AITools/grok-4-review-2026.html",
-    "score": 94,
-    "title": "Grok 4 Review 2026 \u2014 Multi-Agent xAI Model With Live Internet",
-    "words": 1302,
-    "tips": [
-      "\u26a0\ufe0f Description too long (192 chars) \u2014 Shorten to under 155"
-    ]
-  },
-  {
     "file": "AITools/figma-ai-review-2026.html",
     "url": "https://dj420-gif.github.io/PromptPulse/AITools/figma-ai-review-2026.html",
     "score": 94,
@@ -865,11 +857,141 @@
     ]
   },
   {
-    "file": "Blog/cursor-3-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/cursor-3-review-2026.html",
+    "file": "AITools/synthesia-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/AITools/synthesia-review-2026.html",
+    "score": 94,
+    "title": "Synthesia Review 2026 \u2014 Enterprise AI Video Platform Tested",
+    "words": 1284,
+    "tips": [
+      "\u26a0\ufe0f Description too long (207 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "AITools/grok-4-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/AITools/grok-4-review-2026.html",
+    "score": 94,
+    "title": "Grok 4 Review 2026 \u2014 Multi-Agent xAI Model With Live Internet",
+    "words": 1302,
+    "tips": [
+      "\u26a0\ufe0f Description too long (192 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "AITools/zapier-ai-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/AITools/zapier-ai-review-2026.html",
+    "score": 94,
+    "title": "Zapier AI Review 2026 \u2014 Is It Still Worth It vs n8n in 2026?",
+    "words": 1343,
+    "tips": [
+      "\u26a0\ufe0f Description too long (180 chars) \u2014 Shorten to under 155"
+    ]
+  },
+  {
+    "file": "Blog/gemini-flash-live-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/gemini-flash-live-review-2026.html",
     "score": 96,
-    "title": "Cursor 3 Review 2026 \u2014 Agent-First IDE vs Claude Code [Tested]",
-    "words": 1810,
+    "title": "Gemini 3.1 Flash Live Review 2026 \u2014 Real-Time Voice AI Tested",
+    "words": 1566,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/grok-4-20-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/grok-4-20-review-2026.html",
+    "score": 96,
+    "title": "Grok 4.20 Review 2026 \u2014 4 AI Agents, SpaceX Acquisition",
+    "words": 1397,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/claude-mythos-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/claude-mythos-review-2026.html",
+    "score": 96,
+    "title": "Claude Mythos 2026 \u2014 Anthropic's Most Powerful AI Leaked",
+    "words": 1565,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/ai-api-pricing-2026-guide.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/ai-api-pricing-2026-guide.html",
+    "score": 96,
+    "title": "AI API Pricing 2026 \u2014 Will Prices Rise After OpenAI IPO?",
+    "words": 1862,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/qwen3-6-plus-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/qwen3-6-plus-review-2026.html",
+    "score": 96,
+    "title": "Qwen3.6-Plus Review 2026 \u2014 SOTA Coding, 1000 Free API Calls",
+    "words": 1724,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/nano-banana-2-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/nano-banana-2-review-2026.html",
+    "score": 96,
+    "title": "Nano Banana 2 Review 2026 \u2014 Google AI Image That Went Viral",
+    "words": 1582,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/openai-ipo-2026-revenue-growth.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/openai-ipo-2026-revenue-growth.html",
+    "score": 96,
+    "title": "OpenAI $25B Revenue and IPO 2026 \u2014 What It Means for You",
+    "words": 1751,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/anthropic-conway-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/anthropic-conway-2026.html",
+    "score": 96,
+    "title": "Anthropic Conway 2026 \u2014 Always-On AI Agent Leaked",
+    "words": 1257,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/claude-managed-agents-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/claude-managed-agents-review-2026.html",
+    "score": 96,
+    "title": "Claude Managed Agents 2026 Review \u2014 $0.08/hr",
+    "words": 1296,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/gemini-3-1-ultra-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/gemini-3-1-ultra-review-2026.html",
+    "score": 96,
+    "title": "Gemini 3.1 Ultra Review 2026 \u2014 2M Context, Is It Worth It?",
+    "words": 1572,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/suno-5-5-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/suno-5-5-review-2026.html",
+    "score": 96,
+    "title": "Suno 5.5 Review 2026 \u2014 Voice Cloning AI Music Generator",
+    "words": 1388,
     "tips": [
       "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
     ]
@@ -895,11 +1017,51 @@
     ]
   },
   {
-    "file": "Blog/openai-ipo-2026-revenue-growth.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/openai-ipo-2026-revenue-growth.html",
+    "file": "Blog/groq-ai-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/groq-ai-review-2026.html",
     "score": 96,
-    "title": "OpenAI $25B Revenue and IPO 2026 \u2014 What It Means for You",
-    "words": 1751,
+    "title": "Groq AI Review 2026 \u2014 13x Faster Inference, Free Tier",
+    "words": 977,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/gpt-oss-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/gpt-oss-review-2026.html",
+    "score": 96,
+    "title": "GPT-OSS Review 2026 \u2014 OpenAI Open-Source Model Tested",
+    "words": 1398,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/lm-studio-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/lm-studio-review-2026.html",
+    "score": 96,
+    "title": "LM Studio Review 2026 \u2014 Best Local AI GUI, Free to Use",
+    "words": 1004,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/mcp-v2-1-guide-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/mcp-v2-1-guide-2026.html",
+    "score": 96,
+    "title": "MCP v2.1 Guide 2026 \u2014 97M Downloads, What Changed",
+    "words": 1239,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/perplexity-vs-grok-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/perplexity-vs-grok-2026.html",
+    "score": 96,
+    "title": "Perplexity vs Grok 2026 \u2014 Which AI Search Tool Wins?",
+    "words": 1403,
     "tips": [
       "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
     ]
@@ -915,11 +1077,11 @@
     ]
   },
   {
-    "file": "Blog/qwen3-6-plus-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/qwen3-6-plus-review-2026.html",
+    "file": "Blog/seedance-2-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/seedance-2-review-2026.html",
     "score": 96,
-    "title": "Qwen3.6-Plus Review 2026 \u2014 SOTA Coding, 1000 Free API Calls",
-    "words": 1724,
+    "title": "Seedance 2.0 Review 2026 \u2014 ByteDance AI Video Tested",
+    "words": 1566,
     "tips": [
       "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
     ]
@@ -935,11 +1097,61 @@
     ]
   },
   {
-    "file": "Blog/ai-api-pricing-2026-guide.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/ai-api-pricing-2026-guide.html",
+    "file": "Blog/gemma-4-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/gemma-4-review-2026.html",
     "score": 96,
-    "title": "AI API Pricing 2026 \u2014 Will Prices Rise After OpenAI IPO?",
-    "words": 1862,
+    "title": "Google Gemma 4 Review 2026 \u2014 Apache 2.0, 400M Downloads",
+    "words": 1414,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/make-com-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/make-com-review-2026.html",
+    "score": 96,
+    "title": "Make.com Review 2026 \u2014 Zapier Alternative, 1000 Free Ops",
+    "words": 997,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/ollama-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/ollama-review-2026.html",
+    "score": 96,
+    "title": "Ollama Review 2026 \u2014 Run AI Locally Free, 52M Downloads",
+    "words": 1062,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/runway-gen-4-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/runway-gen-4-review-2026.html",
+    "score": 96,
+    "title": "Runway Gen-4 Review 2026 \u2014 Best AI Video for Filmmakers",
+    "words": 1396,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/chatgpt-health-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/chatgpt-health-review-2026.html",
+    "score": 96,
+    "title": "ChatGPT Health Review 2026 \u2014 Is AI Safe for Medical Use?",
+    "words": 1048,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/adobe-firefly-video-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/adobe-firefly-video-review-2026.html",
+    "score": 96,
+    "title": "Adobe Firefly Video Review 2026 \u2014 Commercially Safe AI Video",
+    "words": 1584,
     "tips": [
       "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
     ]
@@ -955,6 +1167,34 @@
     ]
   },
   {
+    "file": "Blog/grok-imagine-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/grok-imagine-review-2026.html",
+    "score": 96,
+    "title": "Grok Imagine 1.0 Review 2026 \u2014 xAI AI Video Generator",
+    "words": 1361,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/cursor-3-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/cursor-3-review-2026.html",
+    "score": 96,
+    "title": "Cursor 3 Review 2026 \u2014 Agent-First IDE vs Claude Code [Tested]",
+    "words": 1810,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/qwen-3-5-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/qwen-3-5-review-2026.html",
+    "score": 100,
+    "title": "Qwen 3.5 Review \u2014 Free Open-Source AI That Beats GPT-5.2? [2026]",
+    "words": 1183,
+    "tips": []
+  },
+  {
     "file": "Blog/kimi-k2-5-review-2026.html",
     "url": "https://dj420-gif.github.io/PromptPulse/Blog/kimi-k2-5-review-2026.html",
     "score": 100,
@@ -968,14 +1208,6 @@
     "score": 100,
     "title": "Mistral AI Review 2026 \u2014 European Open-Source Leader Worth Using?",
     "words": 1321,
-    "tips": []
-  },
-  {
-    "file": "Blog/qwen-3-5-review-2026.html",
-    "url": "https://dj420-gif.github.io/PromptPulse/Blog/qwen-3-5-review-2026.html",
-    "score": 100,
-    "title": "Qwen 3.5 Review \u2014 Free Open-Source AI That Beats GPT-5.2? [2026]",
-    "words": 1183,
     "tips": []
   },
   {

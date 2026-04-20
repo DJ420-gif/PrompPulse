@@ -22,6 +22,28 @@
     ]
   },
   {
+    "file": "Blog/ai-energy-crisis-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/ai-energy-crisis-2026.html",
+    "score": 0,
+    "title": "",
+    "words": 1,
+    "tips": [
+      "\u274c CRITICAL: Missing title tag \u2014 Add <title>Keyword \u2014 PromptPulse</title>",
+      "\u274c CRITICAL: Missing meta description \u2014 Add <meta name='description' content='...'> under 155 chars",
+      "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/Blog/ai-energy-crisis-2026.html'>",
+      "\u274c CRITICAL: Missing H1 tag \u2014 Add one <h1> with primary keyword",
+      "\u26a0\ufe0f Missing og:title \u2014 Add <meta property='og:title' content='...'>",
+      "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/Blog/ai-energy-crisis-2026.html'>",
+      "\u274c CRITICAL: Missing schema markup \u2014 Add Article or Review schema",
+      "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
+      "\u26a0\ufe0f Missing robots meta \u2014 Add <meta name='robots' content='index, follow'>",
+      "\u274c CRITICAL: Missing viewport \u2014 Mobile layout broken",
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals",
+      "\u274c CRITICAL: Only 1 words \u2014 Google may not index (need 300+)",
+      "\u26a0\ufe0f Only 0 internal links \u2014 Add 5+ links to related pages"
+    ]
+  },
+  {
     "file": "Blog/shopify-ai-toolkit-2026.html",
     "url": "https://dj420-gif.github.io/PromptPulse/Blog/shopify-ai-toolkit-2026.html",
     "score": 0,
@@ -34,6 +56,28 @@
       "\u274c CRITICAL: Missing H1 tag \u2014 Add one <h1> with primary keyword",
       "\u26a0\ufe0f Missing og:title \u2014 Add <meta property='og:title' content='...'>",
       "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/Blog/shopify-ai-toolkit-2026.html'>",
+      "\u274c CRITICAL: Missing schema markup \u2014 Add Article or Review schema",
+      "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
+      "\u26a0\ufe0f Missing robots meta \u2014 Add <meta name='robots' content='index, follow'>",
+      "\u274c CRITICAL: Missing viewport \u2014 Mobile layout broken",
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals",
+      "\u274c CRITICAL: Only 1 words \u2014 Google may not index (need 300+)",
+      "\u26a0\ufe0f Only 0 internal links \u2014 Add 5+ links to related pages"
+    ]
+  },
+  {
+    "file": "Blog/nvidia-gtc-2026-ai-agents-review.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/nvidia-gtc-2026-ai-agents-review.html",
+    "score": 0,
+    "title": "",
+    "words": 1,
+    "tips": [
+      "\u274c CRITICAL: Missing title tag \u2014 Add <title>Keyword \u2014 PromptPulse</title>",
+      "\u274c CRITICAL: Missing meta description \u2014 Add <meta name='description' content='...'> under 155 chars",
+      "\u274c CRITICAL: Missing canonical \u2014 Add <link rel='canonical' href='https://dj420-gif.github.io/PromptPulse/Blog/nvidia-gtc-2026-ai-agents-review.html'>",
+      "\u274c CRITICAL: Missing H1 tag \u2014 Add one <h1> with primary keyword",
+      "\u26a0\ufe0f Missing og:title \u2014 Add <meta property='og:title' content='...'>",
+      "\u26a0\ufe0f Missing og:url \u2014 Add <meta property='og:url' content='https://dj420-gif.github.io/PromptPulse/Blog/nvidia-gtc-2026-ai-agents-review.html'>",
       "\u274c CRITICAL: Missing schema markup \u2014 Add Article or Review schema",
       "\ud83d\udca1 TIP: Missing FAQ schema \u2014 Adds Google FAQ dropdowns in search results",
       "\u26a0\ufe0f Missing robots meta \u2014 Add <meta name='robots' content='index, follow'>",
@@ -546,6 +590,17 @@
     ]
   },
   {
+    "file": "Blog/claude-mythos-preview-security-2026-1.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/claude-mythos-preview-security-2026-1.html",
+    "score": 86,
+    "title": "Claude Mythos Preview 2026 \u2014 Finds Zero-Day Exploits",
+    "words": 1293,
+    "tips": [
+      "\u26a0\ufe0f Wrong canonical: https://dj420-gif.github.io/PromptPulse/Blog/claude-mythos-preview-security-2026.html \u2192 Should be: https://dj420-gif.github.io/PromptPulse/Blog/claude-mythos-preview-security-2026-1.html",
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
     "file": "Blog/claude-vs-chatgpt-coding-2026.html",
     "url": "https://dj420-gif.github.io/PromptPulse/Blog/claude-vs-chatgpt-coding-2026.html",
     "score": 86,
@@ -897,11 +952,41 @@
     ]
   },
   {
+    "file": "Blog/google-turbo-quant-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/google-turbo-quant-2026.html",
+    "score": 96,
+    "title": "Google TurboQuant 2026 \u2014 Faster AI With 100x Less KV Cache",
+    "words": 1287,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
     "file": "Blog/grok-4-20-review-2026.html",
     "url": "https://dj420-gif.github.io/PromptPulse/Blog/grok-4-20-review-2026.html",
     "score": 96,
     "title": "Grok 4.20 Review 2026 \u2014 4 AI Agents, SpaceX Acquisition",
     "words": 1397,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/meta-muse-spark-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/meta-muse-spark-review-2026.html",
+    "score": 96,
+    "title": "Meta Muse Spark Review 2026 \u2014 Is It Better Than ChatGPT?",
+    "words": 1415,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/stanford-ai-index-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/stanford-ai-index-2026.html",
+    "score": 96,
+    "title": "Stanford AI Index 2026 \u2014 Key Findings and What They Mean",
+    "words": 1469,
     "tips": [
       "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
     ]
@@ -937,6 +1022,16 @@
     ]
   },
   {
+    "file": "Blog/claude-memory-all-users-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/claude-memory-all-users-2026.html",
+    "score": 96,
+    "title": "Claude Memory Review 2026 \u2014 Free for All Users Now",
+    "words": 1289,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
     "file": "Blog/nano-banana-2-review-2026.html",
     "url": "https://dj420-gif.github.io/PromptPulse/Blog/nano-banana-2-review-2026.html",
     "score": 96,
@@ -962,6 +1057,16 @@
     "score": 96,
     "title": "Anthropic Conway 2026 \u2014 Always-On AI Agent Leaked",
     "words": 1257,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/openai-spud-model-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/openai-spud-model-2026.html",
+    "score": 96,
+    "title": "OpenAI Spud 2026 \u2014 GPT Successor Launching in July",
+    "words": 1279,
     "tips": [
       "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
     ]
@@ -1007,11 +1112,41 @@
     ]
   },
   {
+    "file": "Blog/chatgpt-900-million-users-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/chatgpt-900-million-users-2026.html",
+    "score": 96,
+    "title": "ChatGPT 900M Users 2026 \u2014 How OpenAI Grew So Fast",
+    "words": 1425,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/openai-sora-shutdown-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/openai-sora-shutdown-2026.html",
+    "score": 96,
+    "title": "OpenAI Sora Shutdown 2026 \u2014 App Closes April 26",
+    "words": 1437,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
     "file": "Blog/veo-3-1-lite-review-2026.html",
     "url": "https://dj420-gif.github.io/PromptPulse/Blog/veo-3-1-lite-review-2026.html",
     "score": 96,
     "title": "Google Veo 3.1 Lite Review 2026 \u2014 AI Video at Half the Cost",
     "words": 1821,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/quitgpt-claude-number-one-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/quitgpt-claude-number-one-2026.html",
+    "score": 96,
+    "title": "QuitGPT 2026 \u2014 Claude Hit Number One App Store",
+    "words": 1332,
     "tips": [
       "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
     ]
@@ -1092,6 +1227,16 @@
     "score": 96,
     "title": "Copilot Researcher Multi-Model 2026 \u2014 GPT Drafts, Claude Reviews",
     "words": 1666,
+    "tips": [
+      "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
+    ]
+  },
+  {
+    "file": "Blog/mozilla-thunderbolt-review-2026.html",
+    "url": "https://dj420-gif.github.io/PromptPulse/Blog/mozilla-thunderbolt-review-2026.html",
+    "score": 96,
+    "title": "Mozilla Thunderbolt Review 2026 \u2014 Self-Hosted AI Client",
+    "words": 1325,
     "tips": [
       "\ud83d\udca1 TIP: Missing author box \u2014 Add for E-E-A-T signals"
     ]
